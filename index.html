@@ -358,98 +358,202 @@
       </div>
     </section>
     <section
-        <h1 class="text-center text-green-700 font-semibold text-2xl">
-      Chatbot Literasi
-    </h1>
-    <div class="flex items-start space-x-4">
-      <div class="flex-shrink-0">
-        <img
-          alt="Happy and cool blue robot face with big smiling eyes and cheerful expression, cartoon style"
-          class="rounded-full border border-transparent shadow-[0_0_10px_2px_rgba(96,165,250,0.7)]"
-          height="48"
-          src="https://storage.googleapis.com/a1aa/image/12e3e2d3-bdac-407e-2928-6e158edb4f1c.jpg"
-          width="48"
-          id="bot-avatar"
-        />
-      </div>
-      <div
-        id="bot-message"
-        class="bg-blue-200 text-blue-900 rounded-lg p-4 max-w-[calc(100%-64px)] shadow-[0_0_10px_2px_rgba(96,165,250,0.7)]"
-        style="box-shadow: 0 0 10px 2px rgba(96,165,250,0.7);"
-      >
-        Halo! Saya Chatbot Literasi, siap membantu kamu menemukan cerita, menjawab pertanyaan, dan memberikan rekomendasi bacaan.
-      </div>
-    </div>
-    <form id="chat-form" class="flex space-x-4">
-      <input
-        id="user-input"
-        class="flex-grow rounded-md bg-green-600 text-green-300 placeholder-green-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
-        placeholder="Tulis pesan kamu..."
-        type="text"
-        autocomplete="off"
-        required
-      />
-      <button
-        class="bg-green-600 text-white rounded-md px-6 py-3 font-medium hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"
-        type="submit"
-      >
-        Kirim
-      </button>
-    </form>
-    <div
-      id="chat-history"
-      class="border border-green-200 rounded-md bg-green-50 p-4 max-h-72 overflow-y-scroll text-sm text-green-900 relative space-y-4"
-      style="scrollbar-width: thin; scrollbar-color: #6ee7b7 transparent;"
+      class="bg-white rounded-lg shadow p-6 md:p-10 max-w-4xl mx-auto mt-20"
+      id="chatbot"
     >
-      <style>
-        /* Custom scrollbar for WebKit browsers */
-        #chat-history::-webkit-scrollbar {
-          width: 8px;
-        }
-        #chat-history::-webkit-scrollbar-track {
-          background: transparent;
-        }
-        #chat-history::-webkit-scrollbar-thumb {
-          background-color: #6ee7b7;
-          border-radius: 10px;
-          border: 2px solid transparent;
-          background-clip: content-box;
-        }
-      </style>
-      <div class="flex items-start space-x-4 max-w-[60%]">
-        <img
-          alt="Photo of a male university student wearing glasses and a casual shirt, smiling"
-          class="rounded-full"
-          height="40"
-          src="https://storage.googleapis.com/a1aa/image/ef5d0740-49a7-44da-084d-6c75d1569662.jpg"
-          width="40"
-        />
-        <div class="bg-white rounded-lg px-3 py-2 text-green-900 shadow-sm" id="user-initial-message">
-          e
+      <h2 class="text-3xl font-semibold text-green-700 mb-8 text-center">
+        Chatbot Literasi
+      </h2>
+      <div class="flex flex-col space-y-4">
+        <div class="flex items-center space-x-4">
+          <img
+            alt="Ikon chatbot berwarna biru dengan wajah ramah dan gelembung chat"
+            class="w-12 h-12 rounded-full blue-pulse"
+            height="48"
+            src="https://storage.googleapis.com/a1aa/image/b310fb9f-8695-40ae-0748-4090825d7bc2.jpg"
+            width="48"
+          />
+          <div
+            class="bg-blue-100 text-blue-900 p-4 rounded-lg max-w-prose blue-pulse"
+            id="chatbot-response"
+          >
+            <p>
+              Halo! Saya Chatbot Literasi, siap membantu kamu menemukan cerita,
+              menjawab pertanyaan, dan memberikan rekomendasi bacaan.
+            </p>
+          </div>
         </div>
-      </div>
-      <div
-        class="flex items-start space-x-4 max-w-[60%] ml-auto justify-end"
-        id="bot-initial-response"
-      >
-        <div
-          class="bg-green-600 text-white rounded-lg px-4 py-3 shadow-md break-words"
-          style="word-break: break-word;"
+        <form
+          id="chatbot-form"
+          class="flex space-x-3"
+          method="get"
+          onsubmit="return handleChat(event)"
         >
-          Maaf, saya belum mengerti pertanyaan kamu. Silakan tanyakan seputar literasi sesuai usia atau fitur NusaAksara, saya siap membantu!
-        </div>
-        <img
-          alt="Happy and cool blue robot face with big smiling eyes and cheerful expression, cartoon style"
-          class="rounded-full"
-          height="40"
-          src="https://storage.googleapis.com/a1aa/image/12e3e2d3-bdac-407e-2928-6e158edb4f1c.jpg"
-          width="40"
-        />
-      </div>
-    </div>
-  </div>
+    <input
+  aria-label="Input pesan chatbot"
+  class="flex-grow border border-green-400 rounded-lg px-4 py-2 text-black placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-400"
+  id="chatbot-input"
+  name="query"
+  placeholder="Tulis pesan kamu..."
+  required
+  type="text"
+/>
 
+          <button
+            aria-label="Kirim pesan chatbot"
+            class="bg-green-500 text-white px-5 py-2 rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400"
+            type="submit"
+          >
+            Kirim
+          </button>
+        </form>
+        <div
+          aria-atomic="true"
+          aria-live="polite"
+          class="mt-4 max-h-64 overflow-y-auto space-y-3 border border-green-300 rounded-lg p-4 bg-green-50"
+          id="chat-messages"
+        >
+          <div class="flex items-start space-x-3">
+            <img
+              alt="Avatar pengguna aplikasi literasi dengan ekspresi antusias"
+              class="w-10 h-10 rounded-full"
+              height="40"
+              src="https://storage.googleapis.com/a1aa/image/e1e91528-4b41-4fe9-b51d-d3d431cb4dce.jpg"
+              width="40"
+            />
+            <div class="bg-white p-3 rounded-lg shadow max-w-xs">
+              <p class="text-green-900">
+                Apa rekomendasi literasi untuk pemula dalam literasi digital di NusaAksara?
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3 justify-end">
+            <div
+              class="bg-green-600 text-white p-3 rounded-lg shadow max-w-xs"
+            >
+              <p>
+                Jika anda mahasiswa, anda bisa mengunjungi fitur Mahasiswa dan pilih sesuai minat fitur yang anda inginkan. 
+                Begitu juga sebaliknya, jika anda keluarga bisa kunjungi fitur Keluarga. Di sana ada fitur berdasarkan usia yang tentunya menyenangkan. 
+                Salam literasi, selamat literasi, semoga literasi mu menyenangkan.
+              </p>
+            </div>
+            <img
+              alt="Ikon chatbot berwarna biru dengan wajah ramah"
+              class="w-10 h-10 rounded-full blue-pulse"
+              height="40"
+              src="https://storage.googleapis.com/a1aa/image/b310fb9f-8695-40ae-0748-4090825d7bc2.jpg"
+              width="40"
+            />
+          </div>
+          <div class="flex items-start space-x-3">
+            <img
+              alt="Avatar pengguna aplikasi literasi dengan ekspresi antusias"
+              class="w-10 h-10 rounded-full"
+              height="40"
+              src="https://storage.googleapis.com/a1aa/image/e1e91528-4b41-4fe9-b51d-d3d431cb4dce.jpg"
+              width="40"
+            />
+            <div class="bg-black p-3 rounded-lg shadow max-w-xs">
+              <p class="text-green-900">
+                Bagaimana cara bergabung dengan komunitas literasi di kampus?
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3 justify-end">
+            <div
+              class="bg-green-600 text-white p-3 rounded-lg shadow max-w-xs"
+            >
+              <p>
+                Kamu bisa mengunjungi fitur Forum Kampus &amp; UKM di aplikasi
+                dan mendaftar melalui halaman komunitas.
+              </p>
+            </div>
+            <img
+              alt="Ikon chatbot berwarna biru dengan wajah ramah"
+              class="w-10 h-10 rounded-full blue-pulse"
+              height="40"
+              src="https://storage.googleapis.com/a1aa/image/b310fb9f-8695-40ae-0748-4090825d7bc2.jpg"
+              width="40"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
   <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    navToggle.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+        navToggle.innerHTML = '<i class="fas fa-times"></i>';
+      } else {
+        mobileMenu.classList.add('hidden');
+        navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+      }
+    });
+
+    function closeMobileMenu() {
+      mobileMenu.classList.add('hidden');
+      navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+
+    function handleChat(event) {
+      event.preventDefault();
+      const input = document.getElementById("chatbot-input");
+      const messages = document.getElementById("chat-messages");
+      const userText = input.value.trim();
+      if (!userText) return false;
+
+      // Append user message
+      const userDiv = document.createElement("div");
+      userDiv.className = "flex items-start space-x-3";
+      const userImg = document.createElement("img");
+      userImg.src =
+        "https://storage.googleapis.com/a1aa/image/e1e91528-4b41-4fe9-b51d-d3d431cb4dce.jpg";
+      userImg.alt = "Avatar pengguna aplikasi literasi dengan ekspresi antusias";
+      userImg.className = "w-10 h-10 rounded-full";
+      userImg.width = 40;
+      userImg.height = 40;
+      const userMsg = document.createElement("div");
+      userMsg.className = "bg-blue p-3 rounded-lg shadow max-w-xs";
+      const userP = document.createElement("p");
+      userP.className = "text-green-900";
+      userP.textContent = userText;
+      userMsg.appendChild(userP);
+      userDiv.appendChild(userImg);
+      userDiv.appendChild(userMsg);
+      messages.appendChild(userDiv);
+
+      input.value = "";
+      messages.scrollTop = messages.scrollHeight;
+
+      // Generate bot response
+      setTimeout(() => {
+        const botDiv = document.createElement("div");
+        botDiv.className = "flex items-start space-x-3 justify-end";
+        const botMsg = document.createElement("div");
+        botMsg.className = "bg-green-600 text-white p-3 rounded-lg shadow max-w-xs";
+        const botP = document.createElement("p");
+        botP.textContent = generateResponse(userText);
+        botMsg.appendChild(botP);
+        const botImg = document.createElement("img");
+        botImg.src =
+          "https://storage.googleapis.com/a1aa/image/b310fb9f-8695-40ae-0748-4090825d7bc2.jpg";
+        botImg.alt = "Ikon chatbot berwarna biru dengan wajah ramah";
+        botImg.className = "w-10 h-10 rounded-full blue-pulse";
+        botImg.width = 40;
+        botImg.height = 40;
+        botDiv.appendChild(botMsg);
+        botDiv.appendChild(botImg);
+        messages.appendChild(botDiv);
+        messages.scrollTop = messages.scrollHeight;
+      }, 800);
+
+      return false;
+    }
+
     function generateResponse(input) {
       const text = input.toLowerCase();
 
@@ -502,78 +606,6 @@ Salam literasi, selamat literasi, semoga literasi mu menyenangkan.`;
 
       return "Maaf, saya belum mengerti pertanyaan kamu. Silakan tanyakan seputar literasi sesuai usia atau fitur NusaAksara, saya siap membantu!";
     }
-
-    const chatForm = document.getElementById("chat-form");
-    const userInput = document.getElementById("user-input");
-    const chatHistory = document.getElementById("chat-history");
-
-    chatForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const inputText = userInput.value.trim();
-      if (!inputText) return;
-
-      // Create user message element
-      const userMessageWrapper = document.createElement("div");
-      userMessageWrapper.className = "flex items-start space-x-4 max-w-[60%]";
-      const userImg = document.createElement("img");
-      userImg.src =
-        "https://storage.googleapis.com/a1aa/image/ef5d0740-49a7-44da-084d-6c75d1569662.jpg";
-      userImg.alt =
-        "Photo of a male university student wearing glasses and a casual shirt, smiling";
-      userImg.className = "rounded-full";
-      userImg.width = 40;
-      userImg.height = 40;
-
-      const userTextDiv = document.createElement("div");
-      userTextDiv.className = "bg-white rounded-lg px-3 py-2 text-green-900 shadow-sm break-words";
-      userTextDiv.textContent = inputText;
-
-      userMessageWrapper.appendChild(userImg);
-      userMessageWrapper.appendChild(userTextDiv);
-
-      // Create bot response element
-      const botMessageWrapper = document.createElement("div");
-      botMessageWrapper.className =
-        "flex items-start space-x-4 max-w-[60%] ml-auto justify-end";
-      const botTextDiv = document.createElement("div");
-      botTextDiv.className =
-        "bg-green-600 text-white rounded-lg px-4 py-3 shadow-md break-words";
-      botTextDiv.textContent = generateResponse(inputText);
-
-      const botImg = document.createElement("img");
-      botImg.src =
-        "https://storage.googleapis.com/a1aa/image/12e3e2d3-bdac-407e-2928-6e158edb4f1c.jpg";
-      botImg.alt =
-        "Happy and cool blue robot face with big smiling eyes and cheerful expression, cartoon style";
-      botImg.className = "rounded-full";
-      botImg.width = 40;
-      botImg.height = 40;
-
-      botMessageWrapper.appendChild(botTextDiv);
-      botMessageWrapper.appendChild(botImg);
-
-      // Append messages to chat history
-      chatHistory.appendChild(userMessageWrapper);
-      chatHistory.appendChild(botMessageWrapper);
-
-      // Scroll to bottom
-      chatHistory.scrollTop = chatHistory.scrollHeight;
-
-      // Clear input
-      userInput.value = "";
-      userInput.focus();
-    });
-  
   </script>
-
 </body>
-
 </html>
-
-
-
-
-
-
-
-
