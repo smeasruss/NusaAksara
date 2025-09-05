@@ -358,335 +358,218 @@
       </div>
     </section>
     <section
-       chatbot: `
-      <section class="bg-white rounded-lg shadow p-6 md:p-10 max-w-4xl mx-auto" id="chatbot">
-       <h2 class="text-3xl font-semibold text-green-700 mb-8 text-center">
-        Chatbot Literasi
-       </h2>
-       <div class="flex flex-col space-y-4">
-        <div class="flex items-center space-x-4">
-         <img alt="Ikon chatbot berwarna biru dengan wajah ramah dan gelembung chat" class="w-12 h-12 rounded-full blue-pulse" height="48" src="https://storage.googleapis.com/a1aa/image/b310fb9f-8695-40ae-0748-4090825d7bc2.jpg" width="48"/>
-         <div class="bg-blue-100 text-blue-900 p-4 rounded-lg max-w-prose blue-pulse" id="chatbot-response">
-          <p>
-           Halo! Saya Chatbot Literasi, siap membantu kamu menemukan cerita, menjawab pertanyaan, dan memberikan rekomendasi bacaan.
-          </p>
-         </div>
+        <h1 class="text-center text-green-700 font-semibold text-2xl">
+      Chatbot Literasi
+    </h1>
+    <div class="flex items-start space-x-4">
+      <div class="flex-shrink-0">
+        <img
+          alt="Happy and cool blue robot face with big smiling eyes and cheerful expression, cartoon style"
+          class="rounded-full border border-transparent shadow-[0_0_10px_2px_rgba(96,165,250,0.7)]"
+          height="48"
+          src="https://storage.googleapis.com/a1aa/image/12e3e2d3-bdac-407e-2928-6e158edb4f1c.jpg"
+          width="48"
+          id="bot-avatar"
+        />
+      </div>
+      <div
+        id="bot-message"
+        class="bg-blue-200 text-blue-900 rounded-lg p-4 max-w-[calc(100%-64px)] shadow-[0_0_10px_2px_rgba(96,165,250,0.7)]"
+        style="box-shadow: 0 0 10px 2px rgba(96,165,250,0.7);"
+      >
+        Halo! Saya Chatbot Literasi, siap membantu kamu menemukan cerita, menjawab pertanyaan, dan memberikan rekomendasi bacaan.
+      </div>
+    </div>
+    <form id="chat-form" class="flex space-x-4">
+      <input
+        id="user-input"
+        class="flex-grow rounded-md bg-green-600 text-green-300 placeholder-green-300 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-green-500"
+        placeholder="Tulis pesan kamu..."
+        type="text"
+        autocomplete="off"
+        required
+      />
+      <button
+        class="bg-green-600 text-white rounded-md px-6 py-3 font-medium hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500"
+        type="submit"
+      >
+        Kirim
+      </button>
+    </form>
+    <div
+      id="chat-history"
+      class="border border-green-200 rounded-md bg-green-50 p-4 max-h-72 overflow-y-scroll text-sm text-green-900 relative space-y-4"
+      style="scrollbar-width: thin; scrollbar-color: #6ee7b7 transparent;"
+    >
+      <style>
+        /* Custom scrollbar for WebKit browsers */
+        #chat-history::-webkit-scrollbar {
+          width: 8px;
+        }
+        #chat-history::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        #chat-history::-webkit-scrollbar-thumb {
+          background-color: #6ee7b7;
+          border-radius: 10px;
+          border: 2px solid transparent;
+          background-clip: content-box;
+        }
+      </style>
+      <div class="flex items-start space-x-4 max-w-[60%]">
+        <img
+          alt="Photo of a male university student wearing glasses and a casual shirt, smiling"
+          class="rounded-full"
+          height="40"
+          src="https://storage.googleapis.com/a1aa/image/ef5d0740-49a7-44da-084d-6c75d1569662.jpg"
+          width="40"
+        />
+        <div class="bg-white rounded-lg px-3 py-2 text-green-900 shadow-sm" id="user-initial-message">
+          e
         </div>
-        <form id="chatbot-form" class="flex space-x-3" method="get" onsubmit="return handleChat(event)">
-         <input aria-label="Input pesan chatbot" class="flex-grow border border-green-400 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400" id="chatbot-input" name="query" placeholder="Tulis pesan kamu..." required="" type="text"/>
-         <button aria-label="Kirim pesan chatbot" class="bg-green-500 text-white px-5 py-2 rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400" type="submit">
-          Kirim
-         </button>
-        </form>
-        <div aria-atomic="true" aria-live="polite" class="mt-4 max-h-64 overflow-y-auto space-y-3 border border-green-300 rounded-lg p-4 bg-green-50" id="chat-messages">
-         <div class="flex items-start space-x-3">
-          <img alt="Avatar pengguna aplikasi literasi dengan ekspresi antusias" class="w-10 h-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/e1e91528-4b41-4fe9-b51d-d3d431cb4dce.jpg" width="40"/>
-          <div class="bg-white p-3 rounded-lg shadow max-w-xs">
-           <p class="text-green-900">
-            Apa rekomendasi buku untuk pemula dalam literasi digital?
-           </p>
-          </div>
-         </div>
-         <div class="flex items-start space-x-3 justify-end">
-          <div class="bg-green-600 text-white p-3 rounded-lg shadow max-w-xs">
-           <p>
-            Saya merekomendasikan "Literasi Digital untuk Semua" yang mudah dipahami dan sangat informatif.
-           </p>
-          </div>
-          <img alt="Ikon chatbot berwarna biru dengan wajah ramah" class="w-10 h-10 rounded-full blue-pulse" height="40" src="https://storage.googleapis.com/a1aa/image/b310fb9f-8695-40ae-0748-4090825d7bc2.jpg" width="40"/>
-         </div>
-         <div class="flex items-start space-x-3">
-          <img alt="Avatar pengguna aplikasi literasi dengan ekspresi antusias" class="w-10 h-10 rounded-full" height="40" src="https://storage.googleapis.com/a1aa/image/e1e91528-4b41-4fe9-b51d-d3d431cb4dce.jpg" width="40"/>
-          <div class="bg-white p-3 rounded-lg shadow max-w-xs">
-           <p class="text-green-900">
-            Bagaimana cara bergabung dengan komunitas literasi di kampus?
-           </p>
-          </div>
-         </div>
-         <div class="flex items-start space-x-3 justify-end">
-          <div class="bg-green-600 text-white p-3 rounded-lg shadow max-w-xs">
-           <p>
-            Kamu bisa mengunjungi fitur Forum Kampus &amp; UKM di aplikasi dan mendaftar melalui halaman komunitas.
-           </p>
-          </div>
-          <img alt="Ikon chatbot berwarna biru dengan wajah ramah" class="w-10 h-10 rounded-full blue-pulse" height="40" src="https://storage.googleapis.com/a1aa/image/b310fb9f-8695-40ae-0748-4090825d7bc2.jpg" width="40"/>
-         </div>
+      </div>
+      <div
+        class="flex items-start space-x-4 max-w-[60%] ml-auto justify-end"
+        id="bot-initial-response"
+      >
+        <div
+          class="bg-green-600 text-white rounded-lg px-4 py-3 shadow-md break-words"
+          style="word-break: break-word;"
+        >
+          Maaf, saya belum mengerti pertanyaan kamu. Silakan tanyakan seputar literasi sesuai usia atau fitur NusaAksara, saya siap membantu!
         </div>
-       </div>
-      </section>
-     `,
-     penjelasanFitur: `
-      <section class="bg-white rounded-lg shadow p-6 md:p-10 max-w-7xl mx-auto" id="penjelasan-fitur">
-       <h2 class="text-3xl font-semibold text-green-700 mb-8 text-center">
-        Penjelasan Semua Fitur Literasi App
-       </h2>
-       <div class="space-y-8 max-w-5xl mx-auto text-green-800">
-        <article>
-         <h3 class="text-2xl font-semibold mb-2">Fitur untuk Keluarga</h3>
-         <p class="mb-2">
-          Fitur ini dirancang untuk mendukung literasi di lingkungan keluarga dengan sistem badge penghargaan, pengumpulan poin literasi, dan fitur yang mudah digunakan untuk semua anggota keluarga dari berbagai usia. Anggota keluarga dapat membaca bersama dan saling memotivasi.
-         </p>
-        </article>
-        <article>
-         <h3 class="text-2xl font-semibold mb-2">Fitur untuk Mahasiswa</h3>
-         <p class="mb-2">
-          Menyediakan ruang baca bersama dengan diskusi real-time, kolaborasi penulisan cerita, tantangan literasi mingguan, portofolio literasi untuk menyimpan karya dan kutipan favorit, mentor literasi untuk bimbingan, serta forum kampus dan UKM untuk diskusi dan promosi kegiatan literasi.
-         </p>
-        </article>
-        <article>
-         <h3 class="text-2xl font-semibold mb-2">Fitur Umum untuk Semua</h3>
-         <p class="mb-2">
-          Termasuk reward menarik untuk pencapaian literasi, leaderboard khusus keluarga dan mahasiswa untuk memotivasi dan meningkatkan semangat literasi, serta fitur yang dapat diakses oleh semua pengguna tanpa batasan usia atau latar belakang.
-         </p>
-        </article>
-        <article>
-         <h3 class="text-2xl font-semibold mb-2">Forum Paper &amp; Karya Tulis Ilmiah</h3>
-         <p class="mb-2">
-          Tempat berbagi, membaca, dan berdiskusi tentang esai, artikel ilmiah, dan karya tulis mahasiswa lain. Fitur ini juga mendukung penulisan paper secara kolaboratif untuk memudahkan kerja tim dan meningkatkan kualitas karya tulis ilmiah.
-         </p>
-        </article>
-        <article>
-         <h3 class="text-2xl font-semibold mb-2">Chatbot Literasi</h3>
-         <p class="mb-2">
-          Chatbot interaktif yang siap membantu menjawab pertanyaan seputar literasi sesuai usia dan fitur Aksarasa, memberikan rekomendasi bacaan, serta membantu pengguna memahami dan memanfaatkan fitur-fitur dalam aplikasi dengan mudah.
-         </p>
-        </article>
-        <article>
-         <h3 class="text-2xl font-semibold mb-2">Fitur Aksarasa</h3>
-         <p class="mb-2">
-          Aksarasa adalah fitur khusus yang menyediakan akses ke berbagai sumber literasi digital secara interaktif, termasuk membaca, mendengarkan, dan berdiskusi. Fitur ini memudahkan pengguna untuk memperkaya pengalaman literasi digital mereka.
-         </p>
-        </article>
-       </div>
-      </section>
-     `
-   };
+        <img
+          alt="Happy and cool blue robot face with big smiling eyes and cheerful expression, cartoon style"
+          class="rounded-full"
+          height="40"
+          src="https://storage.googleapis.com/a1aa/image/12e3e2d3-bdac-407e-2928-6e158edb4f1c.jpg"
+          width="40"
+        />
+      </div>
+    </div>
+  </div>
 
-   // Navigation links for roles
-   const navLinks = {
-     keluarga: [
-       { href: '#keluarga', label: 'Keluarga' },
-       { href: '#umum', label: 'Fitur Umum' },
-       { href: '#chatbot', label: 'Chatbot' },
-       { href: '#forum-paper', label: '🧾 Forum Paper & Karya Tulis Ilmiah' }
-     ],
-     mahasiswa: [
-       { href: '#mahasiswa', label: 'Mahasiswa' },
-       { href: '#umum', label: 'Fitur Umum' },
-       { href: '#chatbot', label: 'Chatbot' },
-       { href: '#forum-paper', label: '🧾 Forum Paper & Karya Tulis Ilmiah' }
-     ]
-   };
+  <script>
+    function generateResponse(input) {
+      const text = input.toLowerCase();
 
-   // Sections to show per role
-   const roleSections = {
-     keluarga: ['keluarga', 'umum', 'forumPaper', 'chatbot', 'penjelasanFitur'],
-     mahasiswa: ['mahasiswa', 'umum', 'forumPaper', 'chatbot', 'penjelasanFitur']
-   };
+      const ageKeywords = [
+        "anak",
+        "remaja",
+        "dewasa",
+        "usia",
+        "umur",
+        "anak-anak",
+        "anak kecil",
+        "anak muda",
+        "mahasiswa",
+        "pelajar",
+      ];
+      const NusaAksaraKeywords = [
+        "nusaaksara",
+        "fitur nusaaksara",
+        "cara menggunakan nusaaksara",
+        "apa itu nusaaksara",
+        "nusaaksara literasi",
+        "nusaaksara app",
+      ];
 
-   // Render navigation links
-   function renderNav(role) {
-     desktopNav.innerHTML = '';
-     mobileMenu.innerHTML = '';
-     navLinks[role].forEach(link => {
-       const aDesktop = document.createElement('a');
-       aDesktop.href = link.href;
-       aDesktop.textContent = link.label;
-       aDesktop.className = 'hover:text-green-400 transition';
-       desktopNav.appendChild(aDesktop);
+      if (text.includes("rekomendasi literasi")) {
+        return `Jika anda mahasiswa, anda bisa mengunjungi fitur Mahasiswa dan pilih sesuai minat fitur yang anda inginkan. 
+Begitu juga sebaliknya, jika anda keluarga bisa kunjungi fitur Keluarga. Di sana ada fitur berdasarkan usia yang tentunya menyenangkan. 
+Salam literasi, selamat literasi, semoga literasi mu menyenangkan.`;
+      }
 
-       const aMobile = document.createElement('a');
-       aMobile.href = link.href;
-       aMobile.textContent = link.label;
-       aMobile.className = 'block px-4 py-3 border-b border-green-600 hover:bg-green-600 hover:text-green-100';
-       mobileMenu.appendChild(aMobile);
-     });
-   }
+      for (const keyword of ageKeywords) {
+        if (text.includes(keyword)) {
+          return "Untuk literasi sesuai usia, kami menyediakan berbagai materi yang disesuaikan mulai dari anak-anak, remaja, hingga dewasa. Kamu bisa memilih fitur yang sesuai dengan kelompok usia kamu di aplikasi.";
+        }
+      }
 
-   // Render sections based on role
-   function renderSections(role) {
-     mainSections.innerHTML = '';
-     roleSections[role].forEach(sectionKey => {
-       mainSections.insertAdjacentHTML('beforeend', sections[sectionKey]);
-     });
-     addFeatureCardEffects();
-     addChatbotLogic();
-   }
+      for (const keyword of NusaAksaraKeywords) {
+        if (text.includes(keyword)) {
+          return `Fitur NusaAksara adalah layanan khusus dalam aplikasi kami yang membantu kamu mengakses berbagai sumber literasi digital dengan mudah dan interaktif. Kamu bisa menggunakan NusaAksara untuk membaca, mendengarkan, dan berdiskusi tentang berbagai materi literasi.`;
+        }
+      }
 
-   // Add blue pulse effect on click for all feature cards
-   function addFeatureCardEffects() {
-     const featureCards = document.querySelectorAll('a.feature-card');
-     featureCards.forEach(card => {
-       card.addEventListener('mousedown', () => {
-         card.classList.add('blue-effect', 'pulse');
-       });
-       card.addEventListener('mouseup', () => {
-         setTimeout(() => {
-           card.classList.remove('pulse');
-         }, 1500);
-       });
-       card.addEventListener('mouseleave', () => {
-         card.classList.remove('blue-effect', 'pulse');
-       });
-     });
-   }
+      if (text.includes("literasi")) {
+        return "Literasi adalah kemampuan membaca, menulis, dan memahami informasi. Aplikasi ini membantu kamu meningkatkan literasi melalui berbagai fitur menarik sesuai kebutuhan.";
+      }
 
-   // Chatbot logic
-   function addChatbotLogic() {
-     const chatMessages = document.getElementById('chat-messages');
-     const chatbotResponse = document.getElementById('chatbot-response');
-     const chatbotInput = document.getElementById('chatbot-input');
-     const chatbotForm = document.getElementById('chatbot-form');
+      if (/(halo|hai|hello|selamat pagi|selamat siang|selamat sore|selamat malam)/.test(text)) {
+        return "Halo! Ada yang bisa saya bantu seputar literasi atau fitur aplikasi?";
+      }
 
-     if (!chatbotForm) return;
+      return "Maaf, saya belum mengerti pertanyaan kamu. Silakan tanyakan seputar literasi sesuai usia atau fitur NusaAksara, saya siap membantu!";
+    }
 
-     chatbotForm.onsubmit = function(event) {
-       event.preventDefault();
-       const userInput = chatbotInput.value.trim();
-       if (!userInput) return false;
+    const chatForm = document.getElementById("chat-form");
+    const userInput = document.getElementById("user-input");
+    const chatHistory = document.getElementById("chat-history");
 
-       appendMessage(true, userInput);
-       chatbotInput.value = '';
-       chatbotInput.disabled = true;
+    chatForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const inputText = userInput.value.trim();
+      if (!inputText) return;
 
-       setTimeout(() => {
-         const response = generateResponse(userInput);
-         appendMessage(false, response);
-         chatbotInput.disabled = false;
-         chatbotInput.focus();
-       }, 800);
+      // Create user message element
+      const userMessageWrapper = document.createElement("div");
+      userMessageWrapper.className = "flex items-start space-x-4 max-w-[60%]";
+      const userImg = document.createElement("img");
+      userImg.src =
+        "https://storage.googleapis.com/a1aa/image/ef5d0740-49a7-44da-084d-6c75d1569662.jpg";
+      userImg.alt =
+        "Photo of a male university student wearing glasses and a casual shirt, smiling";
+      userImg.className = "rounded-full";
+      userImg.width = 40;
+      userImg.height = 40;
 
-       return false;
-     };
+      const userTextDiv = document.createElement("div");
+      userTextDiv.className = "bg-white rounded-lg px-3 py-2 text-green-900 shadow-sm break-words";
+      userTextDiv.textContent = inputText;
 
-     function appendMessage(isUser, text) {
-       const container = document.createElement('div');
-       container.classList.add('flex', 'items-start', 'space-x-3');
-       if (!isUser) container.classList.add('justify-end');
+      userMessageWrapper.appendChild(userImg);
+      userMessageWrapper.appendChild(userTextDiv);
 
-       const img = document.createElement('img');
-       img.classList.add('w-10', 'h-10', 'rounded-full');
-       img.height = 40;
-       img.width = 40;
+      // Create bot response element
+      const botMessageWrapper = document.createElement("div");
+      botMessageWrapper.className =
+        "flex items-start space-x-4 max-w-[60%] ml-auto justify-end";
+      const botTextDiv = document.createElement("div");
+      botTextDiv.className =
+        "bg-green-600 text-white rounded-lg px-4 py-3 shadow-md break-words";
+      botTextDiv.textContent = generateResponse(inputText);
 
-       const messageBox = document.createElement('div');
-       messageBox.classList.add('p-3', 'rounded-lg', 'shadow', 'max-w-xs');
-       const p = document.createElement('p');
-       p.textContent = text;
+      const botImg = document.createElement("img");
+      botImg.src =
+        "https://storage.googleapis.com/a1aa/image/12e3e2d3-bdac-407e-2928-6e158edb4f1c.jpg";
+      botImg.alt =
+        "Happy and cool blue robot face with big smiling eyes and cheerful expression, cartoon style";
+      botImg.className = "rounded-full";
+      botImg.width = 40;
+      botImg.height = 40;
 
-       if (isUser) {
-         img.src = 'https://storage.googleapis.com/a1aa/image/e1e91528-4b41-4fe9-b51d-d3d431cb4dce.jpg';
-         p.classList.add('text-green-900');
-         messageBox.classList.add('bg-white');
-       } else {
-         img.src = 'https://storage.googleapis.com/a1aa/image/b310fb9f-8695-40ae-0748-4090825d7bc2.jpg';
-         p.classList.add('text-white');
-         messageBox.classList.add('bg-green-600', 'text-white');
-         img.classList.add('blue-pulse');
-       }
+      botMessageWrapper.appendChild(botTextDiv);
+      botMessageWrapper.appendChild(botImg);
 
-       messageBox.appendChild(p);
-       if (isUser) {
-         container.appendChild(img);
-         container.appendChild(messageBox);
-       } else {
-         container.appendChild(messageBox);
-         container.appendChild(img);
-       }
-       chatMessages.appendChild(container);
-       chatMessages.scrollTop = chatMessages.scrollHeight;
-     }
+      // Append messages to chat history
+      chatHistory.appendChild(userMessageWrapper);
+      chatHistory.appendChild(botMessageWrapper);
 
-     function generateResponse(input) {
-       const text = input.toLowerCase();
+      // Scroll to bottom
+      chatHistory.scrollTop = chatHistory.scrollHeight;
 
-       // Keywords for age-based literacy questions
-       const ageKeywords = ['anak', 'remaja', 'dewasa', 'usia', 'umur', 'anak-anak', 'anak kecil', 'anak muda', 'mahasiswa', 'pelajar'];
-
-       // Keywords for Aksarasa feature questions
-       const aksarasaKeywords = ['aksarasa', 'fitur aksarasa', 'cara menggunakan aksarasa', 'apa itu aksarasa', 'aksarasa literasi', 'aksarasa app'];
-
-       // Check for age-related questions
-       for (const keyword of ageKeywords) {
-         if (text.includes(keyword)) {
-           return "Untuk literasi sesuai usia, kami menyediakan berbagai materi yang disesuaikan mulai dari anak-anak, remaja, hingga dewasa. Kamu bisa memilih fitur yang sesuai dengan kelompok usia kamu di aplikasi.";
-         }
-       }
-
-       // Check for Aksarasa feature questions
-       for (const keyword of aksarasaKeywords) {
-         if (text.includes(keyword)) {
-           return "Fitur Aksarasa adalah layanan khusus dalam aplikasi kami yang membantu kamu mengakses berbagai sumber literasi digital dengan mudah dan interaktif. Kamu bisa menggunakan Aksarasa untuk membaca, mendengarkan, dan berdiskusi tentang berbagai materi literasi.";
-         }
-       }
-
-       // General literacy questions
-       if (text.includes('literasi')) {
-         return "Literasi adalah kemampuan membaca, menulis, dan memahami informasi. Aplikasi ini membantu kamu meningkatkan literasi melalui berbagai fitur menarik sesuai kebutuhan.";
-       }
-
-       // Greetings
-       if (/(halo|hai|hello|selamat pagi|selamat siang|selamat sore|selamat malam)/.test(text)) {
-         return "Halo! Ada yang bisa saya bantu seputar literasi atau fitur aplikasi?";
-       }
-
-       // Default fallback
-       return "Maaf, saya belum mengerti pertanyaan kamu. Silakan tanyakan seputar literasi sesuai usia atau fitur Aksarasa, saya siap membantu!";
-     }
-   }
-
-   // Handle login form submission
-   function handleLogin(event) {
-     event.preventDefault();
-     const username = document.getElementById('username').value.trim();
-     const password = document.getElementById('password').value.trim();
-     const role = document.getElementById('role').value;
-
-     if (!username || !password || !role) {
-       alert('Mohon isi semua kolom dan pilih peran.');
-       return false;
-     }
-
-     // For demo, accept any username/password, just role matters
-     // In real app, validate credentials here
-
-     // Save login state and role in localStorage
-     localStorage.setItem('nusaAksaraLoggedIn', 'true');
-     localStorage.setItem('nusaAksaraRole', role);
-
-     // Hide login page, show app content
-     loginPage.classList.add('hidden');
-     appContent.classList.remove('hidden');
-
-     // Render nav and sections based on role
-     renderNav(role);
-     renderSections(role);
-
-     // Scroll to top
-     window.scrollTo(0, 0);
-
-     return false;
-   }
-
-   // On page load, check if user is already logged in
-   window.addEventListener('DOMContentLoaded', () => {
-     const loggedIn = localStorage.getItem('nusaAksaraLoggedIn');
-     const role = localStorage.getItem('nusaAksaraRole');
-
-     if (loggedIn === 'true' && (role === 'keluarga' || role === 'mahasiswa')) {
-       // Hide login page, show app content
-       loginPage.classList.add('hidden');
-       appContent.classList.remove('hidden');
-
-       // Render nav and sections based on role
-       renderNav(role);
-       renderSections(role);
-     }
-   });
+      // Clear input
+      userInput.value = "";
+      userInput.focus();
+    });
+  
   </script>
+
 </body>
 
 </html>
+
 
 
 
