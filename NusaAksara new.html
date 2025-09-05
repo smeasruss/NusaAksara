@@ -1,0 +1,564 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>NusaAksara - Platform Literasi Digital Interaktif</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+    }
+    .card-3d {
+      perspective: 1000px;
+    }
+    .card-inner {
+      transition: transform 0.5s, background-color 0.3s;
+      transform-style: preserve-3d;
+      background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+      border-radius: 1rem;
+      box-shadow: 0 10px 20px rgb(0 0 0 / 0.3);
+      padding: 1.5rem;
+      text-align: center;
+      cursor: pointer;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+    }
+    .card-3d:hover .card-inner {
+      transform: rotateY(15deg) rotateX(10deg);
+      background: linear-gradient(135deg, #15803d, #22c55e);
+      box-shadow: 0 15px 25px rgb(34 197 94 / 0.7);
+    }
+    .card-inner img {
+      border-radius: 0.75rem;
+      box-shadow: 0 8px 15px rgb(0 0 0 / 0.25);
+      margin-bottom: 1rem;
+      max-width: 160px;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      flex-shrink: 0;
+    }
+    .card-inner h3 {
+      font-weight: 600;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: white;
+      flex-shrink: 0;
+    }
+    .card-inner p {
+      color: rgba(255 255 255 / 0.8);
+      font-size: 0.875rem;
+      line-height: 1.4;
+      flex-grow: 1;
+    }
+    ul.card-list {
+      list-style-type: disc;
+      list-style-position: inside;
+      color: rgba(255 255 255 / 0.8);
+      font-size: 1.125rem;
+      text-align: left;
+      padding-left: 0;
+      margin: 0;
+    }
+    ul.card-list li {
+      margin-bottom: 1rem;
+    }
+    /* Chatbot styles */
+    .blue-pulse {
+      animation: pulseBlue 2s infinite;
+    }
+    @keyframes pulseBlue {
+      0% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-[#0a0a23] via-[#1a0a3a] to-[#0a0a23] text-white">
+  <header
+    class="max-w-7xl mx-auto px-6 pt-6 flex items-center justify-between"
+  >
+    <div class="flex items-center space-x-2">
+      <img
+        alt="NusaAksara logo with blue and pink gradient background"
+        class="w-10 h-10"
+        height="40"
+        src="NusaAksara (1)2 logo.png"
+        width="40"
+      />
+      <span class="text-xl font-bold text-white">NusaAksara</span>
+    </div>
+    <nav class="hidden md:flex space-x-8 text-sm font-semibold text-white/80">
+      <a class="hover:text-white transition" href="#keluarga">Keluarga</a>
+      <a class="hover:text-white transition" href="#mahasiswa">Mahasiswa</a>
+      <a class="hover:text-white transition" href="#umum">Umum</a>
+      <a class="hover:text-white transition" href="#chatbot">Chatbot</a>
+    </nav>
+    <button
+      class="hidden md:inline-block bg-gradient-to-r from-pink-500 to-purple-500 px-5 py-2 rounded-full text-white font-semibold text-sm hover:brightness-110 transition"
+    >
+      Daftar Sekarang
+    </button>
+  </header>
+  <main class="max-w-7xl mx-auto px-6 mt-10">
+    <section
+      class="relative flex flex-col md:flex-row items-center md:items-start gap-10 md:gap-20"
+    >
+      <div class="max-w-md md:max-w-lg space-y-6 z-10">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+          NusaAksara
+          <br />
+          Platform Literasi Digital Interaktif
+        </h1>
+        <p class="text-white/70 text-base md:text-lg max-w-md">
+          Platform literasi digital interaktif Dari Mahasiswa untuk Indonesia: Literasi Cerdas, Masa Depan Gemilang
+        </p>
+        <button
+          class="bg-pink-600 hover:bg-pink-700 transition text-white font-semibold px-6 py-2 rounded-full w-max"
+        >
+          Mulai Sekarang
+        </button>
+      </div>
+      <div class="relative flex-shrink-0 w-full max-w-md md:max-w-lg">
+        <img
+          alt="ilustrasi literasi"
+          class="rounded-xl shadow-lg"
+          height="320"
+          src="2 heder.png"
+          width="320"
+        />
+        <img
+          alt="Illustration of a student reading and collaborating on a laptop with books and notes around"
+          class="absolute bottom-0 right-0 translate-x-1/4 translate-y-1/4 rounded-lg shadow-lg"
+          height="200"
+          src="header A.jpg"
+          width="200"
+        />
+        <img
+          alt="Illustration of a chatbot assistant icon with speech bubbles and digital elements"
+          class="absolute bottom-0 right-0 translate-x-3/4 translate-y-1/2"
+          height="160"
+          src="header_bot-removebg-preview.png"
+          width="120"
+        />
+      </div>
+    </section>
+    <!-- Keluarga Section -->
+    <section class="mt-20 border-t border-white/20 pt-10" id="keluarga">
+      <h2 class="text-center text-2xl font-extrabold mb-10">Fitur untuk Keluarga</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-1 gap-10">
+        
+        <!-- Fitur Ramah Semua Kalangan Card -->
+        <a href="literasi.html" class="card-3d block">
+          <div class="card-inner">
+            <img
+              alt="Illustration of diverse family members using digital devices"
+              src="8.png"
+            />
+            <h3>Fitur Ramah Semua Kalangan</h3>
+            <p>
+              Aksesibilitas mudah dipahami oleh anak-anak, orang tua, maupun
+              lansia. Tampilan sederhana namun tetap interaktif.
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- Mahasiswa Section -->
+    <section class="mt-20 border-t border-white/20 pt-10" id="mahasiswa">
+      <h2 class="text-center text-2xl font-extrabold mb-10">Fitur untuk Mahasiswa</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-10">
+        <!-- Ruang Baca Bareng Card -->
+        <a href="ruang baca.html" class="card-3d block">
+          <div class="card-inner">
+            <img
+              alt="Students reading and discussing books together online"
+              src="1.png"
+            />
+            <h3>Ruang Baca Bareng</h3>
+            <p>
+              Fitur membaca dan diskusi buku secara real-time bersama teman.
+              Cocok untuk klub literasi kampus.
+            </p>
+          </div>
+        </a>
+        <!-- Kolaborasi Penulisan Card -->
+        <a href="kolaborasi nulis.html" class="card-3d block">
+          <div class="card-inner">
+            <img
+              alt="Students collaborating on writing articles and stories online"
+              src="2.png"
+            />
+            <h3>Kolaborasi Penulisan</h3>
+            <p>
+              Mahasiswa bisa menulis cerita, artikel, atau karya ilmiah bersama.
+              Mendukung sistem co-author layaknya Google Docs.
+            </p>
+          </div>
+        </a>
+        <!-- Tantangan Literasi Card -->
+        <a href="tantangan literasi.html" class="card-3d block">
+          <div class="card-inner">
+            <img
+              alt="Illustration of weekly reading challenges and missions"
+              src="3.png"
+            />
+            <h3>Tantangan Literasi</h3>
+            <p>
+              Misi mingguan seperti membaca 1 buku, membuat ringkasan, atau
+              mengajak teman baru. Meningkatkan konsistensi mahasiswa dalam
+              membaca dan menulis.
+            </p>
+          </div>
+        </a>
+        <!-- Portofolio Literasi Card -->
+        <a href="porto" class="card-3d block sm:col-span-2">
+          <div class="card-inner">
+            <img
+              alt="Archive of favorite readings, quotes, and writings"
+              src="5.png"
+            />
+            <h3>Portofolio Literasi</h3>
+            <p>
+              Arsip bacaan, kutipan favorit, dan karya tulis mahasiswa tersimpan
+              rapi. Bisa dijadikan rekam jejak untuk beasiswa atau lomba karya
+              tulis.
+            </p>
+          </div>
+        </a>
+        <!-- Mentor Literasi Card -->
+        <a href="mentor.jpg" class="card-3d block sm:col-span-1">
+          <div class="card-inner">
+            <img
+              alt="Mentor guiding students in writing and literacy"
+              src="4.png"
+            />
+            <h3>Mentor Literasi</h3>
+            <p>
+              Bimbingan dari dosen, senior, atau penulis berpengalaman.
+              Mahasiswa bisa konsultasi tentang penulisan ilmiah atau literasi
+              kritis.
+            </p>
+          </div>
+        </a>
+        <!-- Forum Kampus & UKM Card -->
+        <a href="Forum kampus.html" class="card-3d block sm:col-span-3">
+          <div class="card-inner">
+            <img
+              alt="Students discussing in campus forum and UKM activities"
+              src="6.png"
+            />
+            <h3>Forum Kampus &amp; UKM</h3>
+            <p>
+              Diskusi antar mahasiswa dalam lingkup kampus. Tempat UKM literasi
+              mempromosikan kegiatan, lomba, atau event.
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- Umum Section -->
+    <section class="mt-20 border-t border-white/20 pt-10" id="umum">
+      <h2 class="text-center text-2xl font-extrabold mb-10">Fitur Umum</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-10">
+        <!-- Reward & Gamifikasi Card -->
+        <a href="reward.html" class="card-3d block">
+          <div class="card-inner">
+            <img
+              alt="Reward and gamification system with points and levels"
+              src="7.png"
+            />
+            <h3>Reward &amp; Gamifikasi</h3>
+            <p>
+              Poin literasi dapat ditukar dengan hadiah. Ada sistem level untuk
+              membuat membaca terasa seperti game.
+            </p>
+          </div>
+        </a>
+        <!-- Leaderboard Keluarga  Card -->
+        <a href="leader.html" class="card-3d block">
+          <div class="card-inner">
+            <img
+              alt="Leaderboard showing top active readers in family and students"
+              src="10.png"
+            />
+            <h3>Leaderboard Keluarga </h3>
+            <p>
+              Papan peringkat literasi yang menampilkan pembaca paling aktif.
+              Menumbuhkan semangat kompetitif positif.
+            </p>
+          </div>
+        </a>
+
+        <!-- Leaderboard  Mahasiswa Card -->
+        <a href="leader mahasigma.html" class="card-3d block">
+          <div class="card-inner">
+            <img
+              alt="Leaderboard showing top active readers in family and students"
+              src="11.png"/>
+            <h3>Leaderboard Mahasiswa</h3>
+            <p>
+              Papan peringkat literasi yang menampilkan pembaca paling aktif.
+              Menumbuhkan semangat kompetitif positif.
+            </p>
+          </div>
+        </a>
+        <!-- Forum Paper & Karya Tulis Ilmiah Card -->
+        <a href="paper.html" class="card-3d block">
+          <div class="card-inner">
+            <img
+              alt="Forum for sharing essays, journals, and scientific articles"
+              src="9.png"
+            />
+            <h3>Forum Paper &amp; Karya Tulis Ilmiah</h3>
+            <p>
+              Tempat berbagi esai, jurnal, atau artikel ilmiah. Mendukung
+              kolaborasi antar mahasiswa lintas kampus.
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+    <!-- Chatbot Section -->
+    <section
+      class="bg-white rounded-lg shadow p-6 md:p-10 max-w-4xl mx-auto mt-20"
+      id="chatbot"
+    >
+      <h2 class="text-3xl font-semibold text-green-700 mb-8 text-center">
+        Chatbot Literasi
+      </h2>
+      <div class="flex flex-col space-y-4">
+        <div class="flex items-center space-x-4">
+          <img
+            alt="Ikon chatbot berwarna biru dengan wajah ramah dan gelembung chat"
+            class="w-12 h-12 rounded-full blue-pulse"
+            height="48"
+            src="https://storage.googleapis.com/a1aa/image/b310fb9f-8695-40ae-0748-4090825d7bc2.jpg"
+            width="48"
+          />
+          <div
+            class="bg-blue-100 text-blue-900 p-4 rounded-lg max-w-prose blue-pulse"
+            id="chatbot-response"
+          >
+            <p>
+              Halo! Saya Chatbot Literasi, siap membantu kamu menemukan cerita,
+              menjawab pertanyaan, dan memberikan rekomendasi bacaan.
+            </p>
+          </div>
+        </div>
+        <form
+          id="chatbot-form"
+          class="flex space-x-3"
+          method="get"
+          onsubmit="return handleChat(event)"
+        >
+          <input
+            aria-label="Input pesan chatbot"
+            class="flex-grow border border-green-400 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-green-400"
+            id="chatbot-input"
+            name="query"
+            placeholder="Tulis pesan kamu..."
+            required
+            type="text"
+          />
+          <button
+            aria-label="Kirim pesan chatbot"
+            class="bg-green-500 text-white px-5 py-2 rounded-lg hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400"
+            type="submit"
+          >
+            Kirim
+          </button>
+        </form>
+        <div
+          aria-atomic="true"
+          aria-live="polite"
+          class="mt-4 max-h-64 overflow-y-auto space-y-3 border border-green-300 rounded-lg p-4 bg-green-50"
+          id="chat-messages"
+        >
+          <div class="flex items-start space-x-3">
+            <img
+              alt="Avatar pengguna aplikasi literasi dengan ekspresi antusias"
+              class="w-10 h-10 rounded-full"
+              height="40"
+              src="https://storage.googleapis.com/a1aa/image/e1e91528-4b41-4fe9-b51d-d3d431cb4dce.jpg"
+              width="40"
+            />
+            <div class="bg-white p-3 rounded-lg shadow max-w-xs">
+              <p class="text-green-900">
+                Apa rekomendasi buku untuk pemula dalam literasi digital?
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3 justify-end">
+            <div
+              class="bg-green-600 text-white p-3 rounded-lg shadow max-w-xs"
+            >
+              <p>
+                Saya merekomendasikan "Literasi Digital untuk Semua" yang mudah
+                dipahami dan sangat informatif.
+              </p>
+            </div>
+            <img
+              alt="Ikon chatbot berwarna biru dengan wajah ramah"
+              class="w-10 h-10 rounded-full blue-pulse"
+              height="40"
+              src="https://storage.googleapis.com/a1aa/image/b310fb9f-8695-40ae-0748-4090825d7bc2.jpg"
+              width="40"
+            />
+          </div>
+          <div class="flex items-start space-x-3">
+            <img
+              alt="Avatar pengguna aplikasi literasi dengan ekspresi antusias"
+              class="w-10 h-10 rounded-full"
+              height="40"
+              src="https://storage.googleapis.com/a1aa/image/e1e91528-4b41-4fe9-b51d-d3d431cb4dce.jpg"
+              width="40"
+            />
+            <div class="bg-white p-3 rounded-lg shadow max-w-xs">
+              <p class="text-green-900">
+                Bagaimana cara bergabung dengan komunitas literasi di kampus?
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start space-x-3 justify-end">
+            <div
+              class="bg-green-600 text-white p-3 rounded-lg shadow max-w-xs"
+            >
+              <p>
+                Kamu bisa mengunjungi fitur Forum Kampus &amp; UKM di aplikasi
+                dan mendaftar melalui halaman komunitas.
+              </p>
+            </div>
+            <img
+              alt="Ikon chatbot berwarna biru dengan wajah ramah"
+              class="w-10 h-10 rounded-full blue-pulse"
+              height="40"
+              src="https://storage.googleapis.com/a1aa/image/b310fb9f-8695-40ae-0748-4090825d7bc2.jpg"
+              width="40"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    function handleChat(event) {
+      event.preventDefault();
+      const input = document.getElementById("chatbot-input");
+      const messages = document.getElementById("chat-messages");
+      const userText = input.value.trim();
+      if (!userText) return false;
+
+      // Append user message
+      const userDiv = document.createElement("div");
+      userDiv.className = "flex items-start space-x-3";
+      const userImg = document.createElement("img");
+      userImg.src =
+        "https://storage.googleapis.com/a1aa/image/e1e91528-4b41-4fe9-b51d-d3d431cb4dce.jpg";
+      userImg.alt = "Avatar pengguna aplikasi literasi dengan ekspresi antusias";
+      userImg.className = "w-10 h-10 rounded-full";
+      userImg.width = 40;
+      userImg.height = 40;
+      const userMsg = document.createElement("div");
+      userMsg.className = "bg-white p-3 rounded-lg shadow max-w-xs";
+      const userP = document.createElement("p");
+      userP.className = "text-green-900";
+      userP.textContent = userText;
+      userMsg.appendChild(userP);
+      userDiv.appendChild(userImg);
+      userDiv.appendChild(userMsg);
+      messages.appendChild(userDiv);
+
+      input.value = "";
+      messages.scrollTop = messages.scrollHeight;
+
+      // Generate bot response
+      setTimeout(() => {
+        const botDiv = document.createElement("div");
+        botDiv.className = "flex items-start space-x-3 justify-end";
+        const botMsg = document.createElement("div");
+        botMsg.className = "bg-green-600 text-white p-3 rounded-lg shadow max-w-xs";
+        const botP = document.createElement("p");
+        botP.textContent = generateResponse(userText);
+        botMsg.appendChild(botP);
+        const botImg = document.createElement("img");
+        botImg.src =
+          "https://storage.googleapis.com/a1aa/image/b310fb9f-8695-40ae-0748-4090825d7bc2.jpg";
+        botImg.alt = "Ikon chatbot berwarna biru dengan wajah ramah";
+        botImg.className = "w-10 h-10 rounded-full blue-pulse";
+        botImg.width = 40;
+        botImg.height = 40;
+        botDiv.appendChild(botMsg);
+        botDiv.appendChild(botImg);
+        messages.appendChild(botDiv);
+        messages.scrollTop = messages.scrollHeight;
+      }, 800);
+
+      return false;
+    }
+
+    function generateResponse(input) {
+      const text = input.toLowerCase();
+
+      const ageKeywords = [
+        "anak",
+        "remaja",
+        "dewasa",
+        "usia",
+        "umur",
+        "anak-anak",
+        "anak kecil",
+        "anak muda",
+        "mahasiswa",
+        "pelajar",
+      ];
+      const aksarasaKeywords = [
+        "aksarasa",
+        "fitur aksarasa",
+        "cara menggunakan aksarasa",
+        "apa itu aksarasa",
+        "aksarasa literasi",
+        "aksarasa app",
+      ];
+
+      for (const keyword of ageKeywords) {
+        if (text.includes(keyword)) {
+          return "Untuk literasi sesuai usia, kami menyediakan berbagai materi yang disesuaikan mulai dari anak-anak, remaja, hingga dewasa. Kamu bisa memilih fitur yang sesuai dengan kelompok usia kamu di aplikasi.";
+        }
+      }
+
+      for (const keyword of aksarasaKeywords) {
+        if (text.includes(keyword)) {
+          return "Fitur Aksarasa adalah layanan khusus dalam aplikasi kami yang membantu kamu mengakses berbagai sumber literasi digital dengan mudah dan interaktif. Kamu bisa menggunakan Aksarasa untuk membaca, mendengarkan, dan berdiskusi tentang berbagai materi literasi.";
+        }
+      }
+
+      if (text.includes("literasi")) {
+        return "Literasi adalah kemampuan membaca, menulis, dan memahami informasi. Aplikasi ini membantu kamu meningkatkan literasi melalui berbagai fitur menarik sesuai kebutuhan.";
+      } 
+
+      if (/(halo|hai|hello|selamat pagi|selamat siang|selamat sore|selamat malam)/.test(text)) {
+        return "Halo! Ada yang bisa saya bantu seputar literasi atau fitur aplikasi?";
+      }
+
+      return "Maaf, saya belum mengerti pertanyaan kamu. Silakan tanyakan seputar literasi sesuai usia atau fitur Aksarasa, saya siap membantu!";
+    }
+  </script>
+</body>
+</html>

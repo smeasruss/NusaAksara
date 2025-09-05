@@ -1,0 +1,335 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Ruang Baca Bareng - Buat Grup &amp; Diskusi</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: "Inter", sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-50 min-h-screen flex flex-col items-center p-4">
+  <header class="w-full max-w-6xl mb-8 relative">
+   <h1 class="text-4xl font-semibold text-gray-800 text-center mb-4">
+    Ruang Baca Bareng
+   </h1>
+  </header>
+  <main
+    class="w-full max-w-6xl bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row md:space-x-8 relative"
+  >
+   <!-- Left side: Illustration and description -->
+   <section class="md:w-1/2 flex flex-col justify-center mb-8 md:mb-0">
+    <img
+      alt="Illustration of students reading together in a group with books and laptops open, soft colored background creating an interactive and friendly atmosphere"
+      class="rounded-lg shadow-md w-full h-auto object-cover"
+      height="400"
+      loading="lazy"
+      src="https://storage.googleapis.com/a1aa/image/497b23e1-4e68-41bc-00b6-a336f242f566.jpg"
+      width="600"
+    />
+    <div class="mt-6 text-gray-700 text-lg">
+     <p>
+      Buat grup baca bersama teman sekelas, komunitas, atau UKM berdasarkan
+      nama masing-masing mahasiswa. Di dalam grup, kamu bisa berdiskusi
+      secara interaktif melalui teks, audio, video, dan berbagi layar
+      (screen share).
+     </p>
+    </div>
+   </section>
+   <!-- Right side: Group creation and chat -->
+   <section class="md:w-1/2 flex flex-col relative">
+    <!-- Group Creation -->
+    <div class="mb-6" id="homeSection">
+     <h2 class="text-2xl font-semibold text-gray-800 mb-4">Buat Grup Baru</h2>
+     <form class="space-y-4" id="createGroupForm">
+      <div>
+       <label
+         class="block text-gray-700 font-semibold mb-1"
+         for="groupName"
+         >Nama Grup</label
+       >
+       <input
+         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+         id="groupName"
+         name="groupName"
+         placeholder="Masukkan nama grup"
+         required=""
+         type="text"
+       />
+      </div>
+      <div>
+       <label
+         class="block text-gray-700 font-semibold mb-1"
+         for="creatorName"
+         >Nama Kamu</label
+       >
+       <input
+         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+         id="creatorName"
+         name="creatorName"
+         placeholder="Masukkan nama kamu"
+         required=""
+         type="text"
+       />
+      </div>
+      <button
+        class="w-full px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-md shadow-md transition-colors flex items-center justify-center"
+        type="submit"
+      >
+       <i class="fas fa-plus mr-2"></i>Buat Grup
+      </button>
+     </form>
+     <!-- Groups List -->
+     <div class="mt-8">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Daftar Grup</h2>
+      <div
+        id="groupsList"
+        class="max-h-48 overflow-y-auto border border-gray-300 rounded-md p-3 bg-gray-50"
+      >
+       <p class="text-gray-500 italic text-center">Belum ada grup yang dibuat.</p>
+      </div>
+     </div>
+    </div>
+    <!-- Group Chat & Discussion -->
+    <div
+      class="flex flex-col flex-grow border border-gray-300 rounded-lg shadow-inner p-4 hidden"
+      id="chatContainer"
+    >
+     <button
+       id="btnBack"
+       type="button"
+       class="absolute top-4 left-4 flex items-center space-x-2 px-3 py-1 bg-gray-300 hover:bg-gray-400 rounded-md shadow-sm transition-colors text-gray-700 z-10"
+       aria-label="Kembali ke beranda"
+     >
+      <i class="fas fa-arrow-left"></i>
+      <span>Kembali</span>
+     </button>
+     <h2 class="text-2xl font-semibold text-gray-800 mb-4 text-center" id="chatGroupTitle">
+      Diskusi Grup
+     </h2>
+     <div class="mb-4 text-gray-600 italic text-center" id="groupInfo"></div>
+     <div
+       class="flex-grow overflow-y-auto border border-gray-300 rounded-md p-3 mb-4 bg-gray-50"
+       id="chatMessages"
+       style="min-height: 200px"
+     >
+      <!-- Chat messages will appear here -->
+     </div>
+     <form class="flex space-x-2" id="chatForm">
+      <input
+        autocomplete="off"
+        class="flex-grow px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        id="chatInput"
+        placeholder="Ketik pesan..."
+        required=""
+        type="text"
+      />
+      <button
+        aria-label="Kirim pesan"
+        class="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md shadow-md transition-colors flex items-center justify-center"
+        type="submit"
+      >
+       <i class="fas fa-paper-plane"></i>
+      </button>
+     </form>
+     <div class="mt-4 flex flex-wrap gap-3 justify-center">
+      <button
+        class="flex items-center space-x-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-md shadow-md transition-colors"
+        id="btnAudio"
+        type="button"
+      >
+       <i class="fas fa-microphone"></i>
+       <span>Audio</span>
+      </button>
+      <button
+        class="flex items-center space-x-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-md shadow-md transition-colors"
+        id="btnVideo"
+        type="button"
+      >
+       <i class="fas fa-video"></i>
+       <span>Video</span>
+      </button>
+      <button
+        class="flex items-center space-x-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white rounded-md shadow-md transition-colors"
+        id="btnScreenShare"
+        type="button"
+      >
+       <i class="fas fa-desktop"></i>
+       <span>Share Screen</span>
+      </button>
+     </div>
+     <div class="mt-4 text-center text-gray-700 italic" id="mediaStatus">
+      Tidak ada media aktif
+     </div>
+    </div>
+   </section>
+  </main>
+  <script>
+    // State for groups and chats
+    let groups = [];
+    let currentGroup = null;
+
+    const createGroupForm = document.getElementById("createGroupForm");
+    const groupsList = document.getElementById("groupsList");
+    const chatContainer = document.getElementById("chatContainer");
+    const chatGroupTitle = document.getElementById("chatGroupTitle");
+    const groupInfo = document.getElementById("groupInfo");
+    const chatMessagesDiv = document.getElementById("chatMessages");
+    const chatForm = document.getElementById("chatForm");
+    const chatInput = document.getElementById("chatInput");
+    const mediaStatus = document.getElementById("mediaStatus");
+    const homeSection = document.getElementById("homeSection");
+    const btnBack = document.getElementById("btnBack");
+
+    // Media buttons
+    const btnAudio = document.getElementById("btnAudio");
+    const btnVideo = document.getElementById("btnVideo");
+    const btnScreenShare = document.getElementById("btnScreenShare");
+
+    let audioActive = false;
+    let videoActive = false;
+    let screenShareActive = false;
+
+    function updateMediaStatus() {
+      let statuses = [];
+      if (audioActive) statuses.push("Audio aktif");
+      if (videoActive) statuses.push("Video aktif");
+      if (screenShareActive) statuses.push("Share screen aktif");
+      mediaStatus.textContent =
+        statuses.length > 0 ? statuses.join(" | ") : "Tidak ada media aktif";
+    }
+
+    btnAudio.addEventListener("click", () => {
+      audioActive = !audioActive;
+      btnAudio.classList.toggle("bg-green-700", audioActive);
+      updateMediaStatus();
+    });
+
+    btnVideo.addEventListener("click", () => {
+      videoActive = !videoActive;
+      btnVideo.classList.toggle("bg-red-700", videoActive);
+      updateMediaStatus();
+    });
+
+    btnScreenShare.addEventListener("click", () => {
+      screenShareActive = !screenShareActive;
+      btnScreenShare.classList.toggle("bg-purple-700", screenShareActive);
+      updateMediaStatus();
+    });
+
+    createGroupForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const groupName = e.target.groupName.value.trim();
+      const creatorName = e.target.creatorName.value.trim();
+      if (!groupName || !creatorName) return;
+
+      // Check if group name already exists (case insensitive)
+      if (
+        groups.some(
+          (g) => g.name.toLowerCase() === groupName.toLowerCase()
+        )
+      ) {
+        alert("Nama grup sudah ada, silakan gunakan nama lain.");
+        return;
+      }
+
+      const newGroup = {
+        id: Date.now().toString(),
+        name: groupName,
+        creator: creatorName,
+        members: [creatorName],
+        chatMessages: [],
+      };
+      groups.push(newGroup);
+      renderGroupsList();
+      e.target.reset();
+    });
+
+    function renderGroupsList() {
+      groupsList.innerHTML = "";
+      if (groups.length === 0) {
+        groupsList.innerHTML =
+          '<p class="text-gray-500 italic text-center">Belum ada grup yang dibuat.</p>';
+        chatContainer.classList.add("hidden");
+        currentGroup = null;
+        return;
+      }
+      groups.forEach((group) => {
+        const groupBtn = document.createElement("button");
+        groupBtn.type = "button";
+        groupBtn.className =
+          "w-full text-left px-3 py-2 mb-2 rounded-md border border-gray-300 hover:bg-blue-100 transition-colors font-semibold text-gray-800";
+        groupBtn.textContent = `${group.name} (dibuat oleh ${group.creator})`;
+        groupBtn.addEventListener("click", () => {
+          selectGroup(group.id);
+        });
+        groupsList.appendChild(groupBtn);
+      });
+    }
+
+    function selectGroup(groupId) {
+      const group = groups.find((g) => g.id === groupId);
+      if (!group) return;
+      currentGroup = group;
+      chatContainer.classList.remove("hidden");
+      homeSection.classList.add("hidden");
+      chatGroupTitle.textContent = `Diskusi Grup: ${group.name}`;
+      groupInfo.textContent = `Grup: "${group.name}" dibuat oleh ${group.creator}`;
+      renderChatMessages();
+      chatInput.focus();
+      // Reset media status and buttons
+      audioActive = false;
+      videoActive = false;
+      screenShareActive = false;
+      btnAudio.classList.remove("bg-green-700");
+      btnVideo.classList.remove("bg-red-700");
+      btnScreenShare.classList.remove("bg-purple-700");
+      updateMediaStatus();
+    }
+
+    chatForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const message = chatInput.value.trim();
+      if (!message || !currentGroup) return;
+      // Add message with timestamp and sender
+      currentGroup.chatMessages.push({
+        sender: currentGroup.creator,
+        text: message,
+        time: new Date(),
+      });
+      renderChatMessages();
+      chatInput.value = "";
+      chatInput.focus();
+      // Scroll to bottom
+      chatMessagesDiv.scrollTop = chatMessagesDiv.scrollHeight;
+    });
+
+    btnBack.addEventListener("click", () => {
+      chatContainer.classList.add("hidden");
+      homeSection.classList.remove("hidden");
+      currentGroup = null;
+      // Reset media status and buttons
+      audioActive = false;
+      videoActive = false;
+      screenShareActive = false;
+      btnAudio.classList.remove("bg-green-700");
+      btnVideo.classList.remove("bg-red-700");
+      btnScreenShare.classList.remove("bg-purple-700");
+      updateMediaStatus();
+    });
+
+    // Initial render
+    renderGroupsList();
+  </script>
+ </body>
+</html>

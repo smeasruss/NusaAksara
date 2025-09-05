@@ -1,0 +1,281 @@
+<html class="scroll-smooth" lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Kumpulan Dongeng &amp; Cerita Petualangan Anak
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Comic Neue', cursive, sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gradient-to-b from-yellow-100 to-yellow-50 min-h-screen flex flex-col">
+  <header class="bg-yellow-400 shadow-md">
+   <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex justify-between items-center">
+    <h1 class="text-3xl sm:text-4xl font-extrabold text-white select-none">
+     Dongeng Ceria
+    </h1>
+    <button aria-label="Buka menu navigasi" class="sm:hidden text-white text-3xl focus:outline-none" id="menu-toggle">
+     <i class="fas fa-bars"></i>
+    </button>
+    <ul class="hidden sm:flex space-x-6 text-center text-white text-2xl font-semibold" id="menu">
+     <li>
+      <a class="hover:text-yellow-200 transition block py-2 px-3" href="#cerita-pilihan">
+       Cerita Pilihan
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-yellow-200 transition block py-2 px-3" href="#cerita-bergambar">
+       Cerita Bergambar
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-yellow-200 transition block py-2 px-3" href="#petualangan">
+       Petualangan
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-yellow-200 transition block py-2 px-3" href="#tentang">
+       Tentang
+      </a>
+     </li>
+    </ul>
+   </nav>
+   <div class="sm:hidden bg-yellow-400 px-4 pb-4 hidden" id="mobile-menu">
+    <ul class="space-y-3 text-white text-2xl font-semibold">
+     <li>
+      <a class="block hover:text-yellow-200 transition" href="#cerita-pilihan" onclick="toggleMenu()">
+       Cerita Pilihan
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-yellow-200 transition" href="#cerita-bergambar" onclick="toggleMenu()">
+       Cerita Bergambar
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-yellow-200 transition" href="#petualangan" onclick="toggleMenu()">
+       Petualangan
+      </a>
+     </li>
+     <li>
+      <a class="block hover:text-yellow-200 transition" href="#tentang" onclick="toggleMenu()">
+       Tentang
+      </a>
+     </li>
+    </ul>
+   </div>
+  </header>
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+   <!-- Cerita Pilihan Section -->
+   <section class="space-y-8" id="cerita-pilihan">
+    <h2 class="text-4xl sm:text-5xl font-extrabold text-yellow-700 text-center mb-6 select-none leading-tight">
+     Cerita Pilihan
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+     <!-- Card 1 -->
+     <article class="bg-yellow-200 rounded-3xl shadow-lg p-5 sm:p-6 flex flex-col items-center text-center">
+      <img alt="Ilustrasi kelinci dan kura-kura sedang berlomba di hutan cerah dengan pepohonan hijau dan langit biru" class="rounded-xl mb-4 w-full object-cover h-40 sm:h-48" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/e8902cd3-bffa-4375-d14c-09099f9ac04d.jpg" width="300"/>
+      <h3 class="text-2xl sm:text-3xl font-bold text-yellow-900 mb-2">
+       Kelinci dan Kura-Kura
+      </h3>
+      <p class="text-yellow-800 text-base sm:text-lg mb-4 px-2 sm:px-0">
+       Cerita tentang perlombaan antara kelinci yang cepat dan kura-kura yang sabar.
+      </p>
+      <button aria-label="Dengarkan cerita Kelinci dan Kura-Kura" class="btn-dengarkan bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold py-3 px-5 sm:px-6 rounded-full shadow-md transition flex items-center space-x-2 sm:space-x-3 select-none text-lg sm:text-2xl" data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3">
+       <i class="fas fa-play-circle text-2xl sm:text-3xl">
+       </i>
+       <span>
+        Dengarkan Cerita
+       </span>
+      </button>
+     </article>
+     <!-- Card 2 -->
+     <article class="bg-yellow-200 rounded-3xl shadow-lg p-5 sm:p-6 flex flex-col items-center text-center">
+      <img alt="Ilustrasi si kancil cerdik berjalan di hutan dengan pepohonan dan bunga warna-warni" class="rounded-xl mb-4 w-full object-cover h-40 sm:h-48" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c25c834a-df68-42c9-12ec-c3b5a7b05da7.jpg" width="300"/>
+      <h3 class="text-2xl sm:text-3xl font-bold text-yellow-900 mb-2">
+       Petualangan Si Kancil
+      </h3>
+      <p class="text-yellow-800 text-base sm:text-lg mb-4 px-2 sm:px-0">
+       Kisah seru si kancil yang cerdik menghadapi berbagai tantangan di hutan.
+      </p>
+      <button aria-label="Dengarkan cerita Petualangan Si Kancil" class="btn-dengarkan bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold py-3 px-5 sm:px-6 rounded-full shadow-md transition flex items-center space-x-2 sm:space-x-3 select-none text-lg sm:text-2xl" data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3">
+       <i class="fas fa-play-circle text-2xl sm:text-3xl">
+       </i>
+       <span>
+        Dengarkan Cerita
+       </span>
+      </button>
+     </article>
+     <!-- Card 3 -->
+     <article class="bg-yellow-200 rounded-3xl shadow-lg p-5 sm:p-6 flex flex-col items-center text-center">
+      <img alt="Ilustrasi Putri Salju dengan tujuh kurcaci di sebuah rumah kecil di hutan yang cerah" class="rounded-xl mb-4 w-full object-cover h-40 sm:h-48" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/6de010a4-cc09-4a3a-d914-e5ca46405a05.jpg" width="300"/>
+      <h3 class="text-2xl sm:text-3xl font-bold text-yellow-900 mb-2">
+       Putri Salju dan Tujuh Kurcaci
+      </h3>
+      <p class="text-yellow-800 text-base sm:text-lg mb-4 px-2 sm:px-0">
+       Dongeng klasik tentang kebaikan dan persahabatan yang hangat.
+      </p>
+      <button aria-label="Dengarkan cerita Putri Salju dan Tujuh Kurcaci" class="btn-dengarkan bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold py-3 px-5 sm:px-6 rounded-full shadow-md transition flex items-center space-x-2 sm:space-x-3 select-none text-lg sm:text-2xl" data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3">
+       <i class="fas fa-play-circle text-2xl sm:text-3xl">
+       </i>
+       <span>
+        Dengarkan Cerita
+       </span>
+      </button>
+     </article>
+    </div>
+   </section>
+   <!-- Cerita Bergambar Section -->
+   <section class="space-y-8" id="cerita-bergambar">
+    <h2 class="text-4xl sm:text-5xl font-extrabold text-yellow-700 text-center mb-6 select-none leading-tight">
+     Cerita Bergambar
+    </h2>
+    <div class="grid grid-cols-1 gap-8">
+     <article class="bg-yellow-100 rounded-3xl shadow-lg p-5 sm:p-6 flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
+      <img alt="Ilustrasi naga kecil berwarna merah cerah terbang di atas pegunungan hijau dengan langit biru cerah" class="rounded-2xl w-full md:w-1/2 object-cover h-64 sm:h-72 md:h-64" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/86e0899d-b634-4ad3-a25d-d95048e530c2.jpg" width="400"/>
+      <div class="w-full md:w-1/2 text-yellow-900 px-2 sm:px-0">
+       <h3 class="text-3xl sm:text-4xl font-bold mb-3">
+        Petualangan Si Naga Kecil
+       </h3>
+       <p class="text-xl sm:text-2xl leading-relaxed">
+        Ikuti kisah naga kecil yang ingin belajar terbang dan berteman dengan makhluk hutan.
+       </p>
+      </div>
+     </article>
+     <article class="bg-yellow-100 rounded-3xl shadow-lg p-5 sm:p-6 flex flex-col md:flex-row items-center space-y-6 md:space-y-0 md:space-x-8">
+      <img alt="Ilustrasi putri laut cantik dengan rambut panjang berwarna biru dan ikan ajaib berwarna-warni di dasar laut" class="rounded-2xl w-full md:w-1/2 object-cover h-64 sm:h-72 md:h-64" height="300" loading="lazy" src="https://storage.googleapis.com/a1aa/image/d4d88b1b-3919-42fe-9cbe-d8a44862c28b.jpg" width="400"/>
+      <div class="w-full md:w-1/2 text-yellow-900 px-2 sm:px-0">
+       <h3 class="text-3xl sm:text-4xl font-bold mb-3">
+        Putri Laut dan Ikan Ajaib
+       </h3>
+       <p class="text-xl sm:text-2xl leading-relaxed">
+        Cerita tentang putri laut yang bertemu ikan ajaib dan belajar arti keberanian.
+       </p>
+      </div>
+     </article>
+    </div>
+   </section>
+   <!-- Petualangan Section -->
+   <section class="space-y-8" id="petualangan">
+    <h2 class="text-4xl sm:text-5xl font-extrabold text-yellow-700 text-center mb-6 select-none leading-tight">
+     Cerita Petualangan
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+     <article class="bg-yellow-200 rounded-3xl shadow-lg p-5 sm:p-6 flex flex-col items-center text-center">
+      <img alt="Ilustrasi beruang coklat besar berjalan di hutan lebat dengan pepohonan hijau dan bunga warna-warni" class="rounded-xl mb-4 w-full object-cover h-40 sm:h-48" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3b196a6a-4b35-4f8c-1fe4-85f81146e46c.jpg" width="300"/>
+      <h3 class="text-2xl sm:text-3xl font-bold text-yellow-900 mb-2">
+       Petualangan Si Beruang
+      </h3>
+      <p class="text-yellow-800 text-base sm:text-lg mb-4 px-2 sm:px-0">
+       Beruang yang ramah menjelajahi hutan dan bertemu teman baru.
+      </p>
+      <button aria-label="Dengarkan cerita Petualangan Si Beruang" class="btn-dengarkan bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold py-3 px-5 sm:px-6 rounded-full shadow-md transition flex items-center space-x-2 sm:space-x-3 select-none text-lg sm:text-2xl" data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3">
+       <i class="fas fa-play-circle text-2xl sm:text-3xl">
+       </i>
+       <span>
+        Dengarkan Cerita
+       </span>
+      </button>
+     </article>
+     <article class="bg-yellow-200 rounded-3xl shadow-lg p-5 sm:p-6 flex flex-col items-center text-center">
+      <img alt="Ilustrasi burung hantu dengan mata besar terbang di malam hari di atas pepohonan" class="rounded-xl mb-4 w-full object-cover h-40 sm:h-48" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/227b4910-49b2-4d09-40bd-5e7e951078db.jpg" width="300"/>
+      <h3 class="text-2xl sm:text-3xl font-bold text-yellow-900 mb-2">
+       Petualangan Si Burung Hantu
+      </h3>
+      <p class="text-yellow-800 text-base sm:text-lg mb-4 px-2 sm:px-0">
+       Burung hantu bijak yang membantu teman-temannya di malam hari.
+      </p>
+      <button aria-label="Dengarkan cerita Petualangan Si Burung Hantu" class="btn-dengarkan bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold py-3 px-5 sm:px-6 rounded-full shadow-md transition flex items-center space-x-2 sm:space-x-3 select-none text-lg sm:text-2xl" data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3">
+       <i class="fas fa-play-circle text-2xl sm:text-3xl">
+       </i>
+       <span>
+        Dengarkan Cerita
+       </span>
+      </button>
+     </article>
+     <article class="bg-yellow-200 rounded-3xl shadow-lg p-5 sm:p-6 flex flex-col items-center text-center">
+      <img alt="Ilustrasi kupu-kupu berwarna-warni terbang di taman bunga yang cerah dan penuh warna" class="rounded-xl mb-4 w-full object-cover h-40 sm:h-48" height="200" loading="lazy" src="https://storage.googleapis.com/a1aa/image/482eefa7-100c-4929-2587-a5c621895326.jpg" width="300"/>
+      <h3 class="text-2xl sm:text-3xl font-bold text-yellow-900 mb-2">
+       Petualangan Si Kupu-Kupu
+      </h3>
+      <p class="text-yellow-800 text-base sm:text-lg mb-4 px-2 sm:px-0">
+       Kupu-kupu kecil yang ingin melihat dunia dan bertemu teman baru.
+      </p>
+      <button aria-label="Dengarkan cerita Petualangan Si Kupu-Kupu" class="btn-dengarkan bg-yellow-400 hover:bg-yellow-500 text-yellow-900 font-bold py-3 px-5 sm:px-6 rounded-full shadow-md transition flex items-center space-x-2 sm:space-x-3 select-none text-lg sm:text-2xl" data-audio="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-6.mp3">
+       <i class="fas fa-play-circle text-2xl sm:text-3xl">
+       </i>
+       <span>
+        Dengarkan Cerita
+       </span>
+      </button>
+     </article>
+    </div>
+   </section>
+   <!-- Tentang Section -->
+   <section class="bg-yellow-300 rounded-3xl p-6 sm:p-8 max-w-4xl mx-auto text-yellow-900 text-center space-y-6" id="tentang">
+    <h2 class="text-4xl sm:text-5xl font-extrabold select-none leading-tight">
+     Tentang Dongeng Ceria
+    </h2>
+    <p class="text-lg sm:text-2xl leading-relaxed px-2 sm:px-0">
+     Dongeng Ceria adalah website edukatif yang menyediakan kumpulan dongeng dan cerita petualangan yang menyenangkan dan mudah dipahami untuk anak-anak. Kami ingin membantu anak-anak belajar sambil bermain dan mendengarkan cerita yang penuh warna dan imajinasi.
+    </p>
+    <p class="text-lg sm:text-2xl leading-relaxed px-2 sm:px-0">
+     Semua cerita dilengkapi dengan audio agar anak-anak dapat mendengarkan dongeng dengan mudah, serta gambar yang menarik untuk menambah keseruan membaca.
+    </p>
+   </section>
+  </main>
+  <footer class="bg-yellow-400 text-yellow-900 py-6 text-center select-none">
+   <p class="text-lg sm:text-xl font-semibold">
+    © 2025 Dongeng Ceria. Semua hak cipta dilindungi.
+   </p>
+  </footer>
+  <audio class="hidden" controls="" id="audio-player" aria-label="Pemutar audio dongeng"></audio>
+  <script>
+   const buttons = document.querySelectorAll('.btn-dengarkan');
+    const audioPlayer = document.getElementById('audio-player');
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menu = document.getElementById('menu');
+
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const audioSrc = btn.getAttribute('data-audio');
+        if (audioPlayer.src !== audioSrc) {
+          audioPlayer.src = audioSrc;
+        }
+        audioPlayer.play();
+        // Show audio player on mobile
+        if(window.innerWidth < 768) {
+          audioPlayer.classList.remove('hidden');
+          audioPlayer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+          audioPlayer.classList.add('hidden');
+        }
+      });
+    });
+
+    // Pause audio when scrolling
+    window.addEventListener('scroll', () => {
+      if (!audioPlayer.paused) {
+        audioPlayer.pause();
+      }
+    });
+
+    // Mobile menu toggle
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Close mobile menu after clicking a link
+    function toggleMenu() {
+      mobileMenu.classList.add('hidden');
+    }
+  </script>
+ </body>
+</html>

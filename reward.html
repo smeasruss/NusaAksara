@@ -1,0 +1,532 @@
+<html class="scroll-smooth" lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Reward Literasi untuk Mahasiswa &amp; Keluarga
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+   html, body {
+     overflow-x: hidden;
+   }
+  </style>
+ </head>
+ <body class="bg-gray-50 min-h-screen flex flex-col">
+  <header class="bg-white shadow-md sticky top-0 z-30">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+    <div class="flex items-center space-x-3 min-w-0">
+     <img alt="Logo aplikasi reward literasi untuk mahasiswa dan keluarga, bergaya modern dan minimalis" class="w-10 h-10 rounded-md flex-shrink-0" height="40" src="https://storage.googleapis.com/a1aa/image/2830b730-cc12-4f92-40a8-7c38585041e9.jpg" width="40"/>
+     <h1 class="text-xl font-semibold text-gray-800 truncate">
+      LiterasiReward
+     </h1>
+    </div>
+    <nav class="hidden md:flex space-x-8 text-gray-700 font-medium flex-shrink-0">
+     <a class="hover:text-indigo-600 transition whitespace-nowrap" href="#mahasiswa">
+      Mahasiswa
+     </a>
+     <a class="hover:text-indigo-600 transition whitespace-nowrap" href="#keluarga">
+      Keluarga
+     </a>
+     <a class="hover:text-indigo-600 transition whitespace-nowrap" href="#rewards">
+      Reward
+     </a>
+     <a class="hover:text-indigo-600 transition whitespace-nowrap" href="#cara-kerja">
+      Cara Kerja
+     </a>
+     <a class="hover:text-indigo-600 transition whitespace-nowrap" href="index.html" id="dashboard-link">
+      Dashboard
+     </a>
+    </nav>
+    <button aria-label="Toggle menu" class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500" id="mobile-menu-button">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+   </div>
+   <nav aria-label="Mobile menu" class="md:hidden bg-white border-t border-gray-200 hidden" id="mobile-menu">
+    <a class="block px-4 py-3 text-gray-700 hover:bg-indigo-50 whitespace-nowrap" href="#mahasiswa">
+     Mahasiswa
+    </a>
+    <a class="block px-4 py-3 text-gray-700 hover:bg-indigo-50 whitespace-nowrap" href="#keluarga">
+     Keluarga
+    </a>
+    <a class="block px-4 py-3 text-gray-700 hover:bg-indigo-50 whitespace-nowrap" href="#rewards">
+     Reward
+    </a>
+    <a class="block px-4 py-3 text-gray-700 hover:bg-indigo-50 whitespace-nowrap" href="#cara-kerja">
+     Cara Kerja
+    </a>
+    <a class="block px-4 py-3 text-gray-700 hover:bg-indigo-50 whitespace-nowrap" href="index.html" id="dashboard-link-mobile">
+     Dashboard
+    </a>
+   </nav>
+  </header>
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full max-w-full">
+   <section class="mb-16" id="hero">
+    <div class="text-center max-w-3xl mx-auto px-4 sm:px-0">
+     <h2 class="text-3xl sm:text-4xl font-extrabold text-indigo-700 mb-4 leading-tight">
+      Reward Literasi untuk Mahasiswa &amp; Keluarga
+     </h2>
+     <p class="text-gray-600 text-base sm:text-lg px-2 sm:px-0">
+      Kumpulkan poin dari aktivitas literasi seperti membaca, menulis, dan berdiskusi, lalu tukarkan dengan reward menarik untuk mahasiswa dan keluarga.
+     </p>
+     <img alt="Ilustrasi digital yang menampilkan mahasiswa dan keluarga sedang membaca buku dan berdiskusi dengan suasana hangat" class="mx-auto mt-8 rounded-lg shadow-lg w-full max-w-full h-auto" height="300" src="https://storage.googleapis.com/a1aa/image/7a09e253-918d-493b-482a-ab86dab9ee39.jpg" width="600"/>
+    </div>
+   </section>
+   <section class="mb-20" id="mahasiswa">
+    <h3 class="text-2xl sm:text-3xl font-semibold text-indigo-700 mb-6 text-center">
+     Reward untuk Mahasiswa
+    </h3>
+    <p class="text-center max-w-2xl mx-auto text-gray-700 mb-10 px-4 sm:px-0 text-sm sm:text-base">
+     Tingkatkan kemampuan literasi Anda dengan mengumpulkan poin dari membaca buku, mengikuti seminar, dan menulis artikel. Tukarkan poin dengan reward edukatif dan hiburan.
+    </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto px-4 sm:px-0">
+     <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+      <img alt="Voucher buku dengan desain warna cerah dan ikon buku terbuka" class="mb-4 rounded-md w-24 h-24 object-cover" height="120" src="https://storage.googleapis.com/a1aa/image/65f4e149-6f24-423d-4726-7d5ece82f500.jpg" width="120"/>
+      <h4 class="text-lg sm:text-xl font-semibold mb-2">
+       Voucher Buku
+      </h4>
+      <p class="text-gray-600 text-sm sm:text-base">
+       Tukar poin dengan voucher untuk membeli buku di toko buku favorit.
+      </p>
+     </div>
+     <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+      <img alt="Headphone dengan desain modern berwarna biru muda" class="mb-4 rounded-md w-24 h-24 object-cover" height="120" src="https://storage.googleapis.com/a1aa/image/e7a3181c-b170-4d16-bad5-704ca2b9d5dc.jpg" width="120"/>
+      <h4 class="text-lg sm:text-xl font-semibold mb-2">
+       Headphone
+      </h4>
+      <p class="text-gray-600 text-sm sm:text-base">
+       Dapatkan headphone berkualitas untuk menemani belajar dan hiburan Anda.
+      </p>
+     </div>
+     <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
+      <img alt="Paket seminar dan workshop dengan ilustrasi peserta dan pembicara" class="mb-4 rounded-md w-24 h-24 object-cover" height="120" src="https://storage.googleapis.com/a1aa/image/3fc72c46-09b1-4d9a-0337-ad532a8a668a.jpg" width="120"/>
+      <h4 class="text-lg sm:text-xl font-semibold mb-2">
+       Paket Seminar &amp; Workshop
+      </h4>
+      <p class="text-gray-600 text-sm sm:text-base">
+       Akses seminar dan workshop untuk meningkatkan pengetahuan dan keterampilan.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="mb-20 bg-indigo-50 rounded-lg p-6 sm:p-8 max-w-5xl mx-auto" id="keluarga">
+    <h3 class="text-2xl sm:text-3xl font-semibold text-indigo-700 mb-6 text-center">
+     Reward untuk Keluarga
+    </h3>
+    <p class="text-center max-w-3xl mx-auto text-gray-700 mb-10 px-4 sm:px-0 text-sm sm:text-base">
+     Dukung keluarga Anda dalam membangun budaya literasi dengan reward menarik dari aktivitas membaca bersama, bercerita, dan belajar bersama.
+    </p>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 sm:px-0">
+     <div class="bg-white rounded-lg shadow-md p-5 flex flex-col items-center text-center">
+      <img alt="Ilustrasi voucher belanja mainan edukatif untuk anak-anak" class="mb-4 rounded-md w-24 h-24 object-cover" height="120" src="https://storage.googleapis.com/a1aa/image/0da7da2c-dd17-4522-d5bb-050eb195b274.jpg" width="120"/>
+      <h4 class="text-lg sm:text-xl font-semibold mb-2">
+       Voucher Mainan Edukatif
+      </h4>
+      <p class="text-gray-600 text-sm sm:text-base">
+       Tukar poin dengan voucher mainan edukatif untuk anak-anak di keluarga Anda.
+      </p>
+     </div>
+     <div class="bg-white rounded-lg shadow-md p-5 flex flex-col items-center text-center">
+      <img alt="Paket buku cerita anak dengan ilustrasi warna-warni" class="mb-4 rounded-md w-24 h-24 object-cover" height="120" src="https://storage.googleapis.com/a1aa/image/b9929ea3-feb6-4251-af92-6e5adb09e270.jpg" width="120"/>
+      <h4 class="text-lg sm:text-xl font-semibold mb-2">
+       Paket Buku Cerita Anak
+      </h4>
+      <p class="text-gray-600 text-sm sm:text-base">
+       Dapatkan paket buku cerita anak untuk menumbuhkan minat baca sejak dini.
+      </p>
+     </div>
+     <div class="bg-white rounded-lg shadow-md p-5 flex flex-col items-center text-center">
+      <img alt="Ilustrasi kegiatan belajar bersama keluarga dengan suasana hangat" class="mb-4 rounded-md w-24 h-24 object-cover" height="120" src="https://storage.googleapis.com/a1aa/image/12ef19ce-14b3-4293-e0cb-d53acbb94337.jpg" width="120"/>
+      <h4 class="text-lg sm:text-xl font-semibold mb-2">
+       Kelas Literasi Keluarga
+      </h4>
+      <p class="text-gray-600 text-sm sm:text-base">
+       Akses kelas literasi keluarga untuk meningkatkan kebiasaan membaca dan belajar bersama.
+      </p>
+     </div>
+    </div>
+   </section>
+   <section class="mb-20 max-w-6xl mx-auto px-4 sm:px-0 w-full max-w-full" id="rewards">
+    <h3 class="text-2xl sm:text-3xl font-semibold text-indigo-700 mb-6 text-center">
+     Tukar Poin Reward
+    </h3>
+    <div class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6 mb-10 w-full">
+     <h4 class="text-xl sm:text-2xl font-semibold text-indigo-700 mb-4 text-center">
+      Informasi Pengguna
+     </h4>
+     <form autocomplete="off" class="space-y-4" id="user-form">
+      <div>
+       <label class="block text-gray-700 font-medium mb-1" for="userSelect">
+        Pilih Pengguna
+       </label>
+       <select class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-500" id="userSelect" name="userSelect" required="">
+        <option disabled="" selected="" value="">
+         -- Pilih Mahasiswa atau Keluarga --
+        </option>
+        <option data-jenis="Mahasiswa" data-poin="1500" value="mahasiswa1">
+         Andi - Mahasiswa (1500 poin)
+        </option>
+        <option data-jenis="Mahasiswa" data-poin="800" value="mahasiswa2">
+         Siti - Mahasiswa (800 poin)
+        </option>
+        <option data-jenis="Keluarga" data-poin="3000" value="keluarga1">
+         Keluarga Santoso (3000 poin)
+        </option>
+        <option data-jenis="Keluarga" data-poin="1800" value="keluarga2">
+         Keluarga Wijaya (1800 poin)
+        </option>
+       </select>
+      </div>
+      <div>
+       <label class="block text-gray-700 font-medium mb-1" for="userName">
+        Nama Pengguna
+       </label>
+       <input class="w-full border border-gray-300 rounded-md px-3 py-2 bg-gray-100 cursor-not-allowed" id="userName" name="userName" readonly="" type="text" value=""/>
+      </div>
+      <div>
+       <label class="block text-gray-700 font-medium mb-1" for="userPoin">
+        Poin Tersedia
+       </label>
+       <input class="w-full border border-gray-300 rounded-md px-3 py-2 bg-gray-100 cursor-not-allowed" id="userPoin" name="userPoin" readonly="" type="number" value="0"/>
+      </div>
+     </form>
+    </div>
+    <div class="overflow-x-auto max-w-full">
+     <table class="min-w-full bg-white rounded-lg shadow-md border border-gray-200">
+      <thead class="bg-indigo-100 text-indigo-700 font-semibold">
+       <tr>
+        <th class="py-3 px-4 text-left whitespace-nowrap">
+         Reward
+        </th>
+        <th class="py-3 px-4 text-left whitespace-nowrap">
+         Jenis
+        </th>
+        <th class="py-3 px-4 text-left whitespace-nowrap">
+         Poin yang Dibutuhkan
+        </th>
+        <th class="py-3 px-4 text-left">
+         Deskripsi
+        </th>
+        <th class="py-3 px-4 text-center whitespace-nowrap">
+         Aksi
+        </th>
+       </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-200" id="reward-list">
+       <tr class="hover:bg-indigo-50 transition">
+        <td class="py-3 px-4 flex items-center space-x-3 whitespace-nowrap">
+         <img alt="Voucher buku dengan desain warna cerah dan ikon buku terbuka" class="w-10 h-10 rounded-md object-cover" height="60" src="https://storage.googleapis.com/a1aa/image/65f4e149-6f24-423d-4726-7d5ece82f500.jpg" width="60"/>
+         <span class="text-sm sm:text-base">
+          Voucher Buku Rp100.000
+         </span>
+        </td>
+        <td class="py-3 px-4 whitespace-nowrap text-sm sm:text-base">
+         Mahasiswa
+        </td>
+        <td class="py-3 px-4 whitespace-nowrap text-sm sm:text-base">
+         500
+        </td>
+        <td class="py-3 px-4 text-gray-700 text-sm sm:text-base">
+         Voucher untuk membeli buku di toko buku favorit.
+        </td>
+        <td class="py-3 px-4 text-center whitespace-nowrap">
+         <button class="redeem-btn bg-indigo-600 text-white px-3 py-1 rounded-md hover:bg-indigo-700 transition text-sm sm:text-base" data-jenis="Mahasiswa" data-nama="Voucher Buku Rp100.000" data-poin="500">
+          Tukar
+         </button>
+        </td>
+       </tr>
+       <tr class="hover:bg-indigo-50 transition bg-indigo-50">
+        <td class="py-3 px-4 flex items-center space-x-3 whitespace-nowrap">
+         <img alt="Headphone dengan desain modern berwarna biru muda" class="w-10 h-10 rounded-md object-cover" height="60" src="https://storage.googleapis.com/a1aa/image/e7a3181c-b170-4d16-bad5-704ca2b9d5dc.jpg" width="60"/>
+         <span class="text-sm sm:text-base">
+          Headphone Bluetooth
+         </span>
+        </td>
+        <td class="py-3 px-4 whitespace-nowrap text-sm sm:text-base">
+         Mahasiswa
+        </td>
+        <td class="py-3 px-4 whitespace-nowrap text-sm sm:text-base">
+         1500
+        </td>
+        <td class="py-3 px-4 text-gray-700 text-sm sm:text-base">
+         Headphone bluetooth untuk belajar dan hiburan.
+        </td>
+        <td class="py-3 px-4 text-center whitespace-nowrap">
+         <button class="redeem-btn bg-indigo-600 text-white px-3 py-1 rounded-md hover:bg-indigo-700 transition text-sm sm:text-base" data-jenis="Mahasiswa" data-nama="Headphone Bluetooth" data-poin="1500">
+          Tukar
+         </button>
+        </td>
+       </tr>
+       <tr class="hover:bg-indigo-50 transition">
+        <td class="py-3 px-4 flex items-center space-x-3 whitespace-nowrap">
+         <img alt="Paket seminar dan workshop dengan ilustrasi peserta dan pembicara" class="w-10 h-10 rounded-md object-cover" height="60" src="https://storage.googleapis.com/a1aa/image/3fc72c46-09b1-4d9a-0337-ad532a8a668a.jpg" width="60"/>
+         <span class="text-sm sm:text-base">
+          Paket Seminar &amp; Workshop
+         </span>
+        </td>
+        <td class="py-3 px-4 whitespace-nowrap text-sm sm:text-base">
+         Mahasiswa
+        </td>
+        <td class="py-3 px-4 whitespace-nowrap text-sm sm:text-base">
+         2000
+        </td>
+        <td class="py-3 px-4 text-gray-700 text-sm sm:text-base">
+         Akses seminar dan workshop edukasi.
+        </td>
+        <td class="py-3 px-4 text-center whitespace-nowrap">
+         <button class="redeem-btn bg-indigo-600 text-white px-3 py-1 rounded-md hover:bg-indigo-700 transition text-sm sm:text-base" data-jenis="Mahasiswa" data-nama="Paket Seminar &amp; Workshop" data-poin="2000">
+          Tukar
+         </button>
+        </td>
+       </tr>
+       <tr class="hover:bg-indigo-50 transition bg-indigo-50">
+        <td class="py-3 px-4 flex items-center space-x-3 whitespace-nowrap">
+         <img alt="Voucher mainan edukatif untuk anak-anak" class="w-10 h-10 rounded-md object-cover" height="60" src="https://storage.googleapis.com/a1aa/image/08d7cb8f-dc4a-4956-bfd4-76d73a68e1f6.jpg" width="60"/>
+         <span class="text-sm sm:text-base">
+          Voucher Mainan Edukatif
+         </span>
+        </td>
+        <td class="py-3 px-4 whitespace-nowrap text-sm sm:text-base">
+         Keluarga
+        </td>
+        <td class="py-3 px-4 whitespace-nowrap text-sm sm:text-base">
+         1000
+        </td>
+        <td class="py-3 px-4 text-gray-700 text-sm sm:text-base">
+         Voucher mainan edukatif untuk anak-anak.
+        </td>
+        <td class="py-3 px-4 text-center whitespace-nowrap">
+         <button class="redeem-btn bg-indigo-600 text-white px-3 py-1 rounded-md hover:bg-indigo-700 transition text-sm sm:text-base" data-jenis="Keluarga" data-nama="Voucher Mainan Edukatif" data-poin="1000">
+          Tukar
+         </button>
+        </td>
+       </tr>
+       <tr class="hover:bg-indigo-50 transition">
+        <td class="py-3 px-4 flex items-center space-x-3 whitespace-nowrap">
+         <img alt="Paket buku cerita anak dengan ilustrasi warna-warni" class="w-10 h-10 rounded-md object-cover" height="60" src="https://storage.googleapis.com/a1aa/image/b9929ea3-feb6-4251-af92-6e5adb09e270.jpg" width="60"/>
+         <span class="text-sm sm:text-base">
+          Paket Buku Cerita Anak
+         </span>
+        </td>
+        <td class="py-3 px-4 whitespace-nowrap text-sm sm:text-base">
+         Keluarga
+        </td>
+        <td class="py-3 px-4 whitespace-nowrap text-sm sm:text-base">
+         1500
+        </td>
+        <td class="py-3 px-4 text-gray-700 text-sm sm:text-base">
+         Paket buku cerita untuk anak-anak.
+        </td>
+        <td class="py-3 px-4 text-center whitespace-nowrap">
+         <button class="redeem-btn bg-indigo-600 text-white px-3 py-1 rounded-md hover:bg-indigo-700 transition text-sm sm:text-base" data-jenis="Keluarga" data-nama="Paket Buku Cerita Anak" data-poin="1500">
+          Tukar
+         </button>
+        </td>
+       </tr>
+       <tr class="hover:bg-indigo-50 transition bg-indigo-50">
+        <td class="py-3 px-4 flex items-center space-x-3 whitespace-nowrap">
+         <img alt="Ilustrasi kegiatan belajar bersama keluarga dengan suasana hangat" class="w-10 h-10 rounded-md object-cover" height="60" src="https://storage.googleapis.com/a1aa/image/12ef19ce-14b3-4293-e0cb-d53acbb94337.jpg" width="60"/>
+         <span class="text-sm sm:text-base">
+          Kelas Literasi Keluarga
+         </span>
+        </td>
+        <td class="py-3 px-4 whitespace-nowrap text-sm sm:text-base">
+         Keluarga
+        </td>
+        <td class="py-3 px-4 whitespace-nowrap text-sm sm:text-base">
+         2000
+        </td>
+        <td class="py-3 px-4 text-gray-700 text-sm sm:text-base">
+         Akses kelas literasi untuk keluarga.
+        </td>
+        <td class="py-3 px-4 text-center whitespace-nowrap">
+         <button class="redeem-btn bg-indigo-600 text-white px-3 py-1 rounded-md hover:bg-indigo-700 transition text-sm sm:text-base" data-jenis="Keluarga" data-nama="Kelas Literasi Keluarga" data-poin="2000">
+          Tukar
+         </button>
+        </td>
+       </tr>
+      </tbody>
+     </table>
+    </div>
+   </section>
+   <section class="mb-20 max-w-4xl mx-auto text-center px-4 sm:px-0" id="cara-kerja">
+    <h3 class="text-2xl sm:text-3xl font-semibold text-indigo-700 mb-6">
+     Cara Kerja
+    </h3>
+    <div class="space-y-8 sm:space-y-10">
+     <div class="flex flex-col md:flex-row items-center md:space-x-8">
+      <div class="flex-shrink-0">
+       <img alt="Ilustrasi mahasiswa membaca buku di perpustakaan" class="mx-auto rounded-md w-24 h-24 sm:w-28 sm:h-28 object-cover" height="100" src="https://storage.googleapis.com/a1aa/image/34f0073c-bccd-471f-2114-26b97141e4d7.jpg" width="100"/>
+      </div>
+      <div class="mt-4 md:mt-0 text-left">
+       <h4 class="text-lg sm:text-xl font-semibold text-indigo-700 mb-2">
+        1. Lakukan Aktivitas Literasi
+       </h4>
+       <p class="text-gray-700 text-sm sm:text-base">
+        Kumpulkan poin dengan membaca buku, menulis, berdiskusi, dan mengikuti kegiatan literasi.
+       </p>
+      </div>
+     </div>
+     <div class="flex flex-col md:flex-row items-center md:space-x-8">
+      <div class="flex-shrink-0 order-2 md:order-1">
+       <img alt="Ilustrasi menukarkan poin dengan reward berupa voucher dan barang" class="mx-auto rounded-md w-24 h-24 sm:w-28 sm:h-28 object-cover" height="100" src="https://storage.googleapis.com/a1aa/image/5cd1ee0d-5274-4edf-f65f-c238b1713196.jpg" width="100"/>
+      </div>
+      <div class="mt-4 md:mt-0 text-left order-1 md:order-2">
+       <h4 class="text-lg sm:text-xl font-semibold text-indigo-700 mb-2">
+        2. Tukarkan Poin dengan Reward
+       </h4>
+       <p class="text-gray-700 text-sm sm:text-base">
+        Pilih reward favorit dan tukarkan poin yang sudah terkumpul dengan mudah.
+       </p>
+      </div>
+     </div>
+     <div class="flex flex-col md:flex-row items-center md:space-x-8">
+      <div class="flex-shrink-0">
+       <img alt="Ilustrasi mahasiswa dan keluarga menikmati reward dengan senang hati" class="mx-auto rounded-md w-24 h-24 sm:w-28 sm:h-28 object-cover" height="100" src="https://storage.googleapis.com/a1aa/image/d12347ac-afeb-4926-af6a-fb601e781a6d.jpg" width="100"/>
+      </div>
+      <div class="mt-4 md:mt-0 text-left">
+       <h4 class="text-lg sm:text-xl font-semibold text-indigo-700 mb-2">
+        3. Nikmati Reward dan Manfaat Literasi
+       </h4>
+       <p class="text-gray-700 text-sm sm:text-base">
+        Gunakan reward dan tingkatkan budaya literasi untuk masa depan yang lebih baik.
+       </p>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="bg-white border-t border-gray-200 py-8">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-600 text-sm">
+    © 2025 LiterasiReward.
+   </div>
+  </footer>
+  <!-- Modal -->
+  <div aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden" id="modal">
+   <div class="bg-white rounded-lg shadow-lg max-w-md w-full p-6 relative mx-4 sm:mx-auto">
+    <button aria-label="Close modal" class="absolute top-3 right-3 text-gray-600 hover:text-gray-900 focus:outline-none" id="modal-close">
+     <i class="fas fa-times fa-lg">
+     </i>
+    </button>
+    <h3 class="text-2xl font-semibold text-indigo-700 mb-4" id="modal-title">
+     Konfirmasi Penukaran
+    </h3>
+    <p class="mb-4 text-gray-700" id="modal-message">
+     Apakah Anda yakin ingin menukarkan poin Anda dengan reward ini?
+    </p>
+    <div class="flex justify-end space-x-4">
+     <button class="px-4 py-2 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 transition" id="modal-cancel">
+      Batal
+     </button>
+     <button class="px-4 py-2 rounded-md bg-indigo-600 text-white hover:bg-indigo-700 transition" id="modal-confirm">
+      Tukar
+     </button>
+    </div>
+   </div>
+  </div>
+  <script>
+   const btn = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+
+    btn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+    });
+
+    // User data stored in JS for demo (could be from API/backend)
+    const users = {
+      mahasiswa1: { name: "Rina", poin: 1500, jenis: "Mahasiswa" },
+      mahasiswa2: { name: "Dedi", poin: 800, jenis: "Mahasiswa" },
+      keluarga1: { name: "Keluarga Santoso", poin: 3000, jenis: "Keluarga" },
+      keluarga2: { name: "Keluarga Wijaya", poin: 1800, jenis: "Keluarga" }
+    };
+
+    const userSelect = document.getElementById('userSelect');
+    const userNameInput = document.getElementById('userName');
+    const userPoinInput = document.getElementById('userPoin');
+
+    // Modal elements
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalMessage = document.getElementById('modal-message');
+    const modalCancel = document.getElementById('modal-cancel');
+    const modalConfirm = document.getElementById('modal-confirm');
+    const modalCloseBtn = document.getElementById('modal-close');
+
+    let currentRedeem = null;
+    let currentUserKey = null;
+
+    // Update user info display when user selected
+    userSelect.addEventListener('change', () => {
+      const selectedKey = userSelect.value;
+      if (selectedKey && users[selectedKey]) {
+        currentUserKey = selectedKey;
+        userNameInput.value = users[selectedKey].name;
+        userPoinInput.value = users[selectedKey].poin;
+      } else {
+        currentUserKey = null;
+        userNameInput.value = "";
+        userPoinInput.value = 0;
+      }
+    });
+
+    // Open modal confirmation for redeem
+    function openModal(rewardName, rewardPoin, rewardJenis) {
+      if (!currentUserKey) {
+        alert('Silakan pilih pengguna terlebih dahulu.');
+        userSelect.focus();
+        return;
+      }
+      const user = users[currentUserKey];
+      if (user.jenis !== rewardJenis) {
+        alert(`Reward ini hanya untuk ${rewardJenis}. Pengguna Anda adalah ${user.jenis}.`);
+        return;
+      }
+      if (user.poin < rewardPoin) {
+        alert(`Poin Anda tidak cukup untuk menukarkan reward "${rewardName}". Poin Anda: ${user.poin}, dibutuhkan: ${rewardPoin}`);
+        return;
+      }
+      currentRedeem = { rewardName, rewardPoin };
+      modalTitle.textContent = `Konfirmasi Penukaran: ${rewardName}`;
+      modalMessage.textContent = `Halo ${user.name}, Anda akan menukarkan ${rewardPoin} poin untuk mendapatkan reward "${rewardName}". Apakah Anda yakin?`;
+      modal.classList.remove('hidden');
+    }
+
+    // Close modal
+    function closeModal() {
+      modal.classList.add('hidden');
+      currentRedeem = null;
+    }
+
+    modalCancel.addEventListener('click', closeModal);
+    modalCloseBtn.addEventListener('click', closeModal);
+
+    // Confirm redeem
+    modalConfirm.addEventListener('click', () => {
+      if (!currentRedeem || !currentUserKey) return;
+      const user = users[currentUserKey];
+      user.poin -= currentRedeem.rewardPoin;
+      if (user.poin < 0) user.poin = 0; // safety
+      userPoinInput.value = user.poin;
+      alert(`Terima kasih, ${user.name}! Anda berhasil menukarkan reward "${currentRedeem.rewardName}". Sisa poin Anda: ${user.poin}.`);
+      closeModal();
+    });
+
+    // Attach event to redeem buttons
+    document.querySelectorAll('.redeem-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const rewardName = button.getAttribute('data-nama');
+        const rewardPoin = parseInt(button.getAttribute('data-poin'), 10);
+        const rewardJenis = button.getAttribute('data-jenis');
+        openModal(rewardName, rewardPoin, rewardJenis);
+      });
+    });
+  </script>
+ </body>
+</html>

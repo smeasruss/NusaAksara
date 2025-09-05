@@ -1,0 +1,1074 @@
+<html class="scroll-smooth" lang="id">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Remaja Cerita &amp; Sains
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gradient-to-b from-indigo-50 via-purple-50 to-pink-50 min-h-screen flex flex-col">
+  <header class="bg-white shadow-md sticky top-0 z-50">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+    <a class="text-2xl font-bold text-indigo-600 hover:text-indigo-800" href="index.html">
+     Remaja Cerita &amp; Sains
+    </a>
+    <nav class="hidden md:flex space-x-8 text-indigo-700 font-semibold">
+     <a class="hover:text-indigo-900 transition" href="index.html#latest">
+      Cerita Terbaru
+     </a>
+     <a class="hover:text-indigo-900 transition" href="index.html#filter">
+      Filter Minat
+     </a>
+     <a class="hover:text-indigo-900 transition" href="index.html#recommendations">
+      Rekomendasi
+     </a>
+     <a class="hover:text-indigo-900 transition" href="index.html#trending">
+      Trending
+     </a>
+    </nav>
+    <button class="md:hidden text-indigo-600 focus:outline-none" id="menu-btn">
+     <i class="fas fa-bars fa-lg">
+     </i>
+    </button>
+   </div>
+   <nav class="hidden md:hidden bg-white shadow-inner" id="mobile-menu">
+    <a class="block px-4 py-3 border-b border-indigo-100 text-indigo-700 font-semibold hover:bg-indigo-50" href="index.html#latest">
+     Cerita Terbaru
+    </a>
+    <a class="block px-4 py-3 border-b border-indigo-100 text-indigo-700 font-semibold hover:bg-indigo-50" href="index.html#filter">
+     Filter Minat
+    </a>
+    <a class="block px-4 py-3 border-b border-indigo-100 text-indigo-700 font-semibold hover:bg-indigo-50" href="index.html#recommendations">
+     Rekomendasi
+    </a>
+    <a class="block px-4 py-3 text-indigo-700 font-semibold hover:bg-indigo-50" href="index.html#trending">
+     Trending
+    </a>
+   </nav>
+  </header>
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-12" id="main-content">
+   <!-- Filter Minat -->
+   <section class="bg-white rounded-xl shadow-md p-6" id="filter">
+    <h2 class="text-2xl font-bold text-indigo-700 mb-4">
+     Filter Berdasarkan Minat
+    </h2>
+    <form class="flex flex-wrap gap-4" id="filter-form">
+     <label class="inline-flex items-center cursor-pointer">
+      <input checked="" class="form-checkbox text-pink-500" name="interest" type="checkbox" value="fiksi"/>
+      <span class="ml-2 text-pink-600 font-semibold">
+       Cerita Fiksi
+      </span>
+     </label>
+     <label class="inline-flex items-center cursor-pointer">
+      <input checked="" class="form-checkbox text-indigo-500" name="interest" type="checkbox" value="sejarah"/>
+      <span class="ml-2 text-indigo-600 font-semibold">
+       Sejarah
+      </span>
+     </label>
+     <label class="inline-flex items-center cursor-pointer">
+      <input checked="" class="form-checkbox text-purple-500" name="interest" type="checkbox" value="sains"/>
+      <span class="ml-2 text-purple-600 font-semibold">
+       Sains Populer
+      </span>
+     </label>
+    </form>
+   </section>
+   <!-- Cerita Terbaru -->
+   <section class="space-y-6" id="latest">
+    <h2 class="text-3xl font-extrabold text-indigo-700">
+     Cerita Terbaru
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="latest-list">
+     <!-- 9 latest stories -->
+     <article class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col" data-category="fiksi" data-id="petualangan-hutan-magis">
+      <img alt="Ilustrasi cerita fiksi remaja dengan latar hutan magis dan karakter remaja petualang" class="w-full h-48 object-cover" height="350" src="https://storage.googleapis.com/a1aa/image/53d403c8-6d83-4d57-f2bf-871d4018899d.jpg" width="600"/>
+      <div class="p-4 flex flex-col flex-grow">
+       <h3 class="text-xl font-semibold text-pink-600 mb-2 cursor-pointer story-title">
+        Petualangan di Hutan Magis
+       </h3>
+       <p class="text-gray-700 flex-grow">
+        Seorang remaja menemukan dunia rahasia di balik hutan yang penuh misteri dan makhluk ajaib.
+       </p>
+       <div class="mt-4 flex items-center justify-between text-pink-500">
+        <button class="like-btn flex items-center space-x-1 hover:text-pink-700 focus:outline-none">
+         <i class="fas fa-heart">
+         </i>
+         <span class="like-count">
+          12
+         </span>
+        </button>
+        <button class="comment-toggle flex items-center space-x-1 hover:text-pink-700 focus:outline-none">
+         <i class="fas fa-comment">
+         </i>
+         <span>
+          3
+         </span>
+        </button>
+       </div>
+       <div class="comments mt-3 hidden border-t border-pink-200 pt-3 text-sm text-gray-600 overflow-y-auto max-h-40">
+        <div class="mb-2">
+         <strong>
+          Alya:
+         </strong>
+         Cerita yang sangat seru dan penuh imajinasi!
+        </div>
+        <div class="mb-2">
+         <strong>
+          Rafi:
+         </strong>
+         Aku suka karakter utamanya, keren banget.
+        </div>
+        <form class="mt-2 flex space-x-2">
+         <input class="flex-grow rounded border border-pink-300 px-2 py-1 focus:outline-none focus:ring-2 focus:ring-pink-400" placeholder="Tulis komentar..." type="text"/>
+         <button class="bg-pink-500 text-white px-3 rounded hover:bg-pink-600" type="submit">
+          Kirim
+         </button>
+        </form>
+       </div>
+      </div>
+     </article>
+     <article class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col" data-category="sejarah" data-id="rahasia-kerajaan-kuno">
+      <img alt="Ilustrasi sejarah remaja belajar tentang kerajaan kuno dengan peta dan artefak" class="w-full h-48 object-cover" height="350" src="https://storage.googleapis.com/a1aa/image/257ae2c7-cead-4037-1eca-a57a3d95e49b.jpg" width="600"/>
+      <div class="p-4 flex flex-col flex-grow">
+       <h3 class="text-xl font-semibold text-indigo-600 mb-2 cursor-pointer story-title">
+        Rahasia Kerajaan Kuno
+       </h3>
+       <p class="text-gray-700 flex-grow">
+        Mengungkap misteri kerajaan yang hilang dan pengaruhnya pada dunia modern.
+       </p>
+       <div class="mt-4 flex items-center justify-between text-indigo-500">
+        <button class="like-btn flex items-center space-x-1 hover:text-indigo-700 focus:outline-none">
+         <i class="fas fa-heart">
+         </i>
+         <span class="like-count">
+          20
+         </span>
+        </button>
+        <button class="comment-toggle flex items-center space-x-1 hover:text-indigo-700 focus:outline-none">
+         <i class="fas fa-comment">
+         </i>
+         <span>
+          5
+         </span>
+        </button>
+       </div>
+       <div class="comments mt-3 hidden border-t border-indigo-200 pt-3 text-sm text-gray-600 overflow-y-auto max-h-40">
+        <div class="mb-2">
+         <strong>
+          Dewi:
+         </strong>
+         Sangat informatif dan menarik untuk pelajar!
+        </div>
+        <form class="mt-2 flex space-x-2">
+         <input class="flex-grow rounded border border-indigo-300 px-2 py-1 focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Tulis komentar..." type="text"/>
+         <button class="bg-indigo-500 text-white px-3 rounded hover:bg-indigo-600" type="submit">
+          Kirim
+         </button>
+        </form>
+       </div>
+      </div>
+     </article>
+     <article class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col" data-category="sains" data-id="eksperimen-kimia-seru">
+      <img alt="Ilustrasi sains populer dengan eksperimen kimia berwarna-warni di laboratorium remaja" class="w-full h-48 object-cover" height="350" src="https://storage.googleapis.com/a1aa/image/dedcd2d4-7027-40aa-ee33-dd1b4c3b82d6.jpg" width="600"/>
+      <div class="p-4 flex flex-col flex-grow">
+       <h3 class="text-xl font-semibold text-purple-600 mb-2 cursor-pointer story-title">
+        Eksperimen Kimia Seru
+       </h3>
+       <p class="text-gray-700 flex-grow">
+        Mengenal reaksi kimia yang menakjubkan dengan bahan-bahan sederhana di rumah.
+       </p>
+       <div class="mt-4 flex items-center justify-between text-purple-500">
+        <button class="like-btn flex items-center space-x-1 hover:text-purple-700 focus:outline-none">
+         <i class="fas fa-heart">
+         </i>
+         <span class="like-count">
+          18
+         </span>
+        </button>
+        <button class="comment-toggle flex items-center space-x-1 hover:text-purple-700 focus:outline-none">
+         <i class="fas fa-comment">
+         </i>
+         <span>
+          4
+         </span>
+        </button>
+       </div>
+       <div class="comments mt-3 hidden border-t border-purple-200 pt-3 text-sm text-gray-600 overflow-y-auto max-h-40">
+        <div class="mb-2">
+         <strong>
+          Fajar:
+         </strong>
+         Aku coba eksperimen ini, hasilnya keren banget!
+        </div>
+        <form class="mt-2 flex space-x-2">
+         <input class="flex-grow rounded border border-purple-300 px-2 py-1 focus:outline-none focus:ring-2 focus:ring-purple-400" placeholder="Tulis komentar..." type="text"/>
+         <button class="bg-purple-500 text-white px-3 rounded hover:bg-purple-600" type="submit">
+          Kirim
+         </button>
+        </form>
+       </div>
+      </div>
+     </article>
+     <article class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col" data-category="fiksi" data-id="kota-masa-depan">
+      <img alt="Ilustrasi cerita fiksi remaja di kota futuristik dengan teknologi canggih" class="w-full h-48 object-cover" height="350" src="https://storage.googleapis.com/a1aa/image/8b21b439-8812-4d26-4ddc-bf76e4444858.jpg" width="600"/>
+      <div class="p-4 flex flex-col flex-grow">
+       <h3 class="text-xl font-semibold text-pink-600 mb-2 cursor-pointer story-title">
+        Kota Masa Depan
+       </h3>
+       <p class="text-gray-700 flex-grow">
+        Seorang remaja menjelajahi kota futuristik penuh teknologi dan rahasia tersembunyi.
+       </p>
+       <div class="mt-4 flex items-center justify-between text-pink-500">
+        <button class="like-btn flex items-center space-x-1 hover:text-pink-700 focus:outline-none">
+         <i class="fas fa-heart">
+         </i>
+         <span class="like-count">
+          15
+         </span>
+        </button>
+        <button class="comment-toggle flex items-center space-x-1 hover:text-pink-700 focus:outline-none">
+         <i class="fas fa-comment">
+         </i>
+         <span>
+          6
+         </span>
+        </button>
+       </div>
+       <div class="comments mt-3 hidden border-t border-pink-200 pt-3 text-sm text-gray-600 overflow-y-auto max-h-40">
+        <div class="mb-2">
+         <strong>
+          Intan:
+         </strong>
+         Cerita yang bikin penasaran sampai akhir!
+        </div>
+        <form class="mt-2 flex space-x-2">
+         <input class="flex-grow rounded border border-pink-300 px-2 py-1 focus:outline-none focus:ring-2 focus:ring-pink-400" placeholder="Tulis komentar..." type="text"/>
+         <button class="bg-pink-500 text-white px-3 rounded hover:bg-pink-600" type="submit">
+          Kirim
+         </button>
+        </form>
+       </div>
+      </div>
+     </article>
+     <article class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col" data-category="sejarah" data-id="revolusi-industri">
+      <img alt="Ilustrasi sejarah remaja mempelajari revolusi industri dengan mesin uap dan pabrik" class="w-full h-48 object-cover" height="350" src="https://storage.googleapis.com/a1aa/image/9ec2603e-d1f0-4722-124d-b1805a6744e3.jpg" width="600"/>
+      <div class="p-4 flex flex-col flex-grow">
+       <h3 class="text-xl font-semibold text-indigo-600 mb-2 cursor-pointer story-title">
+        Revolusi Industri
+       </h3>
+       <p class="text-gray-700 flex-grow">
+        Bagaimana mesin uap mengubah dunia dan kehidupan remaja di masa itu.
+       </p>
+       <div class="mt-4 flex items-center justify-between text-indigo-500">
+        <button class="like-btn flex items-center space-x-1 hover:text-indigo-700 focus:outline-none">
+         <i class="fas fa-heart">
+         </i>
+         <span class="like-count">
+          22
+         </span>
+        </button>
+        <button class="comment-toggle flex items-center space-x-1 hover:text-indigo-700 focus:outline-none">
+         <i class="fas fa-comment">
+         </i>
+         <span>
+          7
+         </span>
+        </button>
+       </div>
+       <div class="comments mt-3 hidden border-t border-indigo-200 pt-3 text-sm text-gray-600 overflow-y-auto max-h-40">
+        <div class="mb-2">
+         <strong>
+          Bayu:
+         </strong>
+         Sangat membuka wawasan tentang sejarah teknologi.
+        </div>
+        <form class="mt-2 flex space-x-2">
+         <input class="flex-grow rounded border border-indigo-300 px-2 py-1 focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Tulis komentar..." type="text"/>
+         <button class="bg-indigo-500 text-white px-3 rounded hover:bg-indigo-600" type="submit">
+          Kirim
+         </button>
+        </form>
+       </div>
+      </div>
+     </article>
+     <article class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col" data-category="sains" data-id="mengenal-alam-semesta">
+      <img alt="Ilustrasi sains populer tentang astronomi dengan teleskop dan bintang di langit malam" class="w-full h-48 object-cover" height="350" src="https://storage.googleapis.com/a1aa/image/0a18e81d-161d-40a1-5bf6-837a28cbf796.jpg" width="600"/>
+      <div class="p-4 flex flex-col flex-grow">
+       <h3 class="text-xl font-semibold text-purple-600 mb-2 cursor-pointer story-title">
+        Mengenal Alam Semesta
+       </h3>
+       <p class="text-gray-700 flex-grow">
+        Penjelajahan bintang dan planet dengan teleskop sederhana untuk remaja.
+       </p>
+       <div class="mt-4 flex items-center justify-between text-purple-500">
+        <button class="like-btn flex items-center space-x-1 hover:text-purple-700 focus:outline-none">
+         <i class="fas fa-heart">
+         </i>
+         <span class="like-count">
+          25
+         </span>
+        </button>
+        <button class="comment-toggle flex items-center space-x-1 hover:text-purple-700 focus:outline-none">
+         <i class="fas fa-comment">
+         </i>
+         <span>
+          8
+         </span>
+        </button>
+       </div>
+       <div class="comments mt-3 hidden border-t border-purple-200 pt-3 text-sm text-gray-600 overflow-y-auto max-h-40">
+        <div class="mb-2">
+         <strong>
+          Rina:
+         </strong>
+         Aku jadi tertarik belajar astronomi setelah baca ini!
+        </div>
+        <form class="mt-2 flex space-x-2">
+         <input class="flex-grow rounded border border-purple-300 px-2 py-1 focus:outline-none focus:ring-2 focus:ring-purple-400" placeholder="Tulis komentar..." type="text"/>
+         <button class="bg-purple-500 text-white px-3 rounded hover:bg-purple-600" type="submit">
+          Kirim
+         </button>
+        </form>
+       </div>
+      </div>
+     </article>
+     <article class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col" data-category="fiksi" data-id="dunia-bawah-laut-fantasi">
+      <img alt="Ilustrasi cerita fiksi remaja dengan tema petualangan di dunia bawah laut penuh makhluk fantasi" class="w-full h-48 object-cover" height="350" src="https://storage.googleapis.com/a1aa/image/948bbe5f-1f87-40d0-96e3-da40a12b8f53.jpg" width="600"/>
+      <div class="p-4 flex flex-col flex-grow">
+       <h3 class="text-xl font-semibold text-pink-600 mb-2 cursor-pointer story-title">
+        Dunia Bawah Laut Fantasi
+       </h3>
+       <p class="text-gray-700 flex-grow">
+        Petualangan remaja menjelajahi kerajaan bawah laut yang penuh makhluk ajaib.
+       </p>
+       <div class="mt-4 flex items-center justify-between text-pink-500">
+        <button class="like-btn flex items-center space-x-1 hover:text-pink-700 focus:outline-none">
+         <i class="fas fa-heart">
+         </i>
+         <span class="like-count">
+          19
+         </span>
+        </button>
+        <button class="comment-toggle flex items-center space-x-1 hover:text-pink-700 focus:outline-none">
+         <i class="fas fa-comment">
+         </i>
+         <span>
+          5
+         </span>
+        </button>
+       </div>
+       <div class="comments mt-3 hidden border-t border-pink-200 pt-3 text-sm text-gray-600 overflow-y-auto max-h-40">
+        <div class="mb-2">
+         <strong>
+          Sarah:
+         </strong>
+         Cerita yang sangat imajinatif dan menyenangkan!
+        </div>
+        <form class="mt-2 flex space-x-2">
+         <input class="flex-grow rounded border border-pink-300 px-2 py-1 focus:outline-none focus:ring-2 focus:ring-pink-400" placeholder="Tulis komentar..." type="text"/>
+         <button class="bg-pink-500 text-white px-3 rounded hover:bg-pink-600" type="submit">
+          Kirim
+         </button>
+        </form>
+       </div>
+      </div>
+     </article>
+     <article class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col" data-category="sejarah" data-id="perjuangan-kemerdekaan">
+      <img alt="Ilustrasi sejarah remaja belajar tentang perjuangan kemerdekaan dengan bendera dan pahlawan" class="w-full h-48 object-cover" height="350" src="https://storage.googleapis.com/a1aa/image/63a68f61-e4af-4c2b-0b0e-74af6dc3bd9e.jpg" width="600"/>
+      <div class="p-4 flex flex-col flex-grow">
+       <h3 class="text-xl font-semibold text-indigo-600 mb-2 cursor-pointer story-title">
+        Perjuangan Kemerdekaan
+       </h3>
+       <p class="text-gray-700 flex-grow">
+        Kisah heroik para pahlawan muda dalam merebut kemerdekaan bangsa.
+       </p>
+       <div class="mt-4 flex items-center justify-between text-indigo-500">
+        <button class="like-btn flex items-center space-x-1 hover:text-indigo-700 focus:outline-none">
+         <i class="fas fa-heart">
+         </i>
+         <span class="like-count">
+          30
+         </span>
+        </button>
+        <button class="comment-toggle flex items-center space-x-1 hover:text-indigo-700 focus:outline-none">
+         <i class="fas fa-comment">
+         </i>
+         <span>
+          10
+         </span>
+        </button>
+       </div>
+       <div class="comments mt-3 hidden border-t border-indigo-200 pt-3 text-sm text-gray-600 overflow-y-auto max-h-40">
+        <div class="mb-2">
+         <strong>
+          Hendra:
+         </strong>
+         Sangat menginspirasi dan penuh semangat!
+        </div>
+        <form class="mt-2 flex space-x-2">
+         <input class="flex-grow rounded border border-indigo-300 px-2 py-1 focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Tulis komentar..." type="text"/>
+         <button class="bg-indigo-500 text-white px-3 rounded hover:bg-indigo-600" type="submit">
+          Kirim
+         </button>
+        </form>
+       </div>
+      </div>
+     </article>
+     <article class="bg-white rounded-xl shadow-md overflow-hidden flex flex-col" data-category="sains" data-id="robotika-dan-ai">
+      <img alt="Ilustrasi sains populer tentang robotika dan teknologi AI untuk remaja" class="w-full h-48 object-cover" height="350" src="https://storage.googleapis.com/a1aa/image/d45d9caa-9ce3-4c45-f7fd-365d81b75af0.jpg" width="600"/>
+      <div class="p-4 flex flex-col flex-grow">
+       <h3 class="text-xl font-semibold text-purple-600 mb-2 cursor-pointer story-title">
+        Robotika dan AI
+       </h3>
+       <p class="text-gray-700 flex-grow">
+        Mengenal dunia robotika dan kecerdasan buatan yang sedang berkembang pesat.
+       </p>
+       <div class="mt-4 flex items-center justify-between text-purple-500">
+        <button class="like-btn flex items-center space-x-1 hover:text-purple-700 focus:outline-none">
+         <i class="fas fa-heart">
+         </i>
+         <span class="like-count">
+          28
+         </span>
+        </button>
+        <button class="comment-toggle flex items-center space-x-1 hover:text-purple-700 focus:outline-none">
+         <i class="fas fa-comment">
+         </i>
+         <span>
+          9
+         </span>
+        </button>
+       </div>
+       <div class="comments mt-3 hidden border-t border-purple-200 pt-3 text-sm text-gray-600 overflow-y-auto max-h-40">
+        <div class="mb-2">
+         <strong>
+          Joko:
+         </strong>
+         Aku ingin belajar membuat robot setelah baca ini!
+        </div>
+        <form class="mt-2 flex space-x-2">
+         <input class="flex-grow rounded border border-purple-300 px-2 py-1 focus:outline-none focus:ring-2 focus:ring-purple-400" placeholder="Tulis komentar..." type="text"/>
+         <button class="bg-purple-500 text-white px-3 rounded hover:bg-purple-600" type="submit">
+          Kirim
+         </button>
+        </form>
+       </div>
+      </div>
+     </article>
+    </div>
+   </section>
+   <!-- Rekomendasi untuk Kamu -->
+   <section class="bg-white rounded-xl shadow-md p-6" id="recommendations">
+    <h2 class="text-3xl font-extrabold text-indigo-700 mb-6">
+     Rekomendasi untuk Kamu
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+     <article class="bg-pink-50 rounded-lg p-4 flex flex-col shadow hover:shadow-lg transition" data-id="legenda-kota-pelangi">
+      <img alt="Ilustrasi cerita fiksi remaja dengan tema petualangan di dunia fantasi penuh warna cerah" class="rounded-md object-cover h-48 w-full" height="350" src="https://storage.googleapis.com/a1aa/image/9f37573e-62fd-4417-12e5-55d691b1cfc3.jpg" width="600"/>
+      <h3 class="mt-4 text-xl font-semibold text-pink-600 cursor-pointer story-title">
+       Legenda Kota Pelangi
+      </h3>
+      <p class="text-gray-700 flex-grow mt-2">
+       Cerita tentang kota penuh warna dan keajaiban yang hanya bisa ditemukan oleh remaja pemberani.
+      </p>
+      <div class="mt-4 flex items-center justify-between text-pink-500">
+       <button class="like-btn flex items-center space-x-1 hover:text-pink-700 focus:outline-none">
+        <i class="fas fa-heart">
+        </i>
+        <span class="like-count">
+         14
+        </span>
+       </button>
+       <button class="comment-toggle flex items-center space-x-1 hover:text-pink-700 focus:outline-none">
+        <i class="fas fa-comment">
+        </i>
+        <span>
+         2
+        </span>
+       </button>
+      </div>
+      <div class="comments mt-3 hidden border-t border-pink-200 pt-3 text-sm text-gray-600 overflow-y-auto max-h-40">
+       <div class="mb-2">
+        <strong>
+         Linda:
+        </strong>
+        Cerita yang sangat memotivasi dan penuh warna!
+       </div>
+       <form class="mt-2 flex space-x-2">
+        <input class="flex-grow rounded border border-pink-300 px-2 py-1 focus:outline-none focus:ring-2 focus:ring-pink-400" placeholder="Tulis komentar..." type="text"/>
+        <button class="bg-pink-500 text-white px-3 rounded hover:bg-pink-600" type="submit">
+         Kirim
+        </button>
+       </form>
+      </div>
+     </article>
+     <article class="bg-indigo-50 rounded-lg p-4 flex flex-col shadow hover:shadow-lg transition" data-id="penemuan-abad-20">
+      <img alt="Ilustrasi sejarah remaja mempelajari penemuan penting di abad ke-20 dengan buku dan alat tulis" class="rounded-md object-cover h-48 w-full" height="350" src="https://storage.googleapis.com/a1aa/image/00cf10d7-1d39-4484-fd4d-d2fc1b134658.jpg" width="600"/>
+      <h3 class="mt-4 text-xl font-semibold text-indigo-600 cursor-pointer story-title">
+       Penemuan Abad 20
+      </h3>
+      <p class="text-gray-700 flex-grow mt-2">
+       Mengenal penemuan-penemuan penting yang mengubah dunia dan kehidupan remaja masa kini.
+      </p>
+      <div class="mt-4 flex items-center justify-between text-indigo-500">
+       <button class="like-btn flex items-center space-x-1 hover:text-indigo-700 focus:outline-none">
+        <i class="fas fa-heart">
+        </i>
+        <span class="like-count">
+         17
+        </span>
+       </button>
+       <button class="comment-toggle flex items-center space-x-1 hover:text-indigo-700 focus:outline-none">
+        <i class="fas fa-comment">
+        </i>
+        <span>
+         3
+        </span>
+       </button>
+      </div>
+      <div class="comments mt-3 hidden border-t border-indigo-200 pt-3 text-sm text-gray-600 overflow-y-auto max-h-40">
+       <div class="mb-2">
+        <strong>
+         Arif:
+        </strong>
+        Sangat membantu untuk tugas sejarahku!
+       </div>
+       <form class="mt-2 flex space-x-2">
+        <input class="flex-grow rounded border border-indigo-300 px-2 py-1 focus:outline-none focus:ring-2 focus:ring-indigo-400" placeholder="Tulis komentar..." type="text"/>
+        <button class="bg-indigo-500 text-white px-3 rounded hover:bg-indigo-600" type="submit">
+         Kirim
+        </button>
+       </form>
+      </div>
+     </article>
+     <article class="bg-purple-50 rounded-lg p-4 flex flex-col shadow hover:shadow-lg transition" data-id="energi-terbarukan">
+      <img alt="Ilustrasi sains populer dengan tema energi terbarukan dan panel surya di lingkungan remaja" class="rounded-md object-cover h-48 w-full" height="350" src="https://storage.googleapis.com/a1aa/image/059b45cb-4f33-42db-cda1-697b10d8d47c.jpg" width="600"/>
+      <h3 class="mt-4 text-xl font-semibold text-purple-600 cursor-pointer story-title">
+       Energi Terbarukan
+      </h3>
+      <p class="text-gray-700 flex-grow mt-2">
+       Mengenal sumber energi bersih dan bagaimana remaja bisa berkontribusi menjaga bumi.
+      </p>
+      <div class="mt-4 flex items-center justify-between text-purple-500">
+       <button class="like-btn flex items-center space-x-1 hover:text-purple-700 focus:outline-none">
+        <i class="fas fa-heart">
+        </i>
+        <span class="like-count">
+         21
+        </span>
+       </button>
+       <button class="comment-toggle flex items-center space-x-1 hover:text-purple-700 focus:outline-none">
+        <i class="fas fa-comment">
+        </i>
+        <span>
+         6
+        </span>
+       </button>
+      </div>
+      <div class="comments mt-3 hidden border-t border-purple-200 pt-3 text-sm text-gray-600 overflow-y-auto max-h-40">
+       <div class="mb-2">
+        <strong>
+         Vina:
+        </strong>
+        Aku jadi lebih sadar pentingnya energi bersih!
+       </div>
+       <form class="mt-2 flex space-x-2">
+        <input class="flex-grow rounded border border-purple-300 px-2 py-1 focus:outline-none focus:ring-2 focus:ring-purple-400" placeholder="Tulis komentar..." type="text"/>
+        <button class="bg-purple-500 text-white px-3 rounded hover:bg-purple-600" type="submit">
+         Kirim
+        </button>
+       </form>
+      </div>
+     </article>
+    </div>
+   </section>
+   <!-- Trending di Kalangan Remaja -->
+   <section class="bg-white rounded-xl shadow-md p-6" id="trending">
+    <h2 class="text-3xl font-extrabold text-indigo-700 mb-6">
+     Trending di Kalangan Remaja
+    </h2>
+    <ul class="space-y-4">
+     <li class="flex items-center space-x-4 bg-indigo-50 rounded-lg p-4 shadow hover:shadow-lg transition cursor-pointer" data-id="petualangan-luar-angkasa">
+      <img alt="Ilustrasi trending cerita fiksi remaja dengan tema petualangan luar angkasa" class="w-20 h-20 rounded-lg object-cover" height="80" src="https://storage.googleapis.com/a1aa/image/8ad7d24f-7079-43e8-45c8-e5031e703f43.jpg" width="80"/>
+      <div>
+       <h3 class="text-lg font-semibold text-indigo-700 cursor-pointer story-title">
+        Petualangan Luar Angkasa
+       </h3>
+       <p class="text-gray-700">
+        Cerita fiksi yang sedang viral tentang remaja menjelajahi galaksi jauh.
+       </p>
+      </div>
+      <div class="ml-auto flex items-center space-x-3 text-indigo-600">
+       <button class="like-btn flex items-center space-x-1 hover:text-indigo-800 focus:outline-none">
+        <i class="fas fa-heart">
+        </i>
+        <span class="like-count">
+         45
+        </span>
+       </button>
+       <button class="comment-toggle flex items-center space-x-1 hover:text-indigo-800 focus:outline-none">
+        <i class="fas fa-comment">
+        </i>
+        <span>
+         12
+        </span>
+       </button>
+      </div>
+     </li>
+     <li class="flex items-center space-x-4 bg-pink-50 rounded-lg p-4 shadow hover:shadow-lg transition cursor-pointer" data-id="dunia-sihir-remaja">
+      <img alt="Ilustrasi trending cerita fiksi remaja dengan tema dunia fantasi dan sihir" class="w-20 h-20 rounded-lg object-cover" height="80" src="https://storage.googleapis.com/a1aa/image/9f6da6b2-50af-47dc-7c72-f18ba439c3bd.jpg" width="80"/>
+      <div>
+       <h3 class="text-lg font-semibold text-pink-600 cursor-pointer story-title">
+        Dunia Sihir Remaja
+       </h3>
+       <p class="text-gray-700">
+        Cerita fantasi yang sedang banyak dibicarakan tentang sihir dan persahabatan.
+       </p>
+      </div>
+      <div class="ml-auto flex items-center space-x-3 text-pink-600">
+       <button class="like-btn flex items-center space-x-1 hover:text-pink-800 focus:outline-none">
+        <i class="fas fa-heart">
+        </i>
+        <span class="like-count">
+         38
+        </span>
+       </button>
+       <button class="comment-toggle flex items-center space-x-1 hover:text-pink-800 focus:outline-none">
+        <i class="fas fa-comment">
+        </i>
+        <span>
+         9
+        </span>
+       </button>
+      </div>
+     </li>
+     <li class="flex items-center space-x-4 bg-purple-50 rounded-lg p-4 shadow hover:shadow-lg transition cursor-pointer" data-id="teknologi-ramah-lingkungan">
+      <img alt="Ilustrasi trending artikel sains populer tentang teknologi ramah lingkungan" class="w-20 h-20 rounded-lg object-cover" height="80" src="https://storage.googleapis.com/a1aa/image/0693df0a-784c-41f9-d9bc-e4569c25af03.jpg" width="80"/>
+      <div>
+       <h3 class="text-lg font-semibold text-purple-700 cursor-pointer story-title">
+        Teknologi Ramah Lingkungan
+       </h3>
+       <p class="text-gray-700">
+        Artikel sains yang membahas inovasi teknologi untuk menjaga bumi.
+       </p>
+      </div>
+      <div class="ml-auto flex items-center space-x-3 text-purple-600">
+       <button class="like-btn flex items-center space-x-1 hover:text-purple-800 focus:outline-none">
+        <i class="fas fa-heart">
+        </i>
+        <span class="like-count">
+         40
+        </span>
+       </button>
+       <button class="comment-toggle flex items-center space-x-1 hover:text-purple-800 focus:outline-none">
+        <i class="fas fa-comment">
+        </i>
+        <span>
+         11
+        </span>
+       </button>
+      </div>
+     </li>
+     <li class="flex items-center space-x-4 bg-indigo-50 rounded-lg p-4 shadow hover:shadow-lg transition cursor-pointer" data-id="pahlawan-nasional">
+      <img alt="Ilustrasi trending artikel sejarah tentang pahlawan nasional Indonesia" class="w-20 h-20 rounded-lg object-cover" height="80" src="https://storage.googleapis.com/a1aa/image/b6f7cca2-cdb9-470c-65ea-f73bcbe85004.jpg" width="80"/>
+      <div>
+       <h3 class="text-lg font-semibold text-indigo-700 cursor-pointer story-title">
+        Pahlawan Nasional
+       </h3>
+       <p class="text-gray-700">
+        Kisah inspiratif pahlawan nasional yang menginspirasi remaja masa kini.
+       </p>
+      </div>
+      <div class="ml-auto flex items-center space-x-3 text-indigo-600">
+       <button class="like-btn flex items-center space-x-1 hover:text-indigo-800 focus:outline-none">
+        <i class="fas fa-heart">
+        </i>
+        <span class="like-count">
+         50
+        </span>
+       </button>
+       <button class="comment-toggle flex items-center space-x-1 hover:text-indigo-800 focus:outline-none">
+        <i class="fas fa-comment">
+        </i>
+        <span>
+         15
+        </span>
+       </button>
+      </div>
+     </li>
+     <li class="flex items-center space-x-4 bg-pink-50 rounded-lg p-4 shadow hover:shadow-lg transition cursor-pointer" data-id="persahabatan-petualangan">
+      <img alt="Ilustrasi trending cerita fiksi remaja dengan tema persahabatan dan petualangan di sekolah" class="w-20 h-20 rounded-lg object-cover" height="80" src="https://storage.googleapis.com/a1aa/image/771d9320-ba42-409e-366d-26ed3a1ae821.jpg" width="80"/>
+      <div>
+       <h3 class="text-lg font-semibold text-pink-600 cursor-pointer story-title">
+        Persahabatan &amp; Petualangan
+       </h3>
+       <p class="text-gray-700">
+        Cerita hangat tentang persahabatan dan petualangan seru di lingkungan sekolah.
+       </p>
+      </div>
+      <div class="ml-auto flex items-center space-x-3 text-pink-600">
+       <button class="like-btn flex items-center space-x-1 hover:text-pink-800 focus:outline-none">
+        <i class="fas fa-heart">
+        </i>
+        <span class="like-count">
+         35
+        </span>
+       </button>
+       <button class="comment-toggle flex items-center space-x-1 hover:text-pink-800 focus:outline-none">
+        <i class="fas fa-comment">
+        </i>
+        <span>
+         7
+        </span>
+       </button>
+      </div>
+     </li>
+    </ul>
+   </section>
+  </main>
+  <footer class="bg-indigo-700 text-indigo-100 py-6 mt-auto">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
+    © 2025 Remaja Cerita &amp; Sains. Semua hak cipta dilindungi.
+   </div>
+  </footer>
+  <script>
+   // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Like button functionality
+    document.querySelectorAll('.like-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const countSpan = btn.querySelector('.like-count');
+        let count = parseInt(countSpan.textContent);
+        if (!btn.classList.contains('liked')) {
+          count++;
+          btn.classList.add('liked');
+          btn.querySelector('i').classList.add('fas');
+          btn.querySelector('i').classList.remove('far');
+        } else {
+          count--;
+          btn.classList.remove('liked');
+          btn.querySelector('i').classList.remove('fas');
+          btn.querySelector('i').classList.add('far');
+        }
+        countSpan.textContent = count;
+      });
+    });
+
+    // Initialize like icons as far (outline) if not liked
+    document.querySelectorAll('.like-btn').forEach(btn => {
+      if (!btn.classList.contains('liked')) {
+        btn.querySelector('i').classList.remove('fas');
+        btn.querySelector('i').classList.add('far');
+      }
+    });
+
+    // Comment toggle functionality
+    document.querySelectorAll('.comment-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const article = btn.closest('article, li');
+        const comments = article.querySelector('.comments');
+        if (comments) {
+          comments.classList.toggle('hidden');
+        }
+      });
+    });
+
+    // Comment form submission (just adds comment below, no backend)
+    document.querySelectorAll('form').forEach(form => {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const input = form.querySelector('input[type="text"]');
+        const text = input.value.trim();
+        if (text === '') return;
+        const commentsDiv = form.closest('.comments');
+        const newComment = document.createElement('div');
+        newComment.className = 'mb-2';
+        newComment.innerHTML = `<strong>Kamu:</strong> ${text}`;
+        commentsDiv.insertBefore(newComment, form);
+        input.value = '';
+
+        // Update comment count in toggle button
+        const article = form.closest('article, li');
+        const commentToggle = article.querySelector('.comment-toggle span');
+        let currentCount = parseInt(commentToggle.textContent);
+        commentToggle.textContent = currentCount + 1;
+      });
+    });
+
+    // Filter stories by interest
+    const filterForm = document.getElementById('filter-form');
+    const latestList = document.getElementById('latest-list');
+
+    filterForm.addEventListener('change', () => {
+      const checked = Array.from(filterForm.querySelectorAll('input[name="interest"]:checked')).map(i => i.value);
+      latestList.querySelectorAll('article').forEach(article => {
+        if (checked.includes(article.dataset.category)) {
+          article.classList.remove('hidden');
+        } else {
+          article.classList.add('hidden');
+        }
+      });
+    });
+
+    // Story content data
+    const storiesContent = {
+      "petualangan-hutan-magis": {
+        title: "Petualangan di Hutan Magis",
+        image: "https://storage.googleapis.com/a1aa/image/53d403c8-6d83-4d57-f2bf-871d4018899d.jpg",
+        alt: "Ilustrasi cerita fiksi remaja dengan latar hutan magis dan karakter remaja petualang",
+        content: `<p>Di sebuah desa kecil, seorang remaja bernama Arka menemukan pintu rahasia menuju hutan magis yang penuh dengan makhluk ajaib dan misteri. Dalam petualangannya, Arka bertemu dengan peri, naga kecil, dan berbagai tantangan yang menguji keberanian dan kecerdasannya.</p>
+        <p>Hutan itu ternyata menyimpan rahasia kuno yang bisa mengubah dunia. Arka harus memutuskan apakah ia akan menjaga rahasia itu atau membagikannya kepada dunia luar.</p>`
+      },
+      "rahasia-kerajaan-kuno": {
+        title: "Rahasia Kerajaan Kuno",
+        image: "https://storage.googleapis.com/a1aa/image/257ae2c7-cead-4037-1eca-a57a3d95e49b.jpg",
+        alt: "Ilustrasi sejarah remaja belajar tentang kerajaan kuno dengan peta dan artefak",
+        content: `<p>Kerajaan kuno yang hilang selama berabad-abad akhirnya terungkap melalui penemuan artefak dan peta rahasia. Seorang remaja bernama Sari memulai perjalanan untuk mengungkap sejarah kerajaan tersebut dan bagaimana pengaruhnya masih terasa hingga kini.</p>
+        <p>Dalam perjalanannya, Sari belajar tentang keberanian, pengorbanan, dan pentingnya menjaga warisan budaya.</p>`
+      },
+      "eksperimen-kimia-seru": {
+        title: "Eksperimen Kimia Seru",
+        image: "https://storage.googleapis.com/a1aa/image/dedcd2d4-7027-40aa-ee33-dd1b4c3b82d6.jpg",
+        alt: "Ilustrasi sains populer dengan eksperimen kimia berwarna-warni di laboratorium remaja",
+        content: `<p>Dengan bahan-bahan sederhana yang bisa ditemukan di rumah, remaja bernama Dika melakukan eksperimen kimia yang menakjubkan. Ia menciptakan reaksi warna-warni dan gelembung yang membuatnya semakin tertarik dengan dunia sains.</p>
+        <p>Eksperimen ini tidak hanya menyenangkan, tapi juga mengajarkan konsep dasar kimia yang penting untuk dipahami.</p>`
+      },
+      "kota-masa-depan": {
+        title: "Kota Masa Depan",
+        image: "https://storage.googleapis.com/a1aa/image/8b21b439-8812-4d26-4ddc-bf76e4444858.jpg",
+        alt: "Ilustrasi cerita fiksi remaja di kota futuristik dengan teknologi canggih",
+        content: `<p>Di kota futuristik yang penuh dengan teknologi canggih, remaja bernama Nara menjelajahi rahasia dan tantangan yang ada. Kota ini dipenuhi dengan robot, kendaraan terbang, dan sistem AI yang mengatur kehidupan sehari-hari.</p>
+        <p>Nara menemukan bahwa di balik kemajuan teknologi, ada bahaya yang mengancam kebebasan dan privasi warga kota.</p>`
+      },
+      "revolusi-industri": {
+        title: "Revolusi Industri",
+        image: "https://storage.googleapis.com/a1aa/image/9ec2603e-d1f0-4722-124d-b1805a6744e3.jpg",
+        alt: "Ilustrasi sejarah remaja mempelajari revolusi industri dengan mesin uap dan pabrik",
+        content: `<p>Revolusi Industri mengubah dunia dengan mesin uap dan pabrik-pabrik besar. Seorang remaja bernama Joko belajar bagaimana perubahan ini mempengaruhi kehidupan masyarakat dan perkembangan teknologi.</p>
+        <p>Ia juga melihat dampak sosial dan lingkungan yang muncul akibat revolusi ini.</p>`
+      },
+      "mengenal-alam-semesta": {
+        title: "Mengenal Alam Semesta",
+        image: "https://storage.googleapis.com/a1aa/image/0a18e81d-161d-40a1-5bf6-837a28cbf796.jpg",
+        alt: "Ilustrasi sains populer tentang astronomi dengan teleskop dan bintang di langit malam",
+        content: `<p>Remaja bernama Rina menggunakan teleskop sederhana untuk menjelajahi bintang, planet, dan galaksi. Ia belajar tentang keajaiban alam semesta dan bagaimana manusia mencoba memahami ruang angkasa yang luas.</p>
+        <p>Perjalanan ini membuka wawasan dan menginspirasi Rina untuk menjadi astronom muda.</p>`
+      },
+      "dunia-bawah-laut-fantasi": {
+        title: "Dunia Bawah Laut Fantasi",
+        image: "https://storage.googleapis.com/a1aa/image/948bbe5f-1f87-40d0-96e3-da40a12b8f53.jpg",
+        alt: "Ilustrasi cerita fiksi remaja dengan tema petualangan di dunia bawah laut penuh makhluk fantasi",
+        content: `<p>Seorang remaja bernama Lila menemukan pintu rahasia ke dunia bawah laut yang penuh dengan makhluk fantasi dan kerajaan tersembunyi. Ia bertualang dan berteman dengan makhluk laut ajaib sambil menghadapi ancaman yang mengancam dunia tersebut.</p>
+        <p>Petualangan ini mengajarkan Lila tentang keberanian dan pentingnya menjaga alam.</p>`
+      },
+      "perjuangan-kemerdekaan": {
+        title: "Perjuangan Kemerdekaan",
+        image: "https://storage.googleapis.com/a1aa/image/63a68f61-e4af-4c2b-0b0e-74af6dc3bd9e.jpg",
+        alt: "Ilustrasi sejarah remaja belajar tentang perjuangan kemerdekaan dengan bendera dan pahlawan",
+        content: `<p>Kisah heroik para pahlawan muda yang berjuang merebut kemerdekaan bangsa. Seorang remaja bernama Dedi belajar tentang pengorbanan dan semangat juang yang membara dari para pahlawan nasional.</p>
+        <p>Cerita ini menginspirasi generasi muda untuk mencintai tanah air dan berkontribusi bagi bangsa.</p>`
+      },
+      "robotika-dan-ai": {
+        title: "Robotika dan AI",
+        image: "https://storage.googleapis.com/a1aa/image/d45d9caa-9ce3-4c45-f7fd-365d81b75af0.jpg",
+        alt: "Ilustrasi sains populer tentang robotika dan teknologi AI untuk remaja",
+        content: `<p>Dunia robotika dan kecerdasan buatan semakin berkembang pesat. Remaja bernama Fikri belajar bagaimana membuat robot sederhana dan memahami konsep AI yang dapat membantu kehidupan manusia.</p>
+        <p>Teknologi ini membuka peluang baru dan tantangan yang harus dihadapi generasi muda.</p>`
+      },
+      "legenda-kota-pelangi": {
+        title: "Legenda Kota Pelangi",
+        image: "https://storage.googleapis.com/a1aa/image/9f37573e-62fd-4417-12e5-55d691b1cfc3.jpg",
+        alt: "Ilustrasi cerita fiksi remaja dengan tema petualangan di dunia fantasi penuh warna cerah",
+        content: `<p>Kota Pelangi adalah tempat penuh warna dan keajaiban yang hanya bisa ditemukan oleh remaja pemberani. Cerita ini mengikuti perjalanan seorang remaja yang mencari arti keberanian dan persahabatan di kota tersebut.</p>
+        <p>Legenda ini mengajarkan nilai-nilai penting dalam hidup dan kekuatan mimpi.</p>`
+      },
+      "penemuan-abad-20": {
+        title: "Penemuan Abad 20",
+        image: "https://storage.googleapis.com/a1aa/image/00cf10d7-1d39-4484-fd4d-d2fc1b134658.jpg",
+        alt: "Ilustrasi sejarah remaja mempelajari penemuan penting di abad ke-20 dengan buku dan alat tulis",
+        content: `<p>Abad ke-20 penuh dengan penemuan penting yang mengubah dunia. Seorang remaja bernama Rafi mempelajari berbagai inovasi dan bagaimana penemuan tersebut mempengaruhi kehidupan sehari-hari.</p>
+        <p>Cerita ini memberikan wawasan tentang kemajuan teknologi dan ilmu pengetahuan.</p>`
+      },
+      "energi-terbarukan": {
+        title: "Energi Terbarukan",
+        image: "https://storage.googleapis.com/a1aa/image/059b45cb-4f33-42db-cda1-697b10d8d47c.jpg",
+        alt: "Ilustrasi sains populer dengan tema energi terbarukan dan panel surya di lingkungan remaja",
+        content: `<p>Energi terbarukan adalah kunci menjaga bumi tetap lestari. Remaja bernama Vina belajar tentang berbagai sumber energi bersih dan bagaimana ia bisa berkontribusi menjaga lingkungan.</p>
+        <p>Cerita ini mengajak generasi muda untuk peduli dan bertindak demi masa depan bumi.</p>`
+      },
+      "petualangan-luar-angkasa": {
+        title: "Petualangan Luar Angkasa",
+        image: "https://storage.googleapis.com/a1aa/image/8ad7d24f-7079-43e8-45c8-e5031e703f43.jpg",
+        alt: "Ilustrasi trending cerita fiksi remaja dengan tema petualangan luar angkasa",
+        content: `<p>Seorang remaja bernama Dimas melakukan petualangan menakjubkan menjelajahi galaksi jauh. Ia bertemu dengan makhluk asing dan menghadapi tantangan yang menguji keberanian dan kecerdasannya.</p>
+        <p>Petualangan ini membuka wawasan tentang luasnya alam semesta dan pentingnya persahabatan.</p>`
+      },
+      "dunia-sihir-remaja": {
+        title: "Dunia Sihir Remaja",
+        image: "https://storage.googleapis.com/a1aa/image/9f6da6b2-50af-47dc-7c72-f18ba439c3bd.jpg",
+        alt: "Ilustrasi trending cerita fiksi remaja dengan tema dunia fantasi dan sihir",
+        content: `<p>Di dunia sihir yang penuh misteri, sekelompok remaja belajar menguasai kekuatan magis dan menghadapi ancaman gelap. Cerita ini penuh dengan persahabatan, keberanian, dan keajaiban.</p>
+        <p>Mereka harus bersatu untuk melindungi dunia mereka dari kehancuran.</p>`
+      },
+      "teknologi-ramah-lingkungan": {
+        title: "Teknologi Ramah Lingkungan",
+        image: "https://storage.googleapis.com/a1aa/image/0693df0a-784c-41f9-d9bc-e4569c25af03.jpg",
+        alt: "Ilustrasi trending artikel sains populer tentang teknologi ramah lingkungan",
+        content: `<p>Inovasi teknologi ramah lingkungan menjadi harapan untuk masa depan bumi. Remaja bernama Sinta belajar tentang berbagai teknologi yang dapat mengurangi polusi dan menjaga kelestarian alam.</p>
+        <p>Cerita ini menginspirasi untuk berkontribusi dalam menjaga lingkungan.</p>`
+      },
+      "pahlawan-nasional": {
+        title: "Pahlawan Nasional",
+        image: "https://storage.googleapis.com/a1aa/image/b6f7cca2-cdb9-470c-65ea-f73bcbe85004.jpg",
+        alt: "Ilustrasi trending artikel sejarah tentang pahlawan nasional Indonesia",
+        content: `<p>Kisah inspiratif para pahlawan nasional yang berjuang demi kemerdekaan dan keadilan. Seorang remaja bernama Andi belajar tentang nilai-nilai kepahlawanan dan semangat juang yang harus diteruskan.</p>
+        <p>Cerita ini memotivasi generasi muda untuk mencintai tanah air.</p>`
+      },
+      "persahabatan-petualangan": {
+        title: "Persahabatan & Petualangan",
+        image: "https://storage.googleapis.com/a1aa/image/771d9320-ba42-409e-366d-26ed3a1ae821.jpg",
+        alt: "Ilustrasi trending cerita fiksi remaja dengan tema persahabatan dan petualangan di sekolah",
+        content: `<p>Persahabatan erat antara sekelompok remaja yang menjalani petualangan seru di lingkungan sekolah mereka. Cerita ini penuh dengan tawa, tantangan, dan pelajaran hidup.</p>
+        <p>Mereka belajar arti persahabatan sejati dan keberanian menghadapi masalah.</p>`
+      }
+    };
+
+    // User points stored in localStorage
+    function getUserPoints() {
+      return parseInt(localStorage.getItem('userPoints') || '0');
+    }
+    function setUserPoints(points) {
+      localStorage.setItem('userPoints', points);
+      updatePointsDisplay();
+    }
+    function addUserPoints(points) {
+      const current = getUserPoints();
+      setUserPoints(current + points);
+    }
+    function updatePointsDisplay() {
+      const pointsEl = document.getElementById('user-points');
+      if(pointsEl) {
+        pointsEl.textContent = getUserPoints();
+      }
+    }
+
+    // Function to render story page
+    function renderStoryPage(id) {
+      const story = storiesContent[id];
+      if (!story) return;
+
+      const main = document.getElementById('main-content');
+      main.innerHTML = `
+        <section class="bg-white rounded-xl shadow-md p-6 max-w-4xl mx-auto">
+          <button id="back-btn" class="mb-6 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 focus:outline-none">
+            &larr; Kembali
+          </button>
+          <h1 class="text-4xl font-extrabold text-indigo-700 mb-4">${story.title}</h1>
+          <img src="${story.image}" alt="${story.alt}" class="w-full rounded-lg mb-6 object-cover" height="400" width="800"/>
+          <div class="prose max-w-none text-gray-800 mb-6">${story.content}</div>
+          <button id="finish-btn" class="w-full py-3 bg-pink-500 text-white font-semibold rounded hover:bg-pink-600 focus:outline-none transition">
+            Selesai Baca &amp; Dapatkan Poin
+          </button>
+          <p class="mt-4 text-center text-green-700 font-semibold hidden" id="point-message"></p>
+        </section>
+      `;
+
+      // Back button event
+      document.getElementById('back-btn').addEventListener('click', () => {
+        location.hash = '';
+        location.reload();
+      });
+
+      // Finish button event
+      const finishBtn = document.getElementById('finish-btn');
+      const pointMsg = document.getElementById('point-message');
+      const storageKey = 'read_' + id;
+
+      // Disable button if already read
+      if(localStorage.getItem(storageKey)) {
+        finishBtn.disabled = true;
+        finishBtn.textContent = 'Kamu sudah mendapatkan poin untuk cerita ini';
+        pointMsg.textContent = 'Terima kasih sudah membaca! Poin sudah diberikan.';
+        pointMsg.classList.remove('hidden');
+      }
+
+      finishBtn.addEventListener('click', () => {
+        if(localStorage.getItem(storageKey)) return; // already awarded
+
+        addUserPoints(10); // Add 10 points per story
+        localStorage.setItem(storageKey, 'true');
+        finishBtn.disabled = true;
+        finishBtn.textContent = 'Poin sudah diberikan!';
+        pointMsg.textContent = 'Selamat! Kamu mendapatkan 10 poin.';
+        pointMsg.classList.remove('hidden');
+      });
+    }
+
+    // On page load, check if hash exists for story
+    window.addEventListener('load', () => {
+      updatePointsDisplay();
+      const hash = location.hash.replace('#story-', '');
+      if (hash && storiesContent[hash]) {
+        renderStoryPage(hash);
+      }
+    });
+
+    // On hash change (for navigation)
+    window.addEventListener('hashchange', () => {
+      const hash = location.hash.replace('#story-', '');
+      if (hash && storiesContent[hash]) {
+        renderStoryPage(hash);
+      } else {
+        location.reload();
+      }
+    });
+
+    // Add click event to all story titles to redirect to story page
+    function addStoryTitleListeners() {
+      document.querySelectorAll('.story-title').forEach(title => {
+        title.style.textDecoration = 'underline';
+        title.style.cursor = 'pointer';
+        title.addEventListener('click', () => {
+          const article = title.closest('article, li');
+          const id = article ? article.dataset.id : null;
+          if (id && storiesContent[id]) {
+            location.hash = 'story-' + id;
+          }
+        });
+      });
+    }
+
+    addStoryTitleListeners();
+
+    // Add user points display in header
+    function addPointsDisplay() {
+      const header = document.querySelector('header div.max-w-7xl');
+      if (!header) return;
+      const pointsDiv = document.createElement('div');
+      pointsDiv.className = 'text-indigo-700 font-semibold hidden md:flex items-center space-x-2';
+      pointsDiv.innerHTML = `
+        <i class="fas fa-star text-yellow-400"></i>
+        <span>Poin Kamu: <span id="user-points">0</span></span>
+      `;
+      header.appendChild(pointsDiv);
+      pointsDiv.classList.remove('hidden');
+      updatePointsDisplay();
+    }
+    addPointsDisplay();
+  </script>
+ </body>
+</html>

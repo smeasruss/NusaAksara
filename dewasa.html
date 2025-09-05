@@ -1,0 +1,1319 @@
+<html class="scroll-smooth" lang="id">
+ <head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>
+   Portal Informasi Dewasa - Literasi Digital, Keuangan Keluarga &amp; Parenting
+  </title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+   href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap"
+   rel="stylesheet"
+  />
+  <link
+   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+   rel="stylesheet"
+  />
+  <style>
+   body {
+    font-family: "Inter", sans-serif;
+   }
+  </style>
+ </head>
+ <body class="bg-gray-50 text-gray-800 min-h-screen flex flex-col">
+  <header class="bg-white shadow-md sticky top-0 z-30">
+   <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
+   >
+    <a class="text-2xl font-semibold text-indigo-600" href="#">InfoDewasa</a>
+    <nav class="hidden md:flex space-x-8 text-gray-700 font-medium">
+     <a class="hover:text-indigo-600 transition" href="#literasi-digital"
+      >Literasi Digital</a
+     >
+     <a class="hover:text-indigo-600 transition" href="#keuangan-keluarga"
+      >Keuangan Keluarga</a
+     >
+     <a class="hover:text-indigo-600 transition" href="#parenting">Parenting</a>
+    </nav>
+    <button
+     aria-label="Toggle menu"
+     class="md:hidden text-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-600"
+     id="mobile-menu-button"
+    >
+     <i class="fas fa-bars fa-lg"></i>
+    </button>
+   </div>
+   <nav class="md:hidden bg-white shadow-inner hidden" id="mobile-menu">
+    <a
+     class="block px-4 py-3 border-b border-gray-200 hover:bg-indigo-50 transition"
+     href="#literasi-digital"
+     >Literasi Digital</a
+    >
+    <a
+     class="block px-4 py-3 border-b border-gray-200 hover:bg-indigo-50 transition"
+     href="#keuangan-keluarga"
+     >Keuangan Keluarga</a
+    >
+    <a class="block px-4 py-3 hover:bg-indigo-50 transition" href="#parenting"
+     >Parenting</a
+    >
+   </nav>
+  </header>
+  <main
+   class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 lg:grid-cols-4 gap-8"
+  >
+   <section class="lg:col-span-3 space-y-12">
+    <!-- Literasi Digital -->
+    <article
+     class="bg-white rounded-lg shadow-md p-6"
+     id="literasi-digital"
+     aria-label="Kategori Literasi Digital"
+    >
+     <h2
+      class="text-3xl font-semibold text-indigo-700 mb-6 border-b border-indigo-200 pb-2"
+     >
+      Literasi Digital
+     </h2>
+     <div class="grid gap-8 sm:grid-cols-2">
+      <article
+       class="flex flex-col bg-gray-50 rounded-lg shadow-sm overflow-hidden"
+       data-article-id="ld1"
+      >
+       <img
+        alt="Foto nyata seorang pria dewasa menggunakan laptop di meja kerja dengan latar belakang rak buku dan tanaman hias"
+        class="w-full h-44 object-cover"
+        height="350"
+        loading="lazy"
+        src="https://storage.googleapis.com/a1aa/image/776df30a-09eb-41e6-bda5-9baa0067b8aa.jpg"
+        width="600"
+       />
+       <div class="p-4 flex flex-col flex-grow">
+        <h3>
+         <button
+          type="button"
+          class="text-xl font-semibold text-indigo-800 mb-2 text-left w-full hover:underline focus:outline-none focus:ring-2 focus:ring-indigo-600"
+          aria-expanded="false"
+          aria-controls="content-ld1"
+          id="btn-ld1"
+         >
+          Mengenal Keamanan Siber untuk Pemula
+         </button>
+        </h3>
+        <p class="text-gray-600 flex-grow">
+         Pelajari dasar-dasar keamanan siber agar data pribadi Anda tetap aman
+         dari ancaman digital.
+        </p>
+       </div>
+       <div
+        class="hidden p-4 bg-white border-t border-gray-200 mt-4 rounded-b-lg"
+        id="content-ld1"
+        role="region"
+        aria-labelledby="btn-ld1"
+       >
+        <p class="mb-4 leading-relaxed text-gray-700">
+         Keamanan siber adalah praktik melindungi sistem, jaringan, dan data
+         dari serangan digital. Untuk pemula, penting memahami ancaman umum
+         seperti malware, phishing, dan ransomware. Gunakan kata sandi kuat,
+         perbarui perangkat lunak secara rutin, dan waspadai tautan mencurigakan
+         untuk menjaga keamanan data pribadi Anda.
+        </p>
+        <button
+         type="button"
+         class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-indigo-700 transition"
+         aria-controls="summary-section-ld1"
+         aria-expanded="false"
+         id="finish-btn-ld1"
+        >
+         Selesai Baca
+        </button>
+        <form
+         class="space-y-3 mt-6 hidden"
+         data-article-id="ld1"
+         id="summary-section-ld1"
+        >
+         <label
+          for="summary-ld1"
+          class="block font-semibold text-gray-900"
+          >Ringkasan yang Anda baca:</label
+         >
+         <textarea
+          id="summary-ld1"
+          name="summary"
+          rows="3"
+          required
+          class="w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          placeholder="Tulis ringkasan singkat artikel ini..."
+         ></textarea>
+         <button
+          type="submit"
+          class="bg-indigo-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-indigo-700 transition"
+         >
+          Kirim Ringkasan &amp; Dapatkan Poin
+         </button>
+        </form>
+       </div>
+      </article>
+      <article
+       class="flex flex-col bg-gray-50 rounded-lg shadow-sm overflow-hidden"
+       data-article-id="ld2"
+      >
+       <img
+        alt="Foto nyata seorang wanita dewasa memegang smartphone sambil tersenyum di ruang tamu dengan pencahayaan alami"
+        class="w-full h-44 object-cover"
+        height="350"
+        loading="lazy"
+        src="https://storage.googleapis.com/a1aa/image/4a61e110-5cec-4311-dfe1-bdb8400ecc52.jpg"
+        width="600"
+       />
+       <div class="p-4 flex flex-col flex-grow">
+        <h3>
+         <button
+          type="button"
+          class="text-xl font-semibold text-indigo-800 mb-2 text-left w-full hover:underline focus:outline-none focus:ring-2 focus:ring-indigo-600"
+          aria-expanded="false"
+          aria-controls="content-ld2"
+          id="btn-ld2"
+         >
+          Tips Memilih Sumber Informasi Digital yang Terpercaya
+         </button>
+        </h3>
+        <p class="text-gray-600 flex-grow">
+         Kenali cara membedakan informasi valid dan hoaks di dunia maya untuk
+         meningkatkan literasi digital Anda.
+        </p>
+       </div>
+       <div
+        class="hidden p-4 bg-white border-t border-gray-200 mt-4 rounded-b-lg"
+        id="content-ld2"
+        role="region"
+        aria-labelledby="btn-ld2"
+       >
+        <p class="mb-4 leading-relaxed text-gray-700">
+         Memilih sumber informasi yang terpercaya sangat penting untuk
+         menghindari hoaks. Pastikan sumber berasal dari institusi resmi,
+         cek kredibilitas penulis, dan bandingkan dengan sumber lain. Gunakan
+         situs berita yang sudah dikenal dan hindari menyebarkan informasi
+         tanpa verifikasi.
+        </p>
+        <button
+         type="button"
+         class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-indigo-700 transition"
+         aria-controls="summary-section-ld2"
+         aria-expanded="false"
+         id="finish-btn-ld2"
+        >
+         Selesai Baca
+        </button>
+        <form
+         class="space-y-3 mt-6 hidden"
+         data-article-id="ld2"
+         id="summary-section-ld2"
+        >
+         <label
+          for="summary-ld2"
+          class="block font-semibold text-gray-900"
+          >Ringkasan yang Anda baca:</label
+         >
+         <textarea
+          id="summary-ld2"
+          name="summary"
+          rows="3"
+          required
+          class="w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          placeholder="Tulis ringkasan singkat artikel ini..."
+         ></textarea>
+         <button
+          type="submit"
+          class="bg-indigo-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-indigo-700 transition"
+         >
+          Kirim Ringkasan &amp; Dapatkan Poin
+         </button>
+        </form>
+       </div>
+      </article>
+      <article
+       class="flex flex-col bg-gray-50 rounded-lg shadow-sm overflow-hidden"
+       data-article-id="ld3"
+      >
+       <img
+        alt="Foto nyata seorang pria dewasa sedang mengikuti kursus online di laptop dengan meja kerja rapi dan catatan"
+        class="w-full h-44 object-cover"
+        height="350"
+        loading="lazy"
+        src="https://storage.googleapis.com/a1aa/image/c57c89be-ecfb-41db-d926-368628cde4ae.jpg"
+        width="600"
+       />
+       <div class="p-4 flex flex-col flex-grow">
+        <h3>
+         <button
+          type="button"
+          class="text-xl font-semibold text-indigo-800 mb-2 text-left w-full hover:underline focus:outline-none focus:ring-2 focus:ring-indigo-600"
+          aria-expanded="false"
+          aria-controls="content-ld3"
+          id="btn-ld3"
+         >
+          Manfaat Kursus Online untuk Peningkatan Skill Digital
+         </button>
+        </h3>
+        <p class="text-gray-600 flex-grow">
+         Temukan bagaimana kursus online dapat membantu Anda mengembangkan
+         kemampuan digital secara efektif.
+        </p>
+       </div>
+       <div
+        class="hidden p-4 bg-white border-t border-gray-200 mt-4 rounded-b-lg"
+        id="content-ld3"
+        role="region"
+        aria-labelledby="btn-ld3"
+       >
+        <p class="mb-4 leading-relaxed text-gray-700">
+         Kursus online memberikan fleksibilitas belajar kapan saja dan di mana
+         saja. Anda dapat memilih materi sesuai kebutuhan dan meningkatkan
+         skill digital yang relevan dengan pekerjaan atau hobi. Banyak platform
+         menyediakan sertifikat yang dapat menambah nilai di dunia kerja.
+        </p>
+        <button
+         type="button"
+         class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-indigo-700 transition"
+         aria-controls="summary-section-ld3"
+         aria-expanded="false"
+         id="finish-btn-ld3"
+        >
+         Selesai Baca
+        </button>
+        <form
+         class="space-y-3 mt-6 hidden"
+         data-article-id="ld3"
+         id="summary-section-ld3"
+        >
+         <label
+          for="summary-ld3"
+          class="block font-semibold text-gray-900"
+          >Ringkasan yang Anda baca:</label
+         >
+         <textarea
+          id="summary-ld3"
+          name="summary"
+          rows="3"
+          required
+          class="w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          placeholder="Tulis ringkasan singkat artikel ini..."
+         ></textarea>
+         <button
+          type="submit"
+          class="bg-indigo-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-indigo-700 transition"
+         >
+          Kirim Ringkasan &amp; Dapatkan Poin
+         </button>
+        </form>
+       </div>
+      </article>
+      <article
+       class="flex flex-col bg-gray-50 rounded-lg shadow-sm overflow-hidden"
+       data-article-id="ld4"
+      >
+       <img
+        alt="Foto nyata ilustrasi jaringan internet global dengan tangan memegang smartphone dan ikon keamanan digital"
+        class="w-full h-44 object-cover"
+        height="350"
+        loading="lazy"
+        src="https://storage.googleapis.com/a1aa/image/4a00944b-7e6d-4821-ff8c-7b901a8179a0.jpg"
+        width="600"
+       />
+       <div class="p-4 flex flex-col flex-grow">
+        <h3>
+         <button
+          type="button"
+          class="text-xl font-semibold text-indigo-800 mb-2 text-left w-full hover:underline focus:outline-none focus:ring-2 focus:ring-indigo-600"
+          aria-expanded="false"
+          aria-controls="content-ld4"
+          id="btn-ld4"
+         >
+          Tren Teknologi Digital yang Perlu Diketahui Tahun Ini
+         </button>
+        </h3>
+        <p class="text-gray-600 flex-grow">
+         Update informasi tentang perkembangan teknologi digital terbaru yang
+         berdampak pada kehidupan sehari-hari.
+        </p>
+       </div>
+       <div
+        class="hidden p-4 bg-white border-t border-gray-200 mt-4 rounded-b-lg"
+        id="content-ld4"
+        role="region"
+        aria-labelledby="btn-ld4"
+       >
+        <p class="mb-4 leading-relaxed text-gray-700">
+         Tahun ini, teknologi digital berkembang pesat dengan tren seperti AI,
+         Internet of Things (IoT), dan blockchain. Tren ini memengaruhi cara
+         kita bekerja, belajar, dan berinteraksi. Memahami tren ini membantu
+         Anda tetap relevan dan memanfaatkan teknologi secara optimal.
+        </p>
+        <button
+         type="button"
+         class="mt-4 bg-indigo-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-indigo-700 transition"
+         aria-controls="summary-section-ld4"
+         aria-expanded="false"
+         id="finish-btn-ld4"
+        >
+         Selesai Baca
+        </button>
+        <form
+         class="space-y-3 mt-6 hidden"
+         data-article-id="ld4"
+         id="summary-section-ld4"
+        >
+         <label
+          for="summary-ld4"
+          class="block font-semibold text-gray-900"
+          >Ringkasan yang Anda baca:</label
+         >
+         <textarea
+          id="summary-ld4"
+          name="summary"
+          rows="3"
+          required
+          class="w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          placeholder="Tulis ringkasan singkat artikel ini..."
+         ></textarea>
+         <button
+          type="submit"
+          class="bg-indigo-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-indigo-700 transition"
+         >
+          Kirim Ringkasan &amp; Dapatkan Poin
+         </button>
+        </form>
+       </div>
+      </article>
+     </div>
+    </article>
+    <!-- Keuangan Keluarga -->
+    <article
+     class="bg-white rounded-lg shadow-md p-6"
+     id="keuangan-keluarga"
+     aria-label="Kategori Keuangan Keluarga"
+    >
+     <h2
+      class="text-3xl font-semibold text-green-700 mb-6 border-b border-green-200 pb-2"
+     >
+      Keuangan Keluarga
+     </h2>
+     <div class="grid gap-8 sm:grid-cols-2">
+      <article
+       class="flex flex-col bg-gray-50 rounded-lg shadow-sm overflow-hidden"
+       data-article-id="kk1"
+      >
+       <img
+        alt="Foto nyata keluarga sedang duduk bersama di meja makan sambil membahas anggaran keuangan dengan kalkulator dan catatan"
+        class="w-full h-44 object-cover"
+        height="350"
+        loading="lazy"
+        src="https://storage.googleapis.com/a1aa/image/91618d38-cf98-437a-1a7f-a24a95929dda.jpg"
+        width="600"
+       />
+       <div class="p-4 flex flex-col flex-grow">
+        <h3>
+         <button
+          type="button"
+          class="text-xl font-semibold text-green-800 mb-2 text-left w-full hover:underline focus:outline-none focus:ring-2 focus:ring-green-600"
+          aria-expanded="false"
+          aria-controls="content-kk1"
+          id="btn-kk1"
+         >
+          Cara Efektif Mengatur Anggaran Bulanan Keluarga
+         </button>
+        </h3>
+        <p class="text-gray-600 flex-grow">
+         Strategi praktis untuk mengelola pengeluaran dan pemasukan agar
+         keuangan keluarga tetap sehat.
+        </p>
+       </div>
+       <div
+        class="hidden p-4 bg-white border-t border-gray-200 mt-4 rounded-b-lg"
+        id="content-kk1"
+        role="region"
+        aria-labelledby="btn-kk1"
+       >
+        <p class="mb-4 leading-relaxed text-gray-700">
+         Mengatur anggaran bulanan keluarga dimulai dengan mencatat semua
+         pemasukan dan pengeluaran. Prioritaskan kebutuhan pokok dan sisihkan
+         dana untuk tabungan dan dana darurat. Gunakan aplikasi keuangan untuk
+         memudahkan pengelolaan dan evaluasi rutin agar tetap sesuai rencana.
+        </p>
+        <button
+         type="button"
+         class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-green-700 transition"
+         aria-controls="summary-section-kk1"
+         aria-expanded="false"
+         id="finish-btn-kk1"
+        >
+         Selesai Baca
+        </button>
+        <form
+         class="space-y-3 mt-6 hidden"
+         data-article-id="kk1"
+         id="summary-section-kk1"
+        >
+         <label
+          for="summary-kk1"
+          class="block font-semibold text-gray-900"
+          >Ringkasan yang Anda baca:</label
+         >
+         <textarea
+          id="summary-kk1"
+          name="summary"
+          rows="3"
+          required
+          class="w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+          placeholder="Tulis ringkasan singkat artikel ini..."
+         ></textarea>
+         <button
+          type="submit"
+          class="bg-green-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-green-700 transition"
+         >
+          Kirim Ringkasan &amp; Dapatkan Poin
+         </button>
+        </form>
+       </div>
+      </article>
+      <article
+       class="flex flex-col bg-gray-50 rounded-lg shadow-sm overflow-hidden"
+       data-article-id="kk2"
+      >
+       <img
+        alt="Foto nyata tumpukan koin dan celengan berbentuk rumah di atas meja kayu dengan latar belakang blur"
+        class="w-full h-44 object-cover"
+        height="350"
+        loading="lazy"
+        src="https://storage.googleapis.com/a1aa/image/552ca649-fa70-4da4-a7d9-bebf8f2d7d29.jpg"
+        width="600"
+       />
+       <div class="p-4 flex flex-col flex-grow">
+        <h3>
+         <button
+          type="button"
+          class="text-xl font-semibold text-green-800 mb-2 text-left w-full hover:underline focus:outline-none focus:ring-2 focus:ring-green-600"
+          aria-expanded="false"
+          aria-controls="content-kk2"
+          id="btn-kk2"
+         >
+          Investasi untuk Masa Depan Anak
+         </button>
+        </h3>
+        <p class="text-gray-600 flex-grow">
+         Panduan memilih instrumen investasi yang tepat untuk menjamin
+         pendidikan dan masa depan anak.
+        </p>
+       </div>
+       <div
+        class="hidden p-4 bg-white border-t border-gray-200 mt-4 rounded-b-lg"
+        id="content-kk2"
+        role="region"
+        aria-labelledby="btn-kk2"
+       >
+        <p class="mb-4 leading-relaxed text-gray-700">
+         Investasi untuk masa depan anak bisa dimulai dengan memilih produk
+         seperti reksa dana, deposito, atau asuransi pendidikan. Sesuaikan
+         dengan profil risiko dan tujuan keuangan keluarga. Konsistensi dan
+         evaluasi berkala sangat penting untuk hasil optimal.
+        </p>
+        <button
+         type="button"
+         class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-green-700 transition"
+         aria-controls="summary-section-kk2"
+         aria-expanded="false"
+         id="finish-btn-kk2"
+        >
+         Selesai Baca
+        </button>
+        <form
+         class="space-y-3 mt-6 hidden"
+         data-article-id="kk2"
+         id="summary-section-kk2"
+        >
+         <label
+          for="summary-kk2"
+          class="block font-semibold text-gray-900"
+          >Ringkasan yang Anda baca:</label
+         >
+         <textarea
+          id="summary-kk2"
+          name="summary"
+          rows="3"
+          required
+          class="w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+          placeholder="Tulis ringkasan singkat artikel ini..."
+         ></textarea>
+         <button
+          type="submit"
+          class="bg-green-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-green-700 transition"
+         >
+          Kirim Ringkasan &amp; Dapatkan Poin
+         </button>
+        </form>
+       </div>
+      </article>
+      <article
+       class="flex flex-col bg-gray-50 rounded-lg shadow-sm overflow-hidden"
+       data-article-id="kk3"
+      >
+       <img
+        alt="Foto nyata pasangan dewasa sedang berdiskusi sambil melihat grafik keuangan di tablet di ruang tamu modern"
+        class="w-full h-44 object-cover"
+        height="350"
+        loading="lazy"
+        src="https://storage.googleapis.com/a1aa/image/5bf9c2a5-5776-4c9f-897d-46c2794799d2.jpg"
+        width="600"
+       />
+       <div class="p-4 flex flex-col flex-grow">
+        <h3>
+         <button
+          type="button"
+          class="text-xl font-semibold text-green-800 mb-2 text-left w-full hover:underline focus:outline-none focus:ring-2 focus:ring-green-600"
+          aria-expanded="false"
+          aria-controls="content-kk3"
+          id="btn-kk3"
+         >
+          Mengelola Hutang dengan Bijak untuk Keluarga
+         </button>
+        </h3>
+        <p class="text-gray-600 flex-grow">
+         Tips mengatur dan melunasi hutang agar tidak membebani keuangan
+         keluarga Anda.
+        </p>
+       </div>
+       <div
+        class="hidden p-4 bg-white border-t border-gray-200 mt-4 rounded-b-lg"
+        id="content-kk3"
+        role="region"
+        aria-labelledby="btn-kk3"
+       >
+        <p class="mb-4 leading-relaxed text-gray-700">
+         Mengelola hutang dengan bijak meliputi membuat daftar hutang, prioritas
+         pembayaran, dan menghindari hutang baru yang tidak perlu. Komunikasi
+         terbuka dengan anggota keluarga dan perencanaan keuangan yang matang
+         membantu mengurangi beban hutang.
+        </p>
+        <button
+         type="button"
+         class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-green-700 transition"
+         aria-controls="summary-section-kk3"
+         aria-expanded="false"
+         id="finish-btn-kk3"
+        >
+         Selesai Baca
+        </button>
+        <form
+         class="space-y-3 mt-6 hidden"
+         data-article-id="kk3"
+         id="summary-section-kk3"
+        >
+         <label
+          for="summary-kk3"
+          class="block font-semibold text-gray-900"
+          >Ringkasan yang Anda baca:</label
+         >
+         <textarea
+          id="summary-kk3"
+          name="summary"
+          rows="3"
+          required
+          class="w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+          placeholder="Tulis ringkasan singkat artikel ini..."
+         ></textarea>
+         <button
+          type="submit"
+          class="bg-green-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-green-700 transition"
+         >
+          Kirim Ringkasan &amp; Dapatkan Poin
+         </button>
+        </form>
+       </div>
+      </article>
+      <article
+       class="flex flex-col bg-gray-50 rounded-lg shadow-sm overflow-hidden"
+       data-article-id="kk4"
+      >
+       <img
+        alt="Foto nyata smartphone dengan aplikasi perencanaan keuangan terbuka di layar, diletakkan di atas meja kayu"
+        class="w-full h-44 object-cover"
+        height="350"
+        loading="lazy"
+        src="https://storage.googleapis.com/a1aa/image/045101ab-8601-436b-4e9a-c300fe841cb4.jpg"
+        width="600"
+       />
+       <div class="p-4 flex flex-col flex-grow">
+        <h3>
+         <button
+          type="button"
+          class="text-xl font-semibold text-green-800 mb-2 text-left w-full hover:underline focus:outline-none focus:ring-2 focus:ring-green-600"
+          aria-expanded="false"
+          aria-controls="content-kk4"
+          id="btn-kk4"
+         >
+          Aplikasi Keuangan Keluarga Terbaik Tahun Ini
+         </button>
+        </h3>
+        <p class="text-gray-600 flex-grow">
+         Review aplikasi yang membantu Anda mengelola keuangan keluarga dengan
+         mudah dan efisien.
+        </p>
+       </div>
+       <div
+        class="hidden p-4 bg-white border-t border-gray-200 mt-4 rounded-b-lg"
+        id="content-kk4"
+        role="region"
+        aria-labelledby="btn-kk4"
+       >
+        <p class="mb-4 leading-relaxed text-gray-700">
+         Aplikasi keuangan keluarga membantu mencatat pengeluaran, membuat
+         anggaran, dan mengingatkan tagihan. Pilih aplikasi dengan fitur yang
+         sesuai kebutuhan dan mudah digunakan oleh seluruh anggota keluarga.
+         Keamanan data juga menjadi faktor penting.
+        </p>
+        <button
+         type="button"
+         class="mt-4 bg-green-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-green-700 transition"
+         aria-controls="summary-section-kk4"
+         aria-expanded="false"
+         id="finish-btn-kk4"
+        >
+         Selesai Baca
+        </button>
+        <form
+         class="space-y-3 mt-6 hidden"
+         data-article-id="kk4"
+         id="summary-section-kk4"
+        >
+         <label
+          for="summary-kk4"
+          class="block font-semibold text-gray-900"
+          >Ringkasan yang Anda baca:</label
+         >
+         <textarea
+          id="summary-kk4"
+          name="summary"
+          rows="3"
+          required
+          class="w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-green-500"
+          placeholder="Tulis ringkasan singkat artikel ini..."
+         ></textarea>
+         <button
+          type="submit"
+          class="bg-green-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-green-700 transition"
+         >
+          Kirim Ringkasan &amp; Dapatkan Poin
+         </button>
+        </form>
+       </div>
+      </article>
+     </div>
+    </article>
+    <!-- Parenting -->
+    <article
+     class="bg-white rounded-lg shadow-md p-6"
+     id="parenting"
+     aria-label="Kategori Parenting"
+    >
+     <h2
+      class="text-3xl font-semibold text-pink-700 mb-6 border-b border-pink-200 pb-2"
+     >
+      Parenting
+     </h2>
+     <div class="grid gap-8 sm:grid-cols-2">
+      <article
+       class="flex flex-col bg-gray-50 rounded-lg shadow-sm overflow-hidden"
+       data-article-id="pt1"
+      >
+       <img
+        alt="Foto nyata ibu dan anak sedang membaca buku bersama di ruang keluarga dengan pencahayaan alami"
+        class="w-full h-44 object-cover"
+        height="350"
+        loading="lazy"
+        src="https://storage.googleapis.com/a1aa/image/cd83cf03-f65e-431c-22a1-ca252da64d8b.jpg"
+        width="600"
+       />
+       <div class="p-4 flex flex-col flex-grow">
+        <h3>
+         <button
+          type="button"
+          class="text-xl font-semibold text-pink-800 mb-2 text-left w-full hover:underline focus:outline-none focus:ring-2 focus:ring-pink-600"
+          aria-expanded="false"
+          aria-controls="content-pt1"
+          id="btn-pt1"
+         >
+          Membangun Komunikasi Efektif dengan Anak
+         </button>
+        </h3>
+        <p class="text-gray-600 flex-grow">
+         Cara membangun komunikasi yang sehat dan terbuka antara orang tua dan
+         anak.
+        </p>
+       </div>
+       <div
+        class="hidden p-4 bg-white border-t border-gray-200 mt-4 rounded-b-lg"
+        id="content-pt1"
+        role="region"
+        aria-labelledby="btn-pt1"
+       >
+        <p class="mb-4 leading-relaxed text-gray-700">
+         Komunikasi efektif dengan anak melibatkan mendengarkan aktif,
+         mengungkapkan perasaan dengan jelas, dan memberikan perhatian penuh.
+         Hindari kritik berlebihan dan ciptakan suasana yang nyaman agar anak
+         merasa dihargai dan terbuka.
+        </p>
+        <button
+         type="button"
+         class="mt-4 bg-pink-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-pink-700 transition"
+         aria-controls="summary-section-pt1"
+         aria-expanded="false"
+         id="finish-btn-pt1"
+        >
+         Selesai Baca
+        </button>
+        <form
+         class="space-y-3 mt-6 hidden"
+         data-article-id="pt1"
+         id="summary-section-pt1"
+        >
+         <label
+          for="summary-pt1"
+          class="block font-semibold text-gray-900"
+          >Ringkasan yang Anda baca:</label
+         >
+         <textarea
+          id="summary-pt1"
+          name="summary"
+          rows="3"
+          required
+          class="w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
+          placeholder="Tulis ringkasan singkat artikel ini..."
+         ></textarea>
+         <button
+          type="submit"
+          class="bg-pink-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-pink-700 transition"
+         >
+          Kirim Ringkasan &amp; Dapatkan Poin
+         </button>
+        </form>
+       </div>
+      </article>
+      <article
+       class="flex flex-col bg-gray-50 rounded-lg shadow-sm overflow-hidden"
+       data-article-id="pt2"
+      >
+       <img
+        alt="Foto nyata ayah dan anak bermain di taman dengan latar belakang pepohonan hijau dan sinar matahari"
+        class="w-full h-44 object-cover"
+        height="350"
+        loading="lazy"
+        src="https://storage.googleapis.com/a1aa/image/acebc1a2-02b8-4984-189f-04eb3750805d.jpg"
+        width="600"
+       />
+       <div class="p-4 flex flex-col flex-grow">
+        <h3>
+         <button
+          type="button"
+          class="text-xl font-semibold text-pink-800 mb-2 text-left w-full hover:underline focus:outline-none focus:ring-2 focus:ring-pink-600"
+          aria-expanded="false"
+          aria-controls="content-pt2"
+          id="btn-pt2"
+         >
+          Aktivitas Seru untuk Mengembangkan Kreativitas Anak
+         </button>
+        </h3>
+        <p class="text-gray-600 flex-grow">
+         Ide kegiatan yang dapat merangsang kreativitas dan imajinasi anak di
+         rumah.
+        </p>
+       </div>
+       <div
+        class="hidden p-4 bg-white border-t border-gray-200 mt-4 rounded-b-lg"
+        id="content-pt2"
+        role="region"
+        aria-labelledby="btn-pt2"
+       >
+        <p class="mb-4 leading-relaxed text-gray-700">
+         Aktivitas seperti melukis, membuat kerajinan tangan, dan bermain
+         musik dapat mengembangkan kreativitas anak. Berikan ruang dan waktu
+         untuk bereksplorasi tanpa tekanan agar anak merasa bebas mengekspresikan
+         diri.
+        </p>
+        <button
+         type="button"
+         class="mt-4 bg-pink-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-pink-700 transition"
+         aria-controls="summary-section-pt2"
+         aria-expanded="false"
+         id="finish-btn-pt2"
+        >
+         Selesai Baca
+        </button>
+        <form
+         class="space-y-3 mt-6 hidden"
+         data-article-id="pt2"
+         id="summary-section-pt2"
+        >
+         <label
+          for="summary-pt2"
+          class="block font-semibold text-gray-900"
+          >Ringkasan yang Anda baca:</label
+         >
+         <textarea
+          id="summary-pt2"
+          name="summary"
+          rows="3"
+          required
+          class="w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
+          placeholder="Tulis ringkasan singkat artikel ini..."
+         ></textarea>
+         <button
+          type="submit"
+          class="bg-pink-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-pink-700 transition"
+         >
+          Kirim Ringkasan &amp; Dapatkan Poin
+         </button>
+        </form>
+       </div>
+      </article>
+      <article
+       class="flex flex-col bg-gray-50 rounded-lg shadow-sm overflow-hidden"
+       data-article-id="pt3"
+      >
+       <img
+        alt="Foto nyata keluarga bahagia sedang makan malam bersama di ruang makan dengan suasana hangat"
+        class="w-full h-44 object-cover"
+        height="350"
+        loading="lazy"
+        src="https://storage.googleapis.com/a1aa/image/6a709a00-00c7-4b20-83bb-3aadbf9e9c1b.jpg"
+        width="600"
+       />
+       <div class="p-4 flex flex-col flex-grow">
+        <h3>
+         <button
+          type="button"
+          class="text-xl font-semibold text-pink-800 mb-2 text-left w-full hover:underline focus:outline-none focus:ring-2 focus:ring-pink-600"
+          aria-expanded="false"
+          aria-controls="content-pt3"
+          id="btn-pt3"
+         >
+          Tips Menjaga Keseimbangan Antara Karier dan Keluarga
+         </button>
+        </h3>
+        <p class="text-gray-600 flex-grow">
+         Strategi agar orang tua dapat mengatur waktu antara pekerjaan dan
+         keluarga dengan baik.
+        </p>
+       </div>
+       <div
+        class="hidden p-4 bg-white border-t border-gray-200 mt-4 rounded-b-lg"
+        id="content-pt3"
+        role="region"
+        aria-labelledby="btn-pt3"
+       >
+        <p class="mb-4 leading-relaxed text-gray-700">
+         Menjaga keseimbangan karier dan keluarga memerlukan manajemen waktu
+         yang baik, menetapkan prioritas, dan komunikasi terbuka dengan pasangan
+         serta anak. Sisihkan waktu khusus untuk keluarga tanpa gangguan kerja.
+        </p>
+        <button
+         type="button"
+         class="mt-4 bg-pink-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-pink-700 transition"
+         aria-controls="summary-section-pt3"
+         aria-expanded="false"
+         id="finish-btn-pt3"
+        >
+         Selesai Baca
+        </button>
+        <form
+         class="space-y-3 mt-6 hidden"
+         data-article-id="pt3"
+         id="summary-section-pt3"
+        >
+         <label
+          for="summary-pt3"
+          class="block font-semibold text-gray-900"
+          >Ringkasan yang Anda baca:</label
+         >
+         <textarea
+          id="summary-pt3"
+          name="summary"
+          rows="3"
+          required
+          class="w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
+          placeholder="Tulis ringkasan singkat artikel ini..."
+         ></textarea>
+         <button
+          type="submit"
+          class="bg-pink-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-pink-700 transition"
+         >
+          Kirim Ringkasan &amp; Dapatkan Poin
+         </button>
+        </form>
+       </div>
+      </article>
+      <article
+       class="flex flex-col bg-gray-50 rounded-lg shadow-sm overflow-hidden"
+       data-article-id="pt4"
+      >
+       <img
+        alt="Foto nyata anak-anak sedang belajar bersama dengan orang tua di meja belajar dengan alat tulis dan buku"
+        class="w-full h-44 object-cover"
+        height="350"
+        loading="lazy"
+        src="https://storage.googleapis.com/a1aa/image/555a584b-f34d-4fb2-7791-2c816c64e260.jpg"
+        width="600"
+       />
+       <div class="p-4 flex flex-col flex-grow">
+        <h3>
+         <button
+          type="button"
+          class="text-xl font-semibold text-pink-800 mb-2 text-left w-full hover:underline focus:outline-none focus:ring-2 focus:ring-pink-600"
+          aria-expanded="false"
+          aria-controls="content-pt4"
+          id="btn-pt4"
+         >
+          Mendukung Pendidikan Anak di Era Digital
+         </button>
+        </h3>
+        <p class="text-gray-600 flex-grow">
+         Tips memanfaatkan teknologi untuk mendukung proses belajar anak secara
+         efektif.
+        </p>
+       </div>
+       <div
+        class="hidden p-4 bg-white border-t border-gray-200 mt-4 rounded-b-lg"
+        id="content-pt4"
+        role="region"
+        aria-labelledby="btn-pt4"
+       >
+        <p class="mb-4 leading-relaxed text-gray-700">
+         Memanfaatkan teknologi seperti aplikasi edukasi dan video pembelajaran
+         dapat membantu anak belajar lebih interaktif. Orang tua perlu
+         mendampingi dan mengatur waktu penggunaan agar tetap seimbang dan
+         efektif.
+        </p>
+        <button
+         type="button"
+         class="mt-4 bg-pink-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-pink-700 transition"
+         aria-controls="summary-section-pt4"
+         aria-expanded="false"
+         id="finish-btn-pt4"
+        >
+         Selesai Baca
+        </button>
+        <form
+         class="space-y-3 mt-6 hidden"
+         data-article-id="pt4"
+         id="summary-section-pt4"
+        >
+         <label
+          for="summary-pt4"
+          class="block font-semibold text-gray-900"
+          >Ringkasan yang Anda baca:</label
+         >
+         <textarea
+          id="summary-pt4"
+          name="summary"
+          rows="3"
+          required
+          class="w-full rounded-md border border-gray-300 p-2 focus:outline-none focus:ring-2 focus:ring-pink-500"
+          placeholder="Tulis ringkasan singkat artikel ini..."
+         ></textarea>
+         <button
+          type="submit"
+          class="bg-pink-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-pink-700 transition"
+         >
+          Kirim Ringkasan &amp; Dapatkan Poin
+         </button>
+        </form>
+       </div>
+      </article>
+     </div>
+    </article>
+   </section>
+   <aside class="lg:col-span-1 sticky top-24 self-start">
+    <div class="bg-white rounded-lg shadow-md p-6">
+     <h3
+      class="text-2xl font-semibold text-gray-900 mb-6 border-b border-gray-200 pb-2"
+     >
+      Artikel Terbaru
+     </h3>
+     <ul class="space-y-5">
+      <li>
+       <a
+        class="flex items-center space-x-4 hover:bg-indigo-50 rounded-md p-2 transition"
+        href="#"
+       >
+        <img
+         alt="Thumbnail artikel terbaru tentang keamanan data digital dengan foto nyata gembok digital di layar komputer"
+         class="w-20 h-20 object-cover rounded-md flex-shrink-0"
+         height="80"
+         loading="lazy"
+         src="https://storage.googleapis.com/a1aa/image/803d73df-ceb4-4313-f716-d11056990498.jpg"
+         width="80"
+        />
+        <div>
+         <h4 class="text-indigo-700 font-semibold text-lg leading-tight">
+          5 Cara Melindungi Data Pribadi di Internet
+         </h4>
+         <p class="text-gray-500 text-sm mt-1">
+          Pelajari langkah mudah untuk menjaga privasi Anda saat berselancar di
+          dunia maya.
+         </p>
+        </div>
+       </a>
+      </li>
+      <li>
+       <a
+        class="flex items-center space-x-4 hover:bg-green-50 rounded-md p-2 transition"
+        href="#"
+       >
+        <img
+         alt="Thumbnail artikel terbaru tentang tips menabung keluarga dengan foto nyata celengan dan uang kertas"
+         class="w-20 h-20 object-cover rounded-md flex-shrink-0"
+         height="80"
+         loading="lazy"
+         src="https://storage.googleapis.com/a1aa/image/64d209cf-1744-430a-e5ba-8400ff2afab8.jpg"
+         width="80"
+        />
+        <div>
+         <h4 class="text-green-700 font-semibold text-lg leading-tight">
+          Tips Menabung untuk Dana Darurat Keluarga
+         </h4>
+         <p class="text-gray-500 text-sm mt-1">
+          Kenali pentingnya dana darurat dan cara menabung yang efektif untuk
+          keluarga Anda.
+         </p>
+        </div>
+       </a>
+      </li>
+      <li>
+       <a
+        class="flex items-center space-x-4 hover:bg-pink-50 rounded-md p-2 transition"
+        href="#"
+       >
+        <img
+         alt="Thumbnail artikel terbaru tentang parenting dengan foto nyata orang tua dan anak bermain bersama di ruang keluarga"
+         class="w-20 h-20 object-cover rounded-md flex-shrink-0"
+         height="80"
+         loading="lazy"
+         src="https://storage.googleapis.com/a1aa/image/3d5e1f9c-dd67-4bf6-ed5f-238776818208.jpg"
+         width="80"
+        />
+        <div>
+         <h4 class="text-pink-700 font-semibold text-lg leading-tight">
+          Membangun Kebiasaan Positif pada Anak Sejak Dini
+         </h4>
+         <p class="text-gray-500 text-sm mt-1">
+          Strategi membentuk karakter dan kebiasaan baik yang berdampak jangka
+          panjang.
+         </p>
+        </div>
+       </a>
+      </li>
+      <li>
+       <a
+        class="flex items-center space-x-4 hover:bg-indigo-50 rounded-md p-2 transition"
+        href="#"
+       >
+        <img
+         alt="Thumbnail artikel terbaru tentang literasi digital dengan foto nyata orang menggunakan smartphone di kafe"
+         class="w-20 h-20 object-cover rounded-md flex-shrink-0"
+         height="80"
+         loading="lazy"
+         src="https://storage.googleapis.com/a1aa/image/3c2d53f8-d838-45a1-8dd6-6a8101481491.jpg"
+         width="80"
+        />
+        <div>
+         <h4 class="text-indigo-700 font-semibold text-lg leading-tight">
+          Menghindari Penipuan Online dengan Cermat
+         </h4>
+         <p class="text-gray-500 text-sm mt-1">
+          Tips mengenali modus penipuan dan cara melindungi diri di dunia
+          digital.
+         </p>
+        </div>
+       </a>
+      </li>
+      <li>
+       <a
+        class="flex items-center space-x-4 hover:bg-green-50 rounded-md p-2 transition"
+        href="#"
+       >
+        <img
+         alt="Thumbnail artikel terbaru tentang keuangan keluarga dengan foto nyata grafik keuangan di layar komputer"
+         class="w-20 h-20 object-cover rounded-md flex-shrink-0"
+         height="80"
+         loading="lazy"
+         src="https://storage.googleapis.com/a1aa/image/1c7a2016-69e0-4761-0e14-08a1fe1985ff.jpg"
+         width="80"
+        />
+        <div>
+         <h4 class="text-green-700 font-semibold text-lg leading-tight">
+          Mengelola Pengeluaran Keluarga Saat Pandemi
+         </h4>
+         <p class="text-gray-500 text-sm mt-1">
+          Strategi menyesuaikan anggaran keluarga di masa sulit agar tetap
+          stabil.
+         </p>
+        </div>
+       </a>
+      </li>
+      <li>
+       <a
+        class="flex items-center space-x-4 hover:bg-pink-50 rounded-md p-2 transition"
+        href="#"
+       >
+        <img
+         alt="Thumbnail artikel terbaru tentang parenting dengan foto nyata anak belajar menggunakan tablet di rumah"
+         class="w-20 h-20 object-cover rounded-md flex-shrink-0"
+         height="80"
+         loading="lazy"
+         src="https://storage.googleapis.com/a1aa/image/7fefbe1f-a29f-472c-9c88-0f4ad7fb2273.jpg"
+         width="80"
+        />
+        <div>
+         <h4 class="text-pink-700 font-semibold text-lg leading-tight">
+          Memilih Konten Edukasi Digital untuk Anak
+         </h4>
+         <p class="text-gray-500 text-sm mt-1">
+          Panduan memilih aplikasi dan video edukasi yang aman dan bermanfaat.
+         </p>
+        </div>
+       </a>
+      </li>
+     </ul>
+    </div>
+   </aside>
+  </main>
+  <footer class="bg-white border-t border-gray-200 mt-16">
+   <div
+    class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center text-gray-600 text-sm"
+   >
+    <p>© 2025 InfoDewasa. Semua hak cipta dilindungi.</p>
+    <nav class="space-x-4 mt-3 md:mt-0">
+     <a class="hover:text-indigo-600 transition" href="#">Tentang Kami</a>
+     <a class="hover:text-indigo-600 transition" href="#">Kontak</a>
+     <a class="hover:text-indigo-600 transition" href="#">Kebijakan Privasi</a>
+    </nav>
+   </div>
+  </footer>
+  <script>
+   const btn = document.getElementById("mobile-menu-button");
+   const menu = document.getElementById("mobile-menu");
+
+   btn.addEventListener("click", () => {
+    menu.classList.toggle("hidden");
+   });
+
+   // Toggle article content visibility on title button click
+   document.querySelectorAll("article button[aria-expanded]").forEach((button) => {
+    button.addEventListener("click", () => {
+     const expanded = button.getAttribute("aria-expanded") === "true";
+     // Close all other articles in same category
+     const parentArticle = button.closest("article");
+     const category = parentArticle.closest("article[id]");
+     category.querySelectorAll("button[aria-expanded]").forEach((btn) => {
+      if (btn !== button) {
+       btn.setAttribute("aria-expanded", "false");
+       const contentId = btn.getAttribute("aria-controls");
+       const contentEl = document.getElementById(contentId);
+       if (contentEl) contentEl.classList.add("hidden");
+      }
+     });
+
+     if (expanded) {
+      button.setAttribute("aria-expanded", "false");
+      const contentId = button.getAttribute("aria-controls");
+      const contentEl = document.getElementById(contentId);
+      if (contentEl) contentEl.classList.add("hidden");
+     } else {
+      button.setAttribute("aria-expanded", "true");
+      const contentId = button.getAttribute("aria-controls");
+      const contentEl = document.getElementById(contentId);
+      if (contentEl) contentEl.classList.remove("hidden");
+      // Scroll into view smoothly
+      contentEl.scrollIntoView({ behavior: "smooth", block: "start" });
+     }
+    });
+   });
+
+   // Handle "Selesai Baca" button to show summary form
+   document.querySelectorAll("button[id^='finish-btn-']").forEach((btn) => {
+    btn.addEventListener("click", () => {
+     const controlsId = btn.getAttribute("aria-controls");
+     const summarySection = document.getElementById(controlsId);
+     if (!summarySection) return;
+
+     // Show summary form and hide "Selesai Baca" button
+     summarySection.classList.remove("hidden");
+     btn.setAttribute("aria-expanded", "true");
+     btn.classList.add("hidden");
+
+     // Scroll to summary form smoothly
+     summarySection.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+   });
+
+   // Handle form submissions for summaries and points
+   const pointsKey = "userPoints";
+   const summariesKey = "userSummaries";
+
+   // Load points from localStorage or start at 0
+   let userPoints = parseInt(localStorage.getItem(pointsKey)) || 0;
+   let userSummaries = JSON.parse(localStorage.getItem(summariesKey)) || {};
+
+   function savePoints() {
+    localStorage.setItem(pointsKey, userPoints);
+   }
+   function saveSummaries() {
+    localStorage.setItem(summariesKey, JSON.stringify(userSummaries));
+   }
+
+   // Show points in a fixed top-right badge
+   const pointsBadge = document.createElement("div");
+   pointsBadge.setAttribute(
+    "class",
+    "fixed top-4 right-4 bg-indigo-600 text-white px-4 py-2 rounded-md shadow-lg font-semibold z-50 select-none"
+   );
+   pointsBadge.textContent = `Poin Anda: ${userPoints}`;
+   document.body.appendChild(pointsBadge);
+
+   document.querySelectorAll("form").forEach((form) => {
+    form.addEventListener("submit", (e) => {
+     e.preventDefault();
+     const articleId = form.getAttribute("data-article-id");
+     const textarea = form.querySelector("textarea[name='summary']");
+     const summary = textarea.value.trim();
+     if (!summary) {
+      alert("Mohon isi ringkasan sebelum mengirim.");
+      return;
+     }
+     // Save summary
+     userSummaries[articleId] = summary;
+     saveSummaries();
+
+     // Add points (e.g. 10 points per article)
+     userPoints += 10;
+     savePoints();
+     pointsBadge.textContent = `Poin Anda: ${userPoints}`;
+
+     // Disable form to prevent multiple submissions
+     textarea.disabled = true;
+     form.querySelector("button[type='submit']").disabled = true;
+     form.querySelector("button[type='submit']").textContent =
+      "Terima Kasih! Poin Ditambahkan";
+
+     // Optionally collapse the article content after submission
+     const contentEl = form.closest("div[role='region']");
+     if (contentEl) {
+      contentEl.classList.add("hidden");
+      const btnId = contentEl.getAttribute("aria-labelledby");
+      const btnEl = document.getElementById(btnId);
+      if (btnEl) btnEl.setAttribute("aria-expanded", "false");
+     }
+    });
+   });
+  </script>
+ </body>
+</html>

@@ -1,0 +1,183 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Kolaborasi Penulisan
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+ </head>
+ <body class="bg-gray-50 min-h-screen flex flex-col items-center p-4">
+  <main class="w-full max-w-6xl bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row gap-8">
+   <!-- Left side: Illustration -->
+   <section class="md:w-1/2 flex justify-center items-center">
+    <img alt="Illustration of two students collaborating on writing, one using a laptop and the other writing in a notebook, with a light background to focus on their interaction" class="rounded-lg shadow-lg max-w-full h-auto" height="400" src="https://storage.googleapis.com/a1aa/image/f444ebae-3ecd-4384-1489-b6269f43873e.jpg" width="600"/>
+   </section>
+   <!-- Right side: Collaboration feature -->
+   <section class="md:w-1/2 flex flex-col">
+    <h1 class="text-3xl font-semibold text-gray-800 mb-4">
+     Kolaborasi Penulisan
+    </h1>
+    <p class="text-gray-700 mb-6">
+     Area kolaborasi mirip Google Docs mini, untuk menulis cerita atau ringkasan bersama.
+        Fitur co-author untuk menambahkan teman, memberikan komentar, dan revisi bersama.
+    </p>
+    <button aria-label="Mulai Tulis Bersama" class="mb-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-lg shadow-md transition-colors duration-300 focus:outline-none focus:ring-4 focus:ring-blue-300 flex items-center justify-center" id="startCollabBtn" type="button">
+     <i aria-hidden="true" class="fas fa-pen-nib mr-2">
+     </i>
+     Mulai Tulis Bersama
+    </button>
+    <!-- Collaboration editor area -->
+    <div class="flex flex-col flex-grow border border-gray-300 rounded-lg p-4 mb-6 bg-gray-50" id="collabArea" style="display:none;">
+     <textarea aria-label="Kolaborasi penulisan area" class="resize-none w-full h-48 p-3 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 bg-white text-gray-800" id="collabTextarea" placeholder="Tulis cerita atau ringkasan di sini..."></textarea>
+     <div class="mt-3 flex justify-between text-sm text-gray-600">
+      <span>
+       <i aria-hidden="true" class="fas fa-comments mr-1">
+       </i>
+       Komentar aktif:
+       <span id="activeCommentsCount">
+        0
+       </span>
+      </span>
+      <span>
+       <i aria-hidden="true" class="fas fa-user-friends mr-1">
+       </i>
+       Co-author aktif:
+       <span id="activeCoauthorsCount">
+        0
+       </span>
+      </span>
+     </div>
+    </div>
+    <!-- Status panel -->
+    <div class="border border-gray-300 rounded-lg p-4 bg-white shadow-sm" id="statusPanel" style="display:none;">
+     <h2 class="text-lg font-semibold text-gray-800 mb-3">
+      Status Progress Penulisan
+     </h2>
+     <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="w-full bg-gray-200 rounded-full h-4 mb-4 overflow-hidden" id="progressBarContainer" role="progressbar">
+      <div class="bg-blue-600 h-4 rounded-full" id="progressBar" style="width: 0%;">
+      </div>
+     </div>
+     <p class="text-gray-700 mb-4" id="progressText">
+      0% selesai
+     </p>
+     <h3 class="text-md font-semibold text-gray-800 mb-2">
+      Co-author Aktif
+     </h3>
+     <ul class="flex space-x-4 overflow-x-auto" id="coauthorsList">
+      <!-- Co-author items will be dynamically inserted here -->
+     </ul>
+    </div>
+   </section>
+  </main>
+  <script>
+   (() => {
+    // Sample co-authors data
+    const coauthors = [
+      {
+        id: 1,
+        name: "Rina",
+        avatar: "https://placehold.co/60x60/png?text=Rina",
+        alt: "Avatar of co-author user 1, a young woman with short black hair smiling"
+      },
+      {
+        id: 2,
+        name: "Budi",
+        avatar: "https://placehold.co/60x60/png?text=Budi",
+        alt: "Avatar of co-author user 2, a young man with glasses and short brown hair"
+      },
+      {
+        id: 3,
+        name: "Sari",
+        avatar: "https://placehold.co/60x60/png?text=Sari",
+        alt: "Avatar of co-author user 3, a young woman with long curly hair and glasses"
+      },
+      {
+        id: 4,
+        name: "Andi",
+        avatar: "https://placehold.co/60x60/png?text=Andi",
+        alt: "Avatar of co-author user 4, a young man with short black hair and a beard"
+      }
+    ];
+
+    // Comments count simulation
+    let activeComments = 3;
+
+    // Elements
+    const startBtn = document.getElementById("startCollabBtn");
+    const collabArea = document.getElementById("collabArea");
+    const textarea = document.getElementById("collabTextarea");
+    const activeCommentsCount = document.getElementById("activeCommentsCount");
+    const activeCoauthorsCount = document.getElementById("activeCoauthorsCount");
+    const statusPanel = document.getElementById("statusPanel");
+    const progressBar = document.getElementById("progressBar");
+    const progressText = document.getElementById("progressText");
+    const coauthorsList = document.getElementById("coauthorsList");
+    const progressBarContainer = document.getElementById("progressBarContainer");
+
+    // Initialize co-authors list
+    function renderCoauthors() {
+      coauthorsList.innerHTML = "";
+      coauthors.forEach((author) => {
+        const li = document.createElement("li");
+        li.className = "flex flex-col items-center min-w-[60px]";
+        li.innerHTML = `
+          <img src="${author.avatar}" alt="${author.alt}" class="rounded-full w-14 h-14 object-cover mb-1" width="60" height="60" />
+          <span class="text-xs text-gray-700 truncate w-14 text-center">${author.name}</span>
+        `;
+        coauthorsList.appendChild(li);
+      });
+      activeCoauthorsCount.textContent = coauthors.length;
+    }
+
+    // Calculate progress based on textarea content length
+    // For demo, assume target length is 1000 characters
+    function updateProgress() {
+      const targetLength = 1000;
+      const currentLength = textarea.value.length;
+      let progressPercent = Math.min(100, Math.round((currentLength / targetLength) * 100));
+      progressBar.style.width = progressPercent + "%";
+      progressBarContainer.setAttribute("aria-valuenow", progressPercent);
+      progressText.textContent = progressPercent + "% selesai";
+    }
+
+    // Initialize comments count
+    function updateCommentsCount() {
+      activeCommentsCount.textContent = activeComments;
+    }
+
+    // Start collaboration button click handler
+    startBtn.addEventListener("click", () => {
+      startBtn.disabled = true;
+      startBtn.classList.add("opacity-50", "cursor-not-allowed");
+      collabArea.style.display = "flex";
+      statusPanel.style.display = "block";
+      renderCoauthors();
+      updateCommentsCount();
+      updateProgress();
+      textarea.focus();
+    });
+
+    // Update progress on textarea input
+    textarea.addEventListener("input", () => {
+      updateProgress();
+    });
+
+    // Simulate comments count changes every 15 seconds (randomly add or remove comment)
+    setInterval(() => {
+      const change = Math.random() < 0.5 ? -1 : 1;
+      activeComments = Math.min(Math.max(0, activeComments + change), 10);
+      updateCommentsCount();
+    }, 15000);
+   })();
+  </script>
+ </body>
+</html>
